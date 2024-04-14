@@ -1,0 +1,1 @@
+$execute store success score #diff utils.temp run data modify storage utils:z players[{id:$(id)}].data.mainhand set from block -30000000 0 15000000 Items[0]

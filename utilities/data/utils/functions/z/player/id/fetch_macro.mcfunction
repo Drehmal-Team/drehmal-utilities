@@ -1,0 +1,1 @@
+$execute store result score @s utils.id store result score @s utils.API.id run data get storage utils:z player_ids."$(uuid)"
