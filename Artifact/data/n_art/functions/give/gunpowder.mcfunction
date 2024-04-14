@@ -1,0 +1,1 @@
+give @s arrow{display:{Name:'{"text":"Gunpowder Arrow","color":"yellow","italic":false,"underlined":true}',Lore:['{"text":"lorm!"}','{"text":" "}','{"text":"Explodes when it hits a mob.","color":"dark_gray","italic":true}','{"text":" "}','{"text":"Artisan","color":"yellow","italic":false}']},gunpowder_arrow:1b,n_arrow:{pickup_item:1b,consume_infinity:1b}} 16

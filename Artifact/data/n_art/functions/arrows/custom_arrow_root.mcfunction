@@ -1,0 +1,1 @@
+execute if data storage n_arrow:storage {CustomArrowData:{tag:{gunpowder_arrow:1b}}} run function n_art:arrows/gunpowder/init

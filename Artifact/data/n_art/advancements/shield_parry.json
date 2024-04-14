@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "block": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+          "damage": {
+            "blocked": true
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "n_art:parry/reward"
+    }
+  }
+  

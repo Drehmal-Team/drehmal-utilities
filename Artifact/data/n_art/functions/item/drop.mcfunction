@@ -1,0 +1,2 @@
+tag @s add n_art.temp
+execute if data storage n_art:storage tempItem.tag.n_art.mythic.Frenzy on origin if entity @s[tag=n_art.mythic.frenzy,predicate=!n_art:holding/frenzy] at @s as @e[type=item,tag=n_art.temp] run return run function n_art:m/fzy/drop
