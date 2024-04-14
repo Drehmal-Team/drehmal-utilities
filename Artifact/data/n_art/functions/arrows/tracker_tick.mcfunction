@@ -1,1 +1,0 @@
-execute if entity @s[tag=n_art.gunpowder_tracker] run function n_art:arrows/gunpowder/tick

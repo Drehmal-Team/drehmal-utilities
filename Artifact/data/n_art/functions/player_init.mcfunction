@@ -1,2 +1,0 @@
-data modify storage n_art:storage playerGlobal append value {id:-1,data:{}}
-execute store result score @s n_art.id store result storage n_art:storage playerGlobal[-1].id int 1 run scoreboard players add __ID__ n_art.global 1

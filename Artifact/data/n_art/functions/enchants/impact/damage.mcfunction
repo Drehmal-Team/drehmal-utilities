@@ -1,1 +1,0 @@
-$damage @s $(damage) n_art:additional_2 by @a[tag=n_art.temp,limit=1]

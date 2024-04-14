@@ -1,1 +1,0 @@
-$data modify storage n_art:storage fzy_bar.time set value '{"text":"$(s):$(ins)$(ms)","color":"$(col)"}'

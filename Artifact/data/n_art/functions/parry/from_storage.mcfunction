@@ -1,1 +1,0 @@
-$data modify storage n_art:storage tempShield set from storage n_art:storage playerGlobal[{id:$(id)}].data.shield

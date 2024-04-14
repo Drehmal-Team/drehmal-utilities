@@ -1,1 +1,0 @@
-execute as @e[type=marker,tag=n_plib.beizer_d] at @s run function n_plib:zprivate/lightning/beizer_d/as

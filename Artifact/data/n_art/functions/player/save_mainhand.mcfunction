@@ -1,1 +1,0 @@
-$execute store success score #diff n_art.temp run data modify storage n_art:storage playerGlobal[{id:$(id)}].data.mainhand set from block -30000000 0 15000000 Items[0]

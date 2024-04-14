@@ -1,1 +1,0 @@
-$execute rotated $(x) 0 positioned ^ ^3 ^$(y) align y run function n_art:utils/position/random_ground/loop {cmd:"$(cmd)"}
