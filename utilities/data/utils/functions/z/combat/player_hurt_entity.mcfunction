@@ -2,7 +2,9 @@ execute if entity @s[tag=utils.API.combat.disable_advancement] run return run ad
 
 function utils:z/combat/get_damage
 
-execute as @e[type=!#utils:api/nohitbox,distance=..10] at @s on attacker if entity @s[advancements={utils:z/player_hurt_entity=true}] as @e[distance=0,nbt={HurtTime:10s}] run tag @s add utils.API.combat.victim
+execute as @e[type=!#utils:api/nohitbox,tag=!utils.player_hurt_me,distance=..10] at @s on attacker if entity @s[advancements={utils:z/player_hurt_entity=true}] as @e[distance=0,nbt={HurtTime:10s}] run function utils:z/combat/add_tags
+
+scoreboard players add #testing utils.temp 1
 
 item replace block -30000000 0 15000000 container.0 from entity @s weapon.mainhand
 
@@ -36,4 +38,5 @@ execute if score #DAMAGE_DEALT# utils.API >= #crit_check utils.temp if entity @s
 function #utils:api/combat/player_hurt_entity
 
 tag @e remove utils.API.combat.victim
+schedule function utils:z/combat/remove_blocker_tags 1t
 advancement revoke @s only utils:z/player_hurt_entity

@@ -1,0 +1,1 @@
+item replace entity @s weapon.offhand from block -30000000 0 15000000 container.0

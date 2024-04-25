@@ -1,0 +1,1 @@
+item replace entity @s armor.legs from block -30000000 0 15000000 container.0

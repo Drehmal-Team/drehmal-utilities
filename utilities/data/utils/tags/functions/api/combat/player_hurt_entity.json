@@ -1,6 +1,4 @@
 {
-    "values": [
-        "utils:api/combat/player_hurt_entity"
-    ],
+    "values": [],
     "replace": false
 }
