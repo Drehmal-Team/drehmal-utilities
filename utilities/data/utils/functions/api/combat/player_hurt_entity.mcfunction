@@ -21,3 +21,5 @@ execute if score #HIT_TYPE# utils.API matches 2 run say critical!
 # the #DAMAGE_DEALT# utils.API scoreboard indicates the amount of damage the player dealt, to 0.5 precision and scaled by 10, rounding up
 # example: if the player dealt 0.75 damage, the score would be 10. 1.1 damage, 15 on the scoreboard
 execute if score #DAMAGE_DEALT# utils.API matches 1000.. run say OVERKILL!!!
+
+# the utils.API.combat.disable_advancement is a tag you can add to the player to disable the activation of the advancement. use this if you want to do stuff like /damage with the player as the source

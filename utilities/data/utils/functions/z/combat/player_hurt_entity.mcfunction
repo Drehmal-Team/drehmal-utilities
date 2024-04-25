@@ -4,8 +4,6 @@ function utils:z/combat/get_damage
 
 execute as @e[type=!#utils:api/nohitbox,tag=!utils.player_hurt_me,distance=..10] at @s on attacker if entity @s[advancements={utils:z/player_hurt_entity=true}] as @e[distance=0,nbt={HurtTime:10s}] run function utils:z/combat/add_tags
 
-scoreboard players add #testing utils.temp 1
-
 item replace block -30000000 0 15000000 container.0 from entity @s weapon.mainhand
 
 data modify storage utils:z tempMainhand set from block -30000000 0 15000000 Items[0]

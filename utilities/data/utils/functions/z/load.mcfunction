@@ -11,7 +11,7 @@ scoreboard objectives add utils.id dummy
 
 scoreboard objectives add utils.tag_scores.checked dummy
 
-
+scoreboard objectives add utils.inv.update dummy
 
 
 # NUMERICAL CONSTANTS #
