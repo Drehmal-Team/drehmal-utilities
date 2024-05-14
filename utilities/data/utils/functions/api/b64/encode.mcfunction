@@ -6,6 +6,8 @@
 #
 # OUT: char array
 
+return fail
+
 execute store result score #loop utils.temp if data storage utils:api b64.in[]
 
 scoreboard players operation #loop utils.temp /= #3 utils.const

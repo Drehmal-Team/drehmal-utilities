@@ -13,12 +13,16 @@ scoreboard objectives add utils.tag_scores.checked dummy
 
 scoreboard objectives add utils.inv.update dummy
 
+scoreboard objectives add utils.heal dummy
 
 # NUMERICAL CONSTANTS #
 
 scoreboard players set #3 utils.const 3
 scoreboard players set #4 utils.const 4
+scoreboard players set #5 utils.const 5
 scoreboard players set #8 utils.const 8
+
+scoreboard players set #1000 utils.const 1000
 
 scoreboard players set #2^6 utils.const 64
 scoreboard players set #2^8 utils.const 256
@@ -27,8 +31,12 @@ scoreboard players set #2^16 utils.const 65536
 scoreboard players set #2^18 utils.const 262144
 scoreboard players set #2^24 utils.const 16777215
 
-forceload add 30000000 -15000000
-setblock 30000000 0 -15000000 barrel
+# FORCELOADS #
+
+execute in utils:z/empty run forceload add 0 0
+
+forceload add -30000000 15000000
+setblock -30000000 0 15000000 barrel
 
 # LOOKUP TABLES #
 

@@ -1,3 +1,6 @@
+execute store result score #count utils.temp run data get storage utils:z lists.count[-1]
+scoreboard players operation #count utils.int += #count utils.temp
+
 execute unless data storage utils:z item.replace.args.Ignore_Count run data modify block -30000000 0 15000000 Items[0].count set from storage utils:z lists.count[-1]
 data remove storage utils:z lists.count[-1]
 data remove storage utils:z lists.slot[-1]

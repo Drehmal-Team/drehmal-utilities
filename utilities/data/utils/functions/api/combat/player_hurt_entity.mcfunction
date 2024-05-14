@@ -23,3 +23,7 @@ execute if score #HIT_TYPE# utils.API matches 2 run say critical!
 execute if score #DAMAGE_DEALT# utils.API matches 1000.. run say OVERKILL!!!
 
 # the utils.API.combat.disable_advancement is a tag you can add to the player to disable the activation of the advancement. use this if you want to do stuff like /damage with the player as the source
+# NOTE: THIS IS IMPORTANT! you dont want to trigger weapon abilities or anything else like that outta nowhere
+tag @s add utils.API.combat.disable_advancement
+execute at @s as @e[distance=..10] run damage @s 10 player_attack by @p
+tag @s remove utils.API.combat.disable_advancement

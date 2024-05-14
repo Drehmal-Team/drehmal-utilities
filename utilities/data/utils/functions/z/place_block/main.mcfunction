@@ -6,6 +6,8 @@
 #execute store result score #y utils.temp run data get storage utils:api vector[1] 1000000000
 #execute store result score #z utils.temp run data get storage utils:api vector[2] 1000000000
 
+return fail
+
 data modify storage utils:z macro set value {x:0,y:0,z:0}
 
 scoreboard players set #hand utils.temp 2

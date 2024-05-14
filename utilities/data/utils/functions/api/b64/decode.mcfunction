@@ -6,8 +6,6 @@
 #
 # OUT: char array
 
-return fail
-
 execute store result score #loop utils.temp store result score #len utils.temp run data get storage utils:api b64.in
 
 scoreboard players operation #len utils.temp %= #4 utils.const

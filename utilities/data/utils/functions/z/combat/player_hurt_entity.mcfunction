@@ -9,8 +9,8 @@ item replace block -30000000 0 15000000 container.0 from entity @s weapon.mainha
 data modify storage utils:z tempMainhand set from block -30000000 0 15000000 Items[0]
 
 scoreboard players set #dam_mod utils.temp 0
-execute if entity @s[advancements={utils:z/player_hurt_entity={undead=true}},predicate=utils:z/holding/smite] store result score #dam_mod utils.temp run data get storage utils:z tempMainhand.tag.Enchantments[{"id":"minecraft:smite"}].lvl 25
-execute if entity @s[advancements={utils:z/player_hurt_entity={arthropod=true}},predicate=utils:z/holding/bane] store result score #dam_mod utils.temp run data get storage utils:z tempMainhand.tag.Enchantments[{"id":"minecraft:bane_of_arthropods"}].lvl 25
+execute if entity @s[advancements={utils:z/player_hurt_entity={undead=true}}] store result score #dam_mod utils.temp run data get storage utils:z tempMainhand.components."minecraft:enchantments".levels."minecraft:smite" 25
+execute if entity @s[advancements={utils:z/player_hurt_entity={arthropod=true}}] store result score #dam_mod utils.temp run data get storage utils:z tempMainhand.components."minecraft:enchantments".levels."minecraft:bane_of_athropods" 25
 
 execute store result score #crit_check utils.temp run attribute @s generic.attack_damage get 15
 execute store result score #full_check utils.temp run attribute @s generic.attack_damage get 10
@@ -19,7 +19,7 @@ scoreboard players operation #full_check utils.temp += #dam_mod utils.temp
 
 scoreboard players set #dam_mod utils.temp 0
 scoreboard players set #sharp_level utils.temp 0
-execute if predicate utils:z/holding/sharpness store result score #sharp_level utils.temp run data get storage utils:z tempMainhand.tag.Enchantments[{"id":"minecraft:sharpness"}].lvl 1
+execute store result score #sharp_level utils.temp run data get storage utils:z tempMainhand.components."minecraft:enchantments".levels."minecraft:sharpness" 1
 
 execute if score #sharp_level utils.temp matches 1.. run scoreboard players add #dam_mod utils.temp 10
 execute if score #sharp_level utils.temp matches 1.. run scoreboard players remove #sharp_level utils.temp 1
@@ -30,9 +30,9 @@ scoreboard players operation #full_check utils.temp += #dam_mod utils.temp
 
 scoreboard players set #HIT_TYPE# utils.API 0
 
-
 execute if score #DAMAGE_DEALT# utils.API >= #full_check utils.temp run scoreboard players set #HIT_TYPE# utils.API 1
 execute if score #DAMAGE_DEALT# utils.API >= #crit_check utils.temp if entity @s[predicate=utils:z/combat/crit_possible] run scoreboard players set #HIT_TYPE# utils.API 2
+
 function #utils:api/combat/player_hurt_entity
 
 tag @e remove utils.API.combat.victim
