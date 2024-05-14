@@ -40,8 +40,6 @@ data modify storage utils:z atrs.all append from storage utils:z templist[{Slot:
 data modify storage utils:z atrs.1 append from storage utils:z atrs.all[{operation:"add_multiplied_base"}].amount
 data modify storage utils:z atrs.2 append from storage utils:z atrs.all[{operation:"add_multiplied_total"}].amount
 
-tellraw @s ["",{"score":{"name":"#heal_amt","objective":"utils.temp"},"color":"gold"},"\n",{"text":"Type 1: ","color":"green"},{"nbt":"atrs.1","storage":"utils:z"},"\n","\n",{"text":"Type 2: ","color":"light_purple"},{"nbt":"atrs.2","storage":"utils:z"}]
-
 scoreboard players set #o utils.temp 1000
 
 execute if data storage utils:z atrs.1[] run function utils:z/combat/heal/a/1

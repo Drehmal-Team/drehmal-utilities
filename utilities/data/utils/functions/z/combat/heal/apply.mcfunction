@@ -1,2 +1,1 @@
 $attribute @s generic.max_health modifier add b751cb78-9da3-4b75-8910-fafcbad8ab7f "name" $(val) add_value
-$say $(val)

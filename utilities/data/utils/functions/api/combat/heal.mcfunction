@@ -1,6 +1,8 @@
 # COMBAT/HEAL
 #
-# Heals the player by a specific amount
+# Heals the player by a specific amount. Scoreboard input: #HEAL_AMOUNT# utils.API, scaled by 1000 (so 1 heart = 2000, 1/2 heart = 1000, etc.)
+#
+# subtick n junk stolen from here: https://github.com/XanBelOr/Minecraft-Simple-Custom-Heal/
 
 execute store result score #heal_amt utils.temp run attribute @s generic.max_health get 1000
 execute store result score #heal_mod utils.temp run data get entity @s Health 1000
@@ -22,7 +24,3 @@ execute store result storage utils:z macro.val double -0.001 run scoreboard play
 function utils:z/combat/heal/apply with storage utils:z macro
 scoreboard players set @s utils.heal 1
 effect give @s instant_health 1 28 true
-
-#scoreboard players set @s utils.heal 1
-#schedule function utils:z/combat/heal/schedule 1t
-
