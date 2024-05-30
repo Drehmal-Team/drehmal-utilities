@@ -1,6 +1,6 @@
 # B64/DECODE
 #
-# Takes a base 64 encoded input string at "utils:api b64.in" and outputs the decoded output at "utils:api b64.out."
+# Takes a base 64 encoded input string at "utils:api b64.in" and outputs the decoded output at "utils:api b64.out"
 #
 # IN: string
 #

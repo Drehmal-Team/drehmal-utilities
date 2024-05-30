@@ -15,14 +15,36 @@ scoreboard objectives add utils.inv.update dummy
 
 scoreboard objectives add utils.heal dummy
 
+# PARTICLE EFFECT SCOREBOARDS #
+
+scoreboard objectives add utils.p.x1_mod dummy
+scoreboard objectives add utils.p.y1_mod dummy
+scoreboard objectives add utils.p.z1_mod dummy
+scoreboard objectives add utils.p.x2_mod dummy
+scoreboard objectives add utils.p.y2_mod dummy
+scoreboard objectives add utils.p.z2_mod dummy
+scoreboard objectives add utils.p.x3 dummy
+scoreboard objectives add utils.p.y3 dummy
+scoreboard objectives add utils.p.z3 dummy
+
+scoreboard objectives add utils.p.loop dummy
+scoreboard objectives add utils.p.loop_step dummy
+scoreboard objectives add utils.p.loop_max dummy
+scoreboard objectives add utils.p.loop_sentinel dummy
+
 # NUMERICAL CONSTANTS #
 
+scoreboard players set #2 utils.const 2
 scoreboard players set #3 utils.const 3
 scoreboard players set #4 utils.const 4
 scoreboard players set #5 utils.const 5
 scoreboard players set #8 utils.const 8
 
+scoreboard players set #120 utils.const 120
+
+scoreboard players set #100 utils.const 100
 scoreboard players set #1000 utils.const 1000
+scoreboard players set #10000 utils.const 10000
 
 scoreboard players set #2^6 utils.const 64
 scoreboard players set #2^8 utils.const 256

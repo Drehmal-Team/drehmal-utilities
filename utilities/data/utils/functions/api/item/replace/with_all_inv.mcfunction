@@ -19,7 +19,7 @@
 $data modify storage utils:z item.replace.args set value $(Args)
 
 execute if data storage utils:z item.replace.args.Get_Inv run data modify storage utils:api item.replace.inventory set from entity @s Inventory
-data modify storage utils:z item.replace.inventory set from storage utils:api item.replace.inventory
+execute unless data storage utils:z item.replace.args.Get_Inv run data modify storage utils:z item.replace.inventory set from storage utils:api item.replace.inventory
 
 data remove storage utils:api item.replace.with.Slot
 data remove storage utils:api item.replace.target.Slot

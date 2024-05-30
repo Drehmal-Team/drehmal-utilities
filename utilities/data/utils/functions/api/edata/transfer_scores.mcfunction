@@ -1,4 +1,4 @@
-# EDATA/GET_SCORES
+# EDATA/TRANSFER_SCORES
 #
 # Copies all scores from one username/hex UUID to another. This operation takes multiple ticks and only one can run at once. Also Location can't be a player
 # Doesn't serve much of a purpose IMHO
