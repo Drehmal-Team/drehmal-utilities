@@ -1,1 +1,0 @@
-tag @e remove utils.player_hurt_me

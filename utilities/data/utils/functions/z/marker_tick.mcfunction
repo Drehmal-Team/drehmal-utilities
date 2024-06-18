@@ -1,1 +1,0 @@
-execute if entity @s[tag=utils.beizer_d] at @s run function utils:z/part/lightning/beizer/as

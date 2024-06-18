@@ -1,0 +1,1 @@
+tag @e remove ntils.player_hurt_me

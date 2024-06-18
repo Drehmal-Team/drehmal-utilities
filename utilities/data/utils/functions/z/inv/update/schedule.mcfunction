@@ -1,1 +1,0 @@
-execute as @a[scores={utils.inv.update=1..}] run function utils:z/inv/update/as

@@ -1,0 +1,1 @@
+$data modify storage ntils:api time.get.sunpos.out.pitch set from storage ntils:z lookups.time.sunpos[$(t)]

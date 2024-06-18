@@ -1,1 +1,0 @@
-$data modify storage utils:z player_ids."$(uuid)" set value $(id)

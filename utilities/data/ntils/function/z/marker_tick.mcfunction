@@ -1,0 +1,1 @@
+execute if entity @s[tag=ntils.beizer_d] at @s run function ntils:z/part/lightning/beizer/as

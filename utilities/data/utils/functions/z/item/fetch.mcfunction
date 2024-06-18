@@ -1,1 +1,0 @@
-$execute store success score #diff utils.temp run data modify storage utils:z tempItem set from storage utils:z players[{id:$(id)}].data.mainhand

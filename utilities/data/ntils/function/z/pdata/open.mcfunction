@@ -1,0 +1,1 @@
+$data modify storage ntils:api players[{id:$(id)}].Open set value True
