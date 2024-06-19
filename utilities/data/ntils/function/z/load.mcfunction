@@ -88,6 +88,7 @@ execute in ntils:z/empty run forceload add 0 0
 
 forceload add -30000000 15000000
 setblock -30000000 0 15000000 barrel
+setblock -30000000 -1 15000000 barrel
 
 setblock -30000000 46 15000000 minecraft:repeating_command_block{auto:True,Command:"function ntils:z/combat/invul/block"}
 
