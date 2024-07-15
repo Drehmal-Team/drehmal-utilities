@@ -10,8 +10,8 @@ $data modify storage ntils:z sch.new.macro set value {gt:0,name:"$(Name)",id:0}
 
 execute store result storage ntils:z sch.temp.id int 1 store result storage ntils:z sch.new.macro.id int 1 run scoreboard players add #SCH_ID ntils.z.global 1
 
-execute store result score #gt utils.temp run time query gametime
-$execute store result storage ntils:z sch.new.macro.gt int 1 run scoreboard players add #gt utils.temp $(Delay)
+execute store result score #gt ntils.z.temp run time query gametime
+$execute store result storage ntils:z sch.new.macro.gt int 1 run scoreboard players add #gt ntils.z.temp $(Delay)
 function ntils:z/sch/new/main with storage ntils:z sch.new.macro
 
 schedule function ntils:z/sch/tick 1t
