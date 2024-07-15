@@ -1,3 +1,1 @@
-$data modify entity @s transformation set value [$(x)f,0f,0f,0f,$(y)f,0f,0f,0f,$(z)f,0f,0f,0f,0f,0f,0f,1f]
-data modify storage ntils:api distance.output set from entity @s transformation.scale[0]
-kill @s
+execute in ntils:z/empty summon item_display run function ntils:z/math/distance/main with storage ntils:api math.distance.in

@@ -18,7 +18,7 @@
             "condition": "minecraft:entity_scores",
             "entity": "this",
             "scores": {
-              "ntils.combat.invul.on": {
+              "ntils.z.combat.invul.on": {
                 "min": 1
               }
             }

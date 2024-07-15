@@ -27,8 +27,8 @@
 # yes this uses both macro and scoreboard inputs sue me
 
 $data modify storage ntils:z macro set value {command:"$(Command)",end_pos:[]}
-$scoreboard players set #steps ntils.temp $(Steps)
-$scoreboard players set #delay ntils.temp $(Delay)
+$scoreboard players set #steps ntils.z.temp $(Steps)
+$scoreboard players set #delay ntils.z.temp $(Delay)
 tag @s add ntils.beizer_d
 tag @s add ntils.marker
 $function ntils:z/part/lightning/beizer/main {command:"$(Command)"}

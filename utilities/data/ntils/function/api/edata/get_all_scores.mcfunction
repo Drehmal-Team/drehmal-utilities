@@ -9,25 +9,25 @@
 #       - Min_Length: The minimum length of a scoreholder that will be able to be added to the output list.
 #       - Max_Length: The maximum length of a scoreholder that will be able to be added to the output list.
 
-execute if score #GETTING_SCORES# ntils.global matches 1 run return fail
+execute if score #GETTING_SCORES# ntils.z.global matches 1 run return fail
 
-execute store result score #SCORE_COUNT# ntils.global run scoreboard players list
+execute store result score #SCORE_COUNT# ntils.z.global run scoreboard players list
 
-execute if score #SCORE_COUNT# ntils.global matches 0 run return fail
+execute if score #SCORE_COUNT# ntils.z.global matches 0 run return fail
 
 $data modify storage ntils:z edata.get_all_scores.args set value $(Args)
 
-scoreboard players set #GETTING_SCORES# ntils.global 1
-scoreboard players set #MAX_NAME_LENGTH# ntils.global -1
-scoreboard players set #MIN_NAME_LENGTH# ntils.global -1
-execute if data storage ntils:z edata.get_all_scores.args.Max_Length store result score #MAX_NAME_LENGTH# ntils.global run data get storage ntils:z edata.get_all_scores.args.Max_Length
-execute if data storage ntils:z edata.get_all_scores.args.Min_Length store result score #MIN_NAME_LENGTH# ntils.global run data get storage ntils:z edata.get_all_scores.args.Min_Length
+scoreboard players set #GETTING_SCORES# ntils.z.global 1
+scoreboard players set #MAX_NAME_LENGTH# ntils.z.global -1
+scoreboard players set #MIN_NAME_LENGTH# ntils.z.global -1
+execute if data storage ntils:z edata.get_all_scores.args.Max_Length store result score #MAX_NAME_LENGTH# ntils.z.global run data get storage ntils:z edata.get_all_scores.args.Max_Length
+execute if data storage ntils:z edata.get_all_scores.args.Min_Length store result score #MIN_NAME_LENGTH# ntils.z.global run data get storage ntils:z edata.get_all_scores.args.Min_Length
 
 execute if data storage ntils:z edata.get_all_scores.args.Allowed_Chars run data modify storage ntils:z edata.get_all_scores.args.Allowed_Chars append value null
 
-data modify storage ntils:z edata.get_all_scores.output set value []
+data modify storage ntils:z edata.get_all_scores.out set value []
 
-setblock -30000000 1 15000000 air
-setblock -30000000 1 15000000 command_block{auto:True,Command:"scoreboard players list"}
+execute in ntils:z/empty run setblock -30000000 1 15000000 air
+execute in ntils:z/empty run setblock -30000000 1 15000000 command_block{auto:True,Command:"scoreboard players list"}
 
 schedule function ntils:z/edata/get_all_scores/schedule 2t

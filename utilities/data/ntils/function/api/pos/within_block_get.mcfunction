@@ -3,4 +3,4 @@
 # Copies the decimal portion of the current command context to the storage location ntils.api vector
 # Specifically, if the coord is positive it chops like so: 4.6 -> 0.6. Negative becomes -4.6 -> 0.4.
 
-execute summon marker run function ntils:z/pos/within_block_get/main
+execute in ntils:z/empty summon marker run function ntils:z/pos/within_block_get/main

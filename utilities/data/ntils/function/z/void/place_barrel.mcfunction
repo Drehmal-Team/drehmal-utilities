@@ -1,0 +1,3 @@
+setblock -30000000 0 15000000 barrel
+setblock -30000000 -1 15000000 barrel
+setblock -30000000 1 15000000 barrel

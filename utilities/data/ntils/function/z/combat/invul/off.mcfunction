@@ -1,5 +1,5 @@
 tag @s remove ntils.API.combat.invul
-scoreboard players reset @s ntils.combat.invul.on
+scoreboard players reset @s ntils.z.combat.invul.on
 
 attribute @s generic.safe_fall_distance modifier remove d881a22d-0b44-449f-899f-7f51a2a48916
 

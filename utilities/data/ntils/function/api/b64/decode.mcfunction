@@ -1,29 +1,30 @@
 # B64/DECODE
 #
-# Takes a base 64 encoded input string at "ntils:api b64.in" and outputs the decoded output at "ntils:api b64.out"
+# Takes a base 64 encoded input string at "ntils:api b64.decode.in" and outputs the decoded output at "ntils:api b64.decode.out"
 #
 # IN: string
 #
 # OUT: char array
 
-execute store result score #loop ntils.temp store result score #len ntils.temp run data get storage ntils:api b64.in
+execute store result score #loop ntils.z.temp store result score #len ntils.z.temp run data get storage ntils:api b64.decode.in
 
-scoreboard players operation #len ntils.temp %= #4 ntils.const
+scoreboard players operation #len ntils.z.temp %= #4 ntils.z.const
 
-execute unless score #len ntils.temp matches 0 run return fail
+execute unless score #len ntils.z.temp matches 0 run return fail
 
-data modify storage ntils:api b64.out set value []
+data modify storage ntils:api b64.decode.out set value []
+data modify storage ntils:z b64.decode.in set from storage ntils:api b64.decode.in
 
-scoreboard players operation #loop ntils.temp /= #4 ntils.const
+scoreboard players operation #loop ntils.z.temp /= #4 ntils.z.const
 
-data modify storage ntils:z b64.from set value {0:'',1:'',2:'',3:''}
+data modify storage ntils:z b64.decode.from set value {0:'',1:'',2:'',3:''}
 
-data modify storage ntils:z b64.from.0 set string storage ntils:api b64.in 0 1
-data modify storage ntils:z b64.from.1 set string storage ntils:api b64.in 1 2
-data modify storage ntils:z b64.from.2 set string storage ntils:api b64.in 2 3
-data modify storage ntils:z b64.from.3 set string storage ntils:api b64.in 3 4
-data modify storage ntils:api b64.in set string storage ntils:api b64.in 4
+data modify storage ntils:z b64.decode.from.0 set string storage ntils:z b64.decode.in 0 1
+data modify storage ntils:z b64.decode.from.1 set string storage ntils:z b64.decode.in 1 2
+data modify storage ntils:z b64.decode.from.2 set string storage ntils:z b64.decode.in 2 3
+data modify storage ntils:z b64.decode.from.3 set string storage ntils:z b64.decode.in 3 4
+data modify storage ntils:z b64.decode.in set string storage ntils:z b64.decode.in 4
 
-data modify storage ntils:z b64.to set value {0:0,1:0,2:0}
+data modify storage ntils:z b64.decode.to set value {0:0,1:0,2:0}
 
-function ntils:z/b64/d/iterate with storage ntils:z b64.from
+function ntils:z/b64/decode/iterate with storage ntils:z b64.decode.from

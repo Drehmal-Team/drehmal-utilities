@@ -1,4 +1,4 @@
-execute store result score #GAMETIME# ntils.global run time query gametime
+execute store result score #GAMETIME# ntils.z.global run time query gametime
 
 execute as @e[tag=ntils.API.tag_scores,predicate=!ntils:z/has_scores] run function ntils:z/tag_scores/main
 

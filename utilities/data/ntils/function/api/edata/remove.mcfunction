@@ -24,7 +24,7 @@ execute if data storage ntils:api edata.remove.in[] run function ntils:z/edata/r
 
 execute summon block_display run function ntils:z/cname/delete/as_disp
 
-execute in ntils:z/empty run teleport @s 0 -1000 0
+execute in ntils:z/empty run teleport @s -30000000 -1000 15000000
 kill @s
 
 function ntils:z/cname/delete/main with storage ntils:z macro

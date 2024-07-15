@@ -1,1 +1,1 @@
-$execute store result score @s ntils.id store result score @s ntils.API.id run data get storage ntils:z player_ids."$(uuid)"
+$execute store result score @s ntils.z.id store result score @s ntils.API.id run data get storage ntils:z player_ids."$(uuid)"

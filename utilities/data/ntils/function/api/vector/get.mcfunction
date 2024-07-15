@@ -5,4 +5,4 @@
 # MACRO INPUTS:
 # - Len: The length of the vector in blocks.
 
-$execute positioned .0 0 .0 positioned ^ ^ ^$(Len) summon marker run function ntils:z/pos/get
+$execute in ntils:z/empty positioned .0 0 .0 positioned ^ ^ ^$(Len) summon marker run function ntils:z/vector/get/main

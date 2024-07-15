@@ -8,7 +8,7 @@
               "condition": "minecraft:entity_scores",
               "entity": "this",
               "scores": {
-                "ntils.heal": {
+                "ntils.z.combat.heal.subtick": {
                   "min": 1
                 }
               }
