@@ -5,12 +5,14 @@
 #
 # IN: string array
 
-execute on passengers run tag @s add ntils.z.was_riding_me
-execute on vehicle run tag @s add ntils.z.i_was_riding_this
+function ntils:api/edata/get_id
+
+execute on passengers run tag @s add ntils.z.edata.remove.was_riding_me
+execute on vehicle run tag @s add ntils.z.edata.remove.i_was_riding_this
 
 ride @s dismount
 
-tag @s add ntils.z.temp
+tag @s add ntils.z.edata.remove.temp
 
 data modify storage ntils:z macro set value {nbt:{},id:""}
 data modify storage ntils:z macro.nbt set from entity @s {}
@@ -22,9 +24,8 @@ data modify storage ntils:z edata.macro.s2 set from storage ntils:api edata.remo
 data modify storage ntils:z edata.macro.s3 set from storage ntils:api edata.remove.in[-3]
 execute if data storage ntils:api edata.remove.in[] run function ntils:z/edata/remove/loop with storage ntils:z edata.macro
 
-execute summon block_display run function ntils:z/cname/delete/as_disp
-
-execute in ntils:z/empty run teleport @s -30000000 -1000 15000000
+execute in ntils:z/empty run teleport @s 0 -1000 0
 kill @s
 
-function ntils:z/cname/delete/main with storage ntils:z macro
+data modify storage ntils:z macro.id set from storage ntils:api edata.get_id.out
+function ntils:z/edata/remove/main with storage ntils:z macro

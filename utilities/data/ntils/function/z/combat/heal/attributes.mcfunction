@@ -1,16 +1,16 @@
 scoreboard players set #atr ntils.z.temp 1
 
-execute in ntils:z/empty run data modify block -30000000 0 15000000 Items set value []
-execute in ntils:z/empty run item replace block -30000000 0 15000000 container.0 from entity @s weapon.mainhand
-execute in ntils:z/empty run item replace block -30000000 0 15000000 container.1 from entity @s weapon.offhand
-execute in ntils:z/empty run item replace block -30000000 0 15000000 container.2 from entity @s armor.feet
-execute in ntils:z/empty run item replace block -30000000 0 15000000 container.3 from entity @s armor.legs
-execute in ntils:z/empty run item replace block -30000000 0 15000000 container.4 from entity @s armor.chest
-execute in ntils:z/empty run item replace block -30000000 0 15000000 container.5 from entity @s armor.head
+execute in ntils:z/empty run data modify block 0 0 0 Items set value []
+execute in ntils:z/empty run item replace block 0 0 0 container.0 from entity @s weapon.mainhand
+execute in ntils:z/empty run item replace block 0 0 0 container.1 from entity @s weapon.offhand
+execute in ntils:z/empty run item replace block 0 0 0 container.2 from entity @s armor.feet
+execute in ntils:z/empty run item replace block 0 0 0 container.3 from entity @s armor.legs
+execute in ntils:z/empty run item replace block 0 0 0 container.4 from entity @s armor.chest
+execute in ntils:z/empty run item replace block 0 0 0 container.5 from entity @s armor.head
 
 
 data modify storage ntils:z templist set value []
-execute in ntils:z/empty run data modify storage ntils:z templist append from block -30000000 0 15000000 Items[{components:{"minecraft:attribute_modifiers":{modifiers:[{type:"minecraft:generic.max_health"}]}}}]
+execute in ntils:z/empty run data modify storage ntils:z templist append from block 0 0 0 Items[{components:{"minecraft:attribute_modifiers":{modifiers:[{type:"minecraft:generic.max_health"}]}}}]
 
 data modify storage ntils:z atrs set value {1:[],2:[],all:[]}
 

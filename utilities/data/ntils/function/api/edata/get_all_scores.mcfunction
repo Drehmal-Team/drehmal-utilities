@@ -27,7 +27,7 @@ execute if data storage ntils:z edata.get_all_scores.args.Allowed_Chars run data
 
 data modify storage ntils:z edata.get_all_scores.out set value []
 
-execute in ntils:z/empty run setblock -30000000 1 15000000 air
-execute in ntils:z/empty run setblock -30000000 1 15000000 command_block{auto:True,Command:"scoreboard players list"}
+execute in ntils:z/empty run setblock 0 1 0 air
+execute in ntils:z/empty run setblock 0 1 0 command_block{auto:True,Command:"scoreboard players list"}
 
 schedule function ntils:z/edata/get_all_scores/schedule 2t

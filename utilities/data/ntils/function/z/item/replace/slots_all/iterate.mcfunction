@@ -1,6 +1,6 @@
 data remove storage ntils:z templist[-1]
 
-$execute if score #slot ntils.z.temp matches 0..35 in ntils:z/empty run item replace entity @s container.$(slot) from block -30000000 0 15000000 container.0
+$execute if score #slot ntils.z.temp matches 0..35 in ntils:z/empty run item replace entity @s container.$(slot) from block 0 0 0 container.0
 execute if score #slot ntils.z.temp matches 100 run function ntils:z/item/replace/slots/100
 execute if score #slot ntils.z.temp matches 101 run function ntils:z/item/replace/slots/101
 execute if score #slot ntils.z.temp matches 102 run function ntils:z/item/replace/slots/102

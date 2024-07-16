@@ -26,8 +26,8 @@ data remove storage ntils:api item.replace.target.Slot
 data remove storage ntils:api item.replace.with.count
 data remove storage ntils:api item.replace.target.count
 
-execute in ntils:z/empty run item replace block -30000000 0 15000000 container.0 with stone
-execute in ntils:z/empty run data modify block -30000000 0 15000000 Items[0] set from storage ntils:api item.replace.with
+execute in ntils:z/empty run item replace block 0 0 0 container.0 with stone
+execute in ntils:z/empty run data modify block 0 0 0 Items[0] set from storage ntils:api item.replace.with
 
 data modify storage ntils:z macro set value {replace:{}}
 data modify storage ntils:z macro.replace set from storage ntils:api item.replace.target

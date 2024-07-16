@@ -1,4 +1,4 @@
-data modify storage ntils:api b64.decode.in set string block -30000000 1 15000000 Items[0].components."minecraft:profile".properties[0].value 24 44
+data modify storage ntils:api b64.decode.in set string block 0 1 0 Items[0].components."minecraft:profile".properties[0].value 24 44
 function ntils:api/b64/decode
 data modify storage ntils:api string.concat.in set from storage ntils:api b64.decode.out
 function ntils:api/string/concat

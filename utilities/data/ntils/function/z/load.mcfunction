@@ -17,7 +17,7 @@ scoreboard objectives add ntils.z.combat.heal.subtick dummy
 
 scoreboard objectives add ntils.z.combat.death minecraft.custom:deaths
 
-scoreboard objectives add ntils.z.combat.invul.on dummy
+scoreboard objectives add ntils.z.combat.fire.clear.bool dummy
 
 # SCHEDULE LOOPS #
 
@@ -86,9 +86,9 @@ scoreboard players set #CLEANUP_CYCLE# ntils.z.const 6000
 
 # FORCELOADS #
 
-execute in ntils:z/empty run forceload add -30000000 15000000
-execute in ntils:z/empty unless loaded -30000000 0 15000000 run schedule function ntils:z/void/schedule 1t
-execute in ntils:z/empty if loaded -30000000 0 15000000 run function ntils:z/void/place_barrel
+execute in ntils:z/empty run forceload add 0 0
+execute in ntils:z/empty unless loaded 0 0 0 run schedule function ntils:z/void/schedule 1t
+execute in ntils:z/empty if loaded 0 0 0 run function ntils:z/void/place_barrel
 
 # LOOKUP TABLES #
 

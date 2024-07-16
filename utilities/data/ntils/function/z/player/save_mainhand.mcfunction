@@ -1,1 +1,1 @@
-$execute store success score #diff ntils.z.temp in ntils:z/empty run data modify storage ntils:z players[{id:$(id)}].data.mainhand set from block -30000000 0 15000000 Items[0]
+$execute store success score #diff ntils.z.temp in ntils:z/empty run data modify storage ntils:z players[{id:$(id)}].data.mainhand set from block 0 0 0 Items[0]

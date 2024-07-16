@@ -5,8 +5,8 @@
 # Input: ntils:api item.replace.with (full nbt object of the item to replace said items with)
 #        ntils:api item.replace.slots (either a number or a list of numbers. specific slot or list of slots to replace)
 
-execute in ntils:z/empty run item replace block -30000000 0 15000000 container.0 with stone
-execute in ntils:z/empty run data modify block -30000000 0 15000000 Items[0] set from storage ntils:api item.replace.with
+execute in ntils:z/empty run item replace block 0 0 0 container.0 with stone
+execute in ntils:z/empty run data modify block 0 0 0 Items[0] set from storage ntils:api item.replace.with
 
 data modify storage ntils:z templist set value []
 execute if data storage ntils:api item.replace.slots[] run data modify storage ntils:z templist set from storage ntils:api item.replace.slots

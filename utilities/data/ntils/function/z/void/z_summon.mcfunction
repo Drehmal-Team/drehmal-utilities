@@ -1,0 +1,1 @@
+execute in ntils:z/empty run summon armor_stand 0 100 0 {Tags:["ntils.API.ignore","ntils.z.ignore","ntils.z.combat.damage.oh_shit_hes_got_an_axe_run"],UUID:[I;0,0,0,35],HandItems:[{id:"minecraft:netherite_axe",count:1},{}],NoGravity:True}

@@ -1,4 +1,4 @@
-tag @s add ntils.item
+tag @s add ntils.z.item
 data modify storage ntils:z macro set value {id:-1}
 execute on origin unless items entity @s weapon.mainhand * store result storage ntils:z macro.id int 1 run scoreboard players get @s ntils.z.id
 execute if data storage ntils:z {macro:{id:-1}} run return 0

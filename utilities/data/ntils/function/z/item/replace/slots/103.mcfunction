@@ -1,1 +1,1 @@
-execute in ntils:z/empty run item replace entity @s armor.head from block -30000000 0 15000000 container.0
+execute in ntils:z/empty run item replace entity @s armor.head from block 0 0 0 container.0

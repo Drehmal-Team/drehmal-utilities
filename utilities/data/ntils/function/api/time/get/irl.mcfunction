@@ -6,6 +6,6 @@ scoreboard players add #HEAD_USERNAME# ntils.z.global 1
 scoreboard players operation #HEAD_USERNAME# ntils.z.global %= #1000 ntils.z.const
 execute store result storage ntils:z time.get.irl.macro.name int 1 run scoreboard players operation #HEAD_USERNAME# ntils.z.global > #100 ntils.z.const
 function ntils:z/time/get/irl/place_head with storage ntils:z time.get.irl.macro
-execute in ntils:z/empty run setblock -30000000 2 15000000 air
-execute in ntils:z/empty run setblock -30000000 2 15000000 command_block{auto:True,Command:"help me"}
+execute in ntils:z/empty run setblock 0 2 0 air
+execute in ntils:z/empty run setblock 0 2 0 command_block{auto:True,Command:"help me"}
 schedule function ntils:z/time/get/irl/schedule 1t

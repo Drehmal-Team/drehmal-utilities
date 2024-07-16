@@ -21,8 +21,8 @@ $scoreboard players reset $(Destination)
 
 scoreboard players set #GETTING_SCORES# ntils.z.global 1
 
-execute in ntils:z/empty run setblock -30000000 1 15000000 air
-$execute in ntils:z/empty run setblock -30000000 1 15000000 command_block{auto:True,Command:"scoreboard players list $(Location)"}
+execute in ntils:z/empty run setblock 0 1 0 air
+$execute in ntils:z/empty run setblock 0 1 0 command_block{auto:True,Command:"scoreboard players list $(Location)"}
 
 $data modify storage ntils:z edata.get_scores set value {location:$(Location),destination:$(Destination)}
 schedule function ntils:z/edata/get_scores/schedule 2t

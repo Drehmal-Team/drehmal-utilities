@@ -1,1 +1,1 @@
-execute positioned -30000000 -1000 15000000 summon piglin_brute run function ntils:z/pos/get_dim/as
+execute positioned 0 -1000 0 summon piglin_brute run function ntils:z/pos/get_dim/as

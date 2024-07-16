@@ -11,8 +11,8 @@ return fail
 data modify storage ntils:z macro set value {x:0,y:0,z:0}
 
 scoreboard players set #hand ntils.z.temp 2
-execute if predicate ntils:z/holding/placeable store success score #hand ntils.z.temp run item replace block -30000000 0 15000000 container.0 from entity @s weapon.mainhand
-execute if score #hand ntils.z.temp matches 2 run item replace block -30000000 0 15000000 container.0 from entity @s weapon.offhand
+execute if predicate ntils:z/holding/placeable store success score #hand ntils.z.temp run item replace block 0 0 0 container.0 from entity @s weapon.mainhand
+execute if score #hand ntils.z.temp matches 2 run item replace block 0 0 0 container.0 from entity @s weapon.offhand
 
 execute if entity @s[advancements={ntils:z/place_block/main={x_8=true}}] run data modify storage ntils:z macro.x set value 8
 execute if entity @s[advancements={ntils:z/place_block/main={x_7=true}}] run data modify storage ntils:z macro.x set value 7

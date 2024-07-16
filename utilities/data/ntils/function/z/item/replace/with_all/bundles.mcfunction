@@ -14,7 +14,7 @@ data modify storage ntils:z slotslist append from storage ntils:z templist[].Slo
 execute if data storage ntils:z countslist[] run function ntils:z/item/replace/with_all/bundle_count
 
 data remove storage ntils:z templist[].Slot
-execute in ntils:z/empty run data modify block -30000000 0 15000000 Items[0] set from storage ntils:z templist[-1]
+execute in ntils:z/empty run data modify block 0 0 0 Items[0] set from storage ntils:z templist[-1]
 
 data modify storage ntils:z macro set value {slot:0}
 execute store result score #slot ntils.z.temp store result storage ntils:z macro.slot int 1 run data get storage ntils:z slotslist[-1]

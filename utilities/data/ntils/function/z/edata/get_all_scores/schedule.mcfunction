@@ -1,13 +1,13 @@
-execute if score #SCORE_COUNT# ntils.z.global matches 0..9 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block -30000000 1 15000000 LastOutput 118
-execute if score #SCORE_COUNT# ntils.z.global matches 10..99 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block -30000000 1 15000000 LastOutput 119
-execute if score #SCORE_COUNT# ntils.z.global matches 100..999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block -30000000 1 15000000 LastOutput 120
-execute if score #SCORE_COUNT# ntils.z.global matches 1000..9999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block -30000000 1 15000000 LastOutput 121
-execute if score #SCORE_COUNT# ntils.z.global matches 10000..99999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block -30000000 1 15000000 LastOutput 122
-execute if score #SCORE_COUNT# ntils.z.global matches 100000..999999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block -30000000 1 15000000 LastOutput 123
-execute if score #SCORE_COUNT# ntils.z.global matches 1000000..9999999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block -30000000 1 15000000 LastOutput 124
-execute if score #SCORE_COUNT# ntils.z.global matches 10000000..99999999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block -30000000 1 15000000 LastOutput 125
-execute if score #SCORE_COUNT# ntils.z.global matches 100000000..999999999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block -30000000 1 15000000 LastOutput 126
-execute if score #SCORE_COUNT# ntils.z.global matches 1000000000.. in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block -30000000 1 15000000 LastOutput 127
+execute if score #SCORE_COUNT# ntils.z.global matches 0..9 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block 0 1 0 LastOutput 118
+execute if score #SCORE_COUNT# ntils.z.global matches 10..99 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block 0 1 0 LastOutput 119
+execute if score #SCORE_COUNT# ntils.z.global matches 100..999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block 0 1 0 LastOutput 120
+execute if score #SCORE_COUNT# ntils.z.global matches 1000..9999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block 0 1 0 LastOutput 121
+execute if score #SCORE_COUNT# ntils.z.global matches 10000..99999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block 0 1 0 LastOutput 122
+execute if score #SCORE_COUNT# ntils.z.global matches 100000..999999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block 0 1 0 LastOutput 123
+execute if score #SCORE_COUNT# ntils.z.global matches 1000000..9999999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block 0 1 0 LastOutput 124
+execute if score #SCORE_COUNT# ntils.z.global matches 10000000..99999999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block 0 1 0 LastOutput 125
+execute if score #SCORE_COUNT# ntils.z.global matches 100000000..999999999 in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block 0 1 0 LastOutput 126
+execute if score #SCORE_COUNT# ntils.z.global matches 1000000000.. in ntils:z/empty run data modify storage ntils:z edata.get_all_scores.string set string block 0 1 0 LastOutput 127
 
 scoreboard players set #here ntils.z.temp 0
 

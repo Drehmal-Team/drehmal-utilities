@@ -1,11 +1,11 @@
 execute store result score #count ntils.z.temp run data get storage ntils:z lists.count[-1]
 scoreboard players operation #count ntils.z.int += #count ntils.z.temp
 
-execute unless data storage ntils:z item.replace.args.Ignore_Count in ntils:z/empty run data modify block -30000000 0 15000000 Items[0].count set from storage ntils:z lists.count[-1]
+execute unless data storage ntils:z item.replace.args.Ignore_Count in ntils:z/empty run data modify block 0 0 0 Items[0].count set from storage ntils:z lists.count[-1]
 data remove storage ntils:z lists.count[-1]
 data remove storage ntils:z lists.slot[-1]
 
-$execute if score #slot ntils.z.temp matches 0..35 in ntils:z/empty run item replace entity @s container.$(slot) from block -30000000 0 15000000 container.0
+$execute if score #slot ntils.z.temp matches 0..35 in ntils:z/empty run item replace entity @s container.$(slot) from block 0 0 0 container.0
 execute if score #slot ntils.z.temp matches 100 run function ntils:z/item/replace/slots/100
 execute if score #slot ntils.z.temp matches 101 run function ntils:z/item/replace/slots/101
 execute if score #slot ntils.z.temp matches 102 run function ntils:z/item/replace/slots/102
