@@ -2,6 +2,9 @@
 #
 # Modify the data of ntils:api string.parse.in with the string you want to string.parse
 # The resulting array of characters will be located at ntils:api string.parse.out
+#
+# PERFORMANCE: Excellent
+#   Saves on function executions by bulk parsing. Very fast
 
 execute store result score #loop ntils.z.temp run data get storage ntils:api string.parse.in
 scoreboard players operation #loop ntils.z.temp /= #8 ntils.z.const

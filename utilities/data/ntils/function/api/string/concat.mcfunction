@@ -2,6 +2,11 @@
 #
 # Modify the data of ntils:api string.concat.in with the array you want to turn into a string
 # The resulting string will be located at ntils:api string.concat.out
+#
+# Note: BREAKS WITH NEWLINES AND QUOTES! This is not for heavy-duty stuff.
+#
+# PERFORMANCE: Great
+#   Not the best theoretical concat speed but still faster than one-by-one.
 
 data modify storage ntils:api string.concat.out set value ''
 data modify storage ntils:z string.concat.macro set value {0:'',1:'',2:'',3:'',4:'',5:'',6:'',7:'',out:''}
