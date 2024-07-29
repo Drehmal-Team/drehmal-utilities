@@ -11,13 +11,15 @@ scoreboard objectives add ntils.z.id dummy
 
 scoreboard objectives add ntils.z.tag_scores.checked dummy
 
-scoreboard objectives add ntils.z.inv.update dummy
+scoreboard objectives add ntils.z.player.inv.update.bool dummy
 
 scoreboard objectives add ntils.z.combat.heal.subtick dummy
 
 scoreboard objectives add ntils.z.combat.death minecraft.custom:deaths
 
 scoreboard objectives add ntils.z.combat.fire.clear.bool dummy
+
+scoreboard objectives add ntils.z.combat.fire.light.bool dummy
 
 # SCHEDULE LOOPS #
 
@@ -93,3 +95,7 @@ execute in ntils:z/empty if loaded 0 0 0 run function ntils:z/void/place_barrel
 # LOOKUP TABLES #
 
 function ntils:z/lookups/load
+
+# POINTLESS MACRO INIT #
+
+data modify storage ntils:z player.tick.macro set value {id:0}

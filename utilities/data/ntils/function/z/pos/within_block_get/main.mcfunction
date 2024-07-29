@@ -9,4 +9,5 @@ execute store result storage ntils:z macro.z int -1 run data get storage ntils:z
 function ntils:z/pos/within_block_get/macro with storage ntils:z macro
 
 data modify storage ntils:api pos.within_block_get.out set from entity @s Pos
+teleport @s 0 -1000 0
 kill @s

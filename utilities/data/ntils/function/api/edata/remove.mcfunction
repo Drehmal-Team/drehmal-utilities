@@ -4,6 +4,9 @@
 # NOTE: This will remove the entity from any team and delete ANY SCORES it has! Sadly, this seems unavoidable. Talk to mojang if you have an issue.
 #
 # IN: string array
+#
+# PERFORMANCE: Bad
+#   This is a last resort function for NBT that is completely unremovable. Do not make a habit of using this under any circumstance.
 
 function ntils:api/edata/get_id
 

@@ -1,1 +1,0 @@
-$execute positioned ~$(x) ~$(y) ~$(z) run function ntils:z/place_block/zzz

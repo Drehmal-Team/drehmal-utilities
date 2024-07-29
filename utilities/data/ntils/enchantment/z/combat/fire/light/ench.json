@@ -1,6 +1,6 @@
 {
     "description": "",
-    "supported_items": "minecraft:netherite_axe",
+    "supported_items": [],
     "weight": 1,
     "max_level": 1,
     "min_cost": {

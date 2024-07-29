@@ -1,11 +1,13 @@
 # EDATA/TO_HEX
 #
 # Converts an int-array UUID at "ntils:api uuid.to_hex.in" to a stringified UUID at "ntils:api uuid.to_hex.out"
-# Note: this is exceedingly pointlessly optimized
 #
 # IN: int array
 #
 # OUT: string
+#
+# Performance: Good
+#   Uses two macros, but the math is otherwise perfect. Don't overuse this.
 
 data modify storage ntils:z uuid.to_hex.macro set value {0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0}
 execute store result score #h7 ntils.z.temp store result score #h6 ntils.z.temp run data get storage ntils:api uuid.to_hex.in[0]

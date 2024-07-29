@@ -1,1 +1,0 @@
-$execute store success score #diff ntils.z.temp run data modify storage ntils:z tempItem set from storage ntils:z players[{id:$(id)}].data.mainhand

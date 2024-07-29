@@ -1,1 +1,0 @@
-execute as @a[scores={ntils.z.inv.update=1..}] run function ntils:z/inv/update/as

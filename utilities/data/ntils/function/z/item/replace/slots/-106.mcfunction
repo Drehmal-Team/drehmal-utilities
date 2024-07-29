@@ -1,1 +1,0 @@
-execute in ntils:z/empty run item replace entity @s weapon.offhand from block 0 0 0 container.0

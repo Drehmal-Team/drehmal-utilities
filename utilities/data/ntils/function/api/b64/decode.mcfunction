@@ -5,6 +5,9 @@
 # IN: string
 #
 # OUT: char array
+#
+# PERFORMANCE: Bad
+#   Very optimized for its purpose but still not great. Only use this on the portion of base64 you actually need converted.
 
 execute store result score #loop ntils.z.temp store result score #len ntils.z.temp run data get storage ntils:api b64.decode.in
 

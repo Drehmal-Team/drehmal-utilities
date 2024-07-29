@@ -25,6 +25,9 @@
 #                               Set to higher values to make the third point further away or lower to make it closer.
 #
 # yes this uses both macro and scoreboard inputs sue me
+#
+# PERFORMANCE: Bad
+#   Do not use this multiple times per tick, and try to minimize the distance per tick of it. It is not very great for performance at all.
 
 $data modify storage ntils:z macro set value {command:"$(Command)",end_pos:[]}
 $scoreboard players set #steps ntils.z.temp $(Steps)

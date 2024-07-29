@@ -1,3 +1,5 @@
+return fail
+
 data modify storage ntils:z combat.damage.args set from storage ntils:api combat.damage.in.Args
 data modify storage ntils:z combat.damage.macro set value {}
 

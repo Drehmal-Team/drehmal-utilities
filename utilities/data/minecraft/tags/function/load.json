@@ -1,6 +1,7 @@
 {
     "values": [
-  "ntils:z/load"
+  "ntils:z/load",
+  "#ntils:api/generic/load"
     ],
     "replace":false
   }

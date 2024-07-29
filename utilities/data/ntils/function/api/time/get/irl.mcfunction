@@ -1,3 +1,5 @@
+return fail
+
 execute if score #GETTING_TIME# ntils.z.global matches 1 run return fail
 scoreboard players set #TIME_SPENT# ntils.z.global 0
 scoreboard players set #GETTING_TIME# ntils.z.global 1

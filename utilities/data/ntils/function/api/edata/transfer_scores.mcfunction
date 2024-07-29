@@ -8,6 +8,10 @@
 # - Destination: A username/hex UUID to copy to
 #
 # Both the source and destination will be wiped. The source will be wiped because that's simply unavoidable and the destination because :shrug:
+#
+# PERFORMANCE: Excellent
+#   Takes multiple ticks. No discerable impact on lag.
+
 
 execute if score #GETTING_SCORES# ntils.z.global matches 1 run return fail
 

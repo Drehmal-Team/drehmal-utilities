@@ -1,1 +1,0 @@
-$data modify storage ntils:z player_ids."$(uuid)" set value $(id)

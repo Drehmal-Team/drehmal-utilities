@@ -1,6 +1,7 @@
 {
     "values": [
-  "ntils:z/tick"
+  "ntils:z/tick",
+  "#ntils:api/generic/tick"
     ],
     "replace":false
   }

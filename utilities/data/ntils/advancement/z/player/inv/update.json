@@ -10,7 +10,7 @@
                 "condition": "minecraft:entity_scores",
                 "entity": "this",
                 "scores": {
-                  "ntils.z.inv.update": {
+                  "ntils.z.player.inv.update.bool": {
                     "min": 1
                   }
                 }
@@ -21,7 +21,7 @@
       }
     },
     "rewards": {
-      "function": "ntils:z/inv/update/reward"
+      "function": "ntils:z/player/inv/update/reward"
     }
   }
   

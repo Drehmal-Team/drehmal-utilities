@@ -1,17 +1,19 @@
 # COMBAT/HEAL
 #
-# Heals the player by a specific amount. Scoreboard input: #HEAL_AMOUNT# ntils.API, scaled by 1000 (so 1 heart = 2000, 1/2 heart = 1000, etc.)
+# Heals the player by a specific amount. Scoreboard input: #COMBAT.HEAL.AMOUNT# ntils.API, scaled by 1000 (so 1 heart = 2000, 1/2 heart = 1000, etc.)
 #
 # subtick n junk stolen from here: https://github.com/XanBelOr/Minecraft-Simple-Custom-Heal/
+
+return fail
 
 execute store result score #heal_amt ntils.z.temp run attribute @s generic.max_health get 1000
 execute store result score #heal_mod ntils.z.temp run data get entity @s Health 1000
 
 scoreboard players operation #heal_amt ntils.z.temp -= #heal_mod ntils.z.temp
 
-execute if score #HEAL_AMOUNT# ntils.API > #heal_amt ntils.z.temp run return run effect give @s instant_health 1 28 true
+execute if score #COMBAT.HEAL.AMOUNT# ntils.API > #heal_amt ntils.z.temp run return run effect give @s instant_health 1 28 true
 
-scoreboard players operation #heal_amt ntils.z.temp -= #HEAL_AMOUNT# ntils.API
+scoreboard players operation #heal_amt ntils.z.temp -= #COMBAT.HEAL.AMOUNT# ntils.API
 
 scoreboard players set #atr ntils.z.temp 0
 

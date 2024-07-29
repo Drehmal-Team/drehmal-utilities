@@ -4,5 +4,8 @@
 #
 # MACRO INPUTS:
 # - Len: The length of the vector in blocks.
+#
+# Performance: Ok
+#   -Really only exists for convienence. I would adivse using this for readability.
 
-$execute in ntils:z/empty positioned .0 0 .0 positioned ^ ^ ^$(Len) summon marker run function ntils:z/vector/get/main
+$execute positioned .0 0 .0 positioned ^ ^ ^$(Len) summon marker run function ntils:z/vector/get/main

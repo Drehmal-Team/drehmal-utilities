@@ -7,6 +7,8 @@
 # - Command: A syntacically correct command. No " quotes or escape characters
 # - RadiusMin: The lower bound of the radius. Integer. Scaled by 100 (so 3 block radius = 300)
 # - RadiusMax: The upper bound of the radius. Integer. Scaled by 100 (so 3 block radius = 300)
+#
+# PERFORMANCE: Good
 
 $data modify storage ntils:z macro set value {cmd:"$(Command)",x:0,y:0}
 

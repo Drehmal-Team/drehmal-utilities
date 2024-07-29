@@ -7,7 +7,7 @@
         "predicate": {
           "stepping_on": {
             "block": {
-              "blocks": "#ntils:api/nocol"
+              "blocks": "#ntils:z/notground"
             }
           }
         }

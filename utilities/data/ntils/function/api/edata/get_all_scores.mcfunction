@@ -8,6 +8,9 @@
 #                        All scoreholders will be considered valid if this list is unspecified.
 #       - Min_Length: The minimum length of a scoreholder that will be able to be added to the output list.
 #       - Max_Length: The maximum length of a scoreholder that will be able to be added to the output list.
+#
+# PERFORMANCE: Horrible
+#   Runs in a single tick and creates a massive lag spike if the scoreboard file is large. Do not run this outside of, say, load functions.
 
 execute if score #GETTING_SCORES# ntils.z.global matches 1 run return fail
 

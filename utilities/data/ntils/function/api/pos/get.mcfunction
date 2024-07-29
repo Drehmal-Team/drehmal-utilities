@@ -1,5 +1,9 @@
 # POS/GET
 #
-# Copies the current command context location to the storage location ntils.api vector
+# Copies the current command context location to the storage location ntils.api pos.get.out
+#
+# PERFORMANCE: Ok
+#   Use when the current command context is different from the position of the context entity, or when running as a player.
+#   Otherwise, just get the entities position data.
 
-execute in ntils:z/empty summon marker run function ntils:z/pos/get/main
+execute summon marker run function ntils:z/pos/get/main

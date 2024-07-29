@@ -1,0 +1,1 @@
+execute as @a[scores={ntils.z.combat.fire.light.bool=1}] run function ntils:z/combat/fire/light/as

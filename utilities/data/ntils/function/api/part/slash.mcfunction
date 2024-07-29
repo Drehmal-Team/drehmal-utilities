@@ -11,6 +11,9 @@
 # MACRO INPUTS:
 #   - Command: This is a string which will be the command that is played at each point along the slash. It will run at the location this function is run but its rotation will be modified.
 #              Try a command like: "particle small_flame ^ ^ ^ ^ ^ ^1000000 0.000000166 0" to get an idea of how this works.
+#
+# PERFORMANCE: Good
+#   Quite surprisingly, even with a billion macro calls this runs quite well. Still, don't overuse it.
 
 execute unless score #SLASH_REVERSE# ntils.API matches 1 run scoreboard players operation #framecurrent2 ntils.z.temp = #SLASH_FRAME_CURRENT# ntils.API
 execute if score #SLASH_REVERSE# ntils.API matches 1 run scoreboard players operation #framecurrent2 ntils.z.temp = #SLASH_FRAME_MAX# ntils.API
