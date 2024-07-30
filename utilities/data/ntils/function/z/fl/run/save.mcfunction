@@ -1,0 +1,2 @@
+$data merge entity @s {Tags:["ntils.z.ignore","ntils.z.marker","ntils.z.fl.run.command"],data:{ntils:{z:{fl:{run:{cmd:"$(Command)"}}}}}}
+execute store result entity @s data.ntils.z.fl.run.id int 1 run function ntils:api/fl/new {Args:{},Name:"ntils.z.fl.run.internal"}

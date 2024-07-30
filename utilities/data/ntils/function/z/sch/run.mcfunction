@@ -1,4 +1,5 @@
-$execute in $(dim) as $(uuid) positioned $(x) $(y) $(z)$(extra)run $(cmd)
+#$tellraw @a {"text": "execute in $(dim)$(extra2)$(uuid)$(extra)$(x)$(s)$(y)$(s)$(z)$(s)run $(cmd)$(extra3)$(macro)","color": "green"}
+$execute in $(dim)$(extra2)$(uuid)$(extra)$(x)$(s)$(y)$(s)$(z)$(s)run $(cmd)$(extra3)$(macro)
 $data remove storage ntils:z sch.tick.timestamps.$(gt)[-1]
 $data modify storage ntils:z sch.run.macro set from storage ntils:z sch.tick.timestamps.$(gt)[-1]
 $data modify storage ntils:z sch.run.macro.gt set value $(gt)

@@ -1,0 +1,1 @@
+$data modify storage ntils:api fl.query.out append from storage ntils:z fl.list[{dim:"$(dim)",x:$(x),z:$(z)}]
