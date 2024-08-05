@@ -23,7 +23,7 @@
 #   The lag of this command depends heavily on what it's being run as and on what additional arguments are being provided.
 #   The fastest way to run this is with Dimension provided, As unspecified, and a hardcoded At position. The slowest is with only the As flag as true.
 #   If you can set the command to run At and provide a Dimension, its shockingly good. Otherwise, however, it's mostly Ok, and can be borderline Bad.
-#   Still use it to cut down on needless scoreboard timers and the like.
+#   Still use it to cut down on needless scoreboard timers and the like, and to cut down on tick functions in places like players:main and especially entity tick functions.
 
 $data modify storage ntils:z sch.new.args set value $(Args)
 $data modify storage ntils:z sch.temp set value {cmd:"$(Command)",uuid:'',name:"$(Name)",id:0,dim:'',extra:' positioned ',s:" ",extra2:'',extra3:'',macro:'',x:'',y:'',z:''}

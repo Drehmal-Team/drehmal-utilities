@@ -14,13 +14,13 @@ execute store result score #x ntils.z.temp store result score #x2 ntils.z.int ru
 execute store result score #y ntils.z.temp store result score #y2 ntils.z.int run data get storage ntils:z tempPosEnd[1] 100
 execute store result score #z ntils.z.temp store result score #z2 ntils.z.int run data get storage ntils:z tempPosEnd[2] 100
 
-data modify storage ntils:z math.distance.in set value {X:1.0d,Y:1.0d,Z:1.0d}
+data modify storage ntils:api math.distance.in set value {X:1.0f,Y:1.0f,Z:1.0f}
 
-execute store result storage ntils:z math.distance.in.X double 0.01 run scoreboard players operation #x ntils.z.temp -= #x2 ntils.z.temp
-execute store result storage ntils:z math.distance.in.Y double 0.01 run scoreboard players operation #y ntils.z.temp -= #y2 ntils.z.temp
-execute store result storage ntils:z math.distance.in.Z double 0.01 run scoreboard players operation #z ntils.z.temp -= #z2 ntils.z.temp
+execute store result storage ntils:api math.distance.in.X float 0.01 run scoreboard players operation #x ntils.z.temp -= #x2 ntils.z.temp
+execute store result storage ntils:api math.distance.in.Y float 0.01 run scoreboard players operation #y ntils.z.temp -= #y2 ntils.z.temp
+execute store result storage ntils:api math.distance.in.Z float 0.01 run scoreboard players operation #z ntils.z.temp -= #z2 ntils.z.temp
 
-function ntils:api/math/distance with storage ntils:z math.distance.in
+function ntils:api/math/distance
 
 execute store result score #sqrt_out ntils.z.temp run data get storage ntils:api math.distance.out 100
 

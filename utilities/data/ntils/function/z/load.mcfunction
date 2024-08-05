@@ -50,6 +50,26 @@ scoreboard objectives add ntils.z.uuid.get_int.1 dummy
 scoreboard objectives add ntils.z.uuid.get_int.2 dummy
 scoreboard objectives add ntils.z.uuid.get_int.3 dummy
 
+# BEIZER ITERATION SCOREBOARDS #
+
+scoreboard objectives add ntils.z.math.bz.i.vec.x dummy
+scoreboard objectives add ntils.z.math.bz.i.vec.y dummy
+scoreboard objectives add ntils.z.math.bz.i.vec.z dummy
+
+scoreboard objectives add ntils.z.math.bz.i.accel.x dummy
+scoreboard objectives add ntils.z.math.bz.i.accel.y dummy
+scoreboard objectives add ntils.z.math.bz.i.accel.z dummy
+
+scoreboard objectives add ntils.z.math.bz.i.vec_s.x dummy
+scoreboard objectives add ntils.z.math.bz.i.vec_s.y dummy
+scoreboard objectives add ntils.z.math.bz.i.vec_s.z dummy
+
+scoreboard objectives add ntils.z.math.bz.i.base.x dummy
+scoreboard objectives add ntils.z.math.bz.i.base.y dummy
+scoreboard objectives add ntils.z.math.bz.i.base.z dummy
+
+scoreboard objectives add ntils.z.math.bz.i.temp dummy
+
 # NUMERICAL CONSTANTS #
 
 scoreboard players set #-1 ntils.z.const -1
@@ -96,6 +116,7 @@ execute in ntils:z/empty if loaded 0 0 0 run function ntils:z/void/place_barrel
 
 function ntils:z/lookups/load
 
-# POINTLESS MACRO INIT #
+# POINTLESS STORAGE INIT #
 
+data modify storage ntils:api math.bz.i.out set value [0d,0d,0d]
 data modify storage ntils:z player.tick.macro set value {id:0}
