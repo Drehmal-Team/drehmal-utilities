@@ -50,25 +50,53 @@ scoreboard objectives add ntils.z.uuid.get_int.1 dummy
 scoreboard objectives add ntils.z.uuid.get_int.2 dummy
 scoreboard objectives add ntils.z.uuid.get_int.3 dummy
 
-# BEIZER ITERATION SCOREBOARDS #
+# 3 POINT BEIZER ITERATION SCOREBOARDS #
 
-scoreboard objectives add ntils.z.math.bz.i.vec.x dummy
-scoreboard objectives add ntils.z.math.bz.i.vec.y dummy
-scoreboard objectives add ntils.z.math.bz.i.vec.z dummy
+scoreboard objectives add ntils.z.math.bz.3.i.vec.x dummy
+scoreboard objectives add ntils.z.math.bz.3.i.vec.y dummy
+scoreboard objectives add ntils.z.math.bz.3.i.vec.z dummy
 
-scoreboard objectives add ntils.z.math.bz.i.accel.x dummy
-scoreboard objectives add ntils.z.math.bz.i.accel.y dummy
-scoreboard objectives add ntils.z.math.bz.i.accel.z dummy
+scoreboard objectives add ntils.z.math.bz.3.i.accel.x dummy
+scoreboard objectives add ntils.z.math.bz.3.i.accel.y dummy
+scoreboard objectives add ntils.z.math.bz.3.i.accel.z dummy
 
-scoreboard objectives add ntils.z.math.bz.i.vec_s.x dummy
-scoreboard objectives add ntils.z.math.bz.i.vec_s.y dummy
-scoreboard objectives add ntils.z.math.bz.i.vec_s.z dummy
+scoreboard objectives add ntils.z.math.bz.3.i.vec_s.x dummy
+scoreboard objectives add ntils.z.math.bz.3.i.vec_s.y dummy
+scoreboard objectives add ntils.z.math.bz.3.i.vec_s.z dummy
 
-scoreboard objectives add ntils.z.math.bz.i.base.x dummy
-scoreboard objectives add ntils.z.math.bz.i.base.y dummy
-scoreboard objectives add ntils.z.math.bz.i.base.z dummy
+scoreboard objectives add ntils.z.math.bz.3.i.base.x dummy
+scoreboard objectives add ntils.z.math.bz.3.i.base.y dummy
+scoreboard objectives add ntils.z.math.bz.3.i.base.z dummy
 
-scoreboard objectives add ntils.z.math.bz.i.temp dummy
+scoreboard objectives add ntils.z.math.bz.3.i.temp dummy
+
+# 4 POINT BEIZER ITERATION SCOREBOARDS #
+
+scoreboard objectives add ntils.z.math.bz.4.i.vec.x dummy
+scoreboard objectives add ntils.z.math.bz.4.i.vec.y dummy
+scoreboard objectives add ntils.z.math.bz.4.i.vec.z dummy
+
+scoreboard objectives add ntils.z.math.bz.4.i.accel.x dummy
+scoreboard objectives add ntils.z.math.bz.4.i.accel.y dummy
+scoreboard objectives add ntils.z.math.bz.4.i.accel.z dummy
+
+scoreboard objectives add ntils.z.math.bz.4.i.accel_s.x dummy
+scoreboard objectives add ntils.z.math.bz.4.i.accel_s.y dummy
+scoreboard objectives add ntils.z.math.bz.4.i.accel_s.z dummy
+
+scoreboard objectives add ntils.z.math.bz.4.i.jerk.x dummy
+scoreboard objectives add ntils.z.math.bz.4.i.jerk.y dummy
+scoreboard objectives add ntils.z.math.bz.4.i.jerk.z dummy
+
+scoreboard objectives add ntils.z.math.bz.4.i.vec_s.x dummy
+scoreboard objectives add ntils.z.math.bz.4.i.vec_s.y dummy
+scoreboard objectives add ntils.z.math.bz.4.i.vec_s.z dummy
+
+scoreboard objectives add ntils.z.math.bz.4.i.base.x dummy
+scoreboard objectives add ntils.z.math.bz.4.i.base.y dummy
+scoreboard objectives add ntils.z.math.bz.4.i.base.z dummy
+
+scoreboard objectives add ntils.z.math.bz.4.i.temp dummy
 
 # NUMERICAL CONSTANTS #
 
@@ -77,6 +105,8 @@ scoreboard players set #2 ntils.z.const 2
 scoreboard players set #3 ntils.z.const 3
 scoreboard players set #4 ntils.z.const 4
 scoreboard players set #5 ntils.z.const 5
+scoreboard players set #6 ntils.z.const 6
+scoreboard players set #6000 ntils.z.const 6000
 scoreboard players set #8 ntils.z.const 8
 
 scoreboard players set #120 ntils.z.const 120
@@ -118,5 +148,6 @@ function ntils:z/lookups/load
 
 # POINTLESS STORAGE INIT #
 
-data modify storage ntils:api math.bz.i.out set value [0d,0d,0d]
+data modify storage ntils:api math.bz.3.i.out set value [0d,0d,0d]
+data modify storage ntils:api math.bz.4.i.out set value [0d,0d,0d]
 data modify storage ntils:z player.tick.macro set value {id:0}

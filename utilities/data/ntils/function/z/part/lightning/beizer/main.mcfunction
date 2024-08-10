@@ -1,58 +1,39 @@
-data modify storage ntils:z tempPos set from entity @s Pos
+data modify storage ntils:z part.lightning.beizer.pos_start set from entity @s Pos
 
-execute store result score #x2 ntils.z.temp store result score #x1 ntils.z.int run data get storage ntils:z tempPos[0] 100
-execute store result score #y2 ntils.z.temp store result score #y1 ntils.z.int run data get storage ntils:z tempPos[1] 100
-execute store result score #z2 ntils.z.temp store result score #z1 ntils.z.int run data get storage ntils:z tempPos[2] 100
+execute store result score #part.lightning.beizer.d.x1 ntils.z.temp store result score #part.lightning.beizer.r.x1 ntils.z.temp store result score #math.bz.3.i.in.a.x ntils.API run data get storage ntils:z part.lightning.beizer.pos_start[0] 1000
+execute store result score #part.lightning.beizer.d.y1 ntils.z.temp store result score #part.lightning.beizer.r.y1 ntils.z.temp store result score #math.bz.3.i.in.a.y ntils.API run data get storage ntils:z part.lightning.beizer.pos_start[1] 1000
+execute store result score #part.lightning.beizer.d.z1 ntils.z.temp store result score #part.lightning.beizer.r.z1 ntils.z.temp store result score #math.bz.3.i.in.a.z ntils.API run data get storage ntils:z part.lightning.beizer.pos_start[2] 1000
 
 teleport @s ~ ~ ~
 
-data modify storage ntils:z tempPosEnd set from entity @s Pos
-data modify storage ntils:z macro.end_pos set from storage ntils:z tempPosEnd
+data modify storage ntils:z part.lightning.beizer.pos_end set from entity @s Pos
+data modify storage ntils:z macro.end_pos set from storage ntils:z part.lightning.beizer.pos_end
 data modify entity @s data.ntils.z.particle.lightning set from storage ntils:z macro
 
-execute store result score #x ntils.z.temp store result score #x2 ntils.z.int run data get storage ntils:z tempPosEnd[0] 100
-execute store result score #y ntils.z.temp store result score #y2 ntils.z.int run data get storage ntils:z tempPosEnd[1] 100
-execute store result score #z ntils.z.temp store result score #z2 ntils.z.int run data get storage ntils:z tempPosEnd[2] 100
+execute store result score #part.lightning.beizer.d.x2 ntils.z.temp store result score #part.lightning.beizer.r.x2 ntils.z.temp store result score #math.bz.3.i.in.c.x ntils.API run data get storage ntils:z part.lightning.beizer.pos_end[0] 1000
+execute store result score #part.lightning.beizer.d.y2 ntils.z.temp store result score #part.lightning.beizer.r.y2 ntils.z.temp store result score #math.bz.3.i.in.c.y ntils.API run data get storage ntils:z part.lightning.beizer.pos_end[1] 1000
+execute store result score #part.lightning.beizer.d.z2 ntils.z.temp store result score #part.lightning.beizer.r.z2 ntils.z.temp store result score #math.bz.3.i.in.c.z ntils.API run data get storage ntils:z part.lightning.beizer.pos_end[2] 1000
 
 data modify storage ntils:api math.distance.in set value {X:1.0f,Y:1.0f,Z:1.0f}
 
-execute store result storage ntils:api math.distance.in.X float 0.01 run scoreboard players operation #x ntils.z.temp -= #x2 ntils.z.temp
-execute store result storage ntils:api math.distance.in.Y float 0.01 run scoreboard players operation #y ntils.z.temp -= #y2 ntils.z.temp
-execute store result storage ntils:api math.distance.in.Z float 0.01 run scoreboard players operation #z ntils.z.temp -= #z2 ntils.z.temp
+execute store result storage ntils:api math.distance.in.X float 1 run scoreboard players operation #part.lightning.beizer.d.x1 ntils.z.temp -= #part.lightning.beizer.d.x2 ntils.z.temp
+execute store result storage ntils:api math.distance.in.Y float 1 run scoreboard players operation #part.lightning.beizer.d.y1 ntils.z.temp -= #part.lightning.beizer.d.y2 ntils.z.temp
+execute store result storage ntils:api math.distance.in.Z float 1 run scoreboard players operation #part.lightning.beizer.d.z1 ntils.z.temp -= #part.lightning.beizer.d.z2 ntils.z.temp
 
 function ntils:api/math/distance
 
-execute store result score #sqrt_out ntils.z.temp run data get storage ntils:api math.distance.out 100
+execute store result score @s ntils.z.p.loop_sentinel store result score @s ntils.z.p.loop_step store result score #math.bz.3.i.in.iterations ntils.API run data get storage ntils:api math.distance.out 0.001
+scoreboard players remove @s ntils.z.p.loop_sentinel 1
+execute if score #steps ntils.z.temp matches ..1 run scoreboard players set #steps ntils.z.temp 1
+scoreboard players operation @s ntils.z.p.loop_step /= #steps ntils.z.temp
+scoreboard players set @s ntils.z.p.loop 0
+scoreboard players set #loop ntils.z.temp 0
 
 execute if score #DIRECTION_MODE# ntils.API matches 1 run function ntils:z/part/lightning/beizer/direction
 execute unless score #DIRECTION_MODE# ntils.API matches 1 run function ntils:z/part/lightning/beizer/random
 
-execute store result score @s ntils.z.p.loop_sentinel store result score @s ntils.z.p.loop_max run scoreboard players operation #sqrt_out ntils.z.temp /= #100 ntils.z.const
-execute store result score @s ntils.z.p.loop_step run scoreboard players remove @s ntils.z.p.loop_sentinel 1
+data modify entity @s Pos set from storage ntils:z part.lightning.beizer.pos_start
 
-data modify entity @s Pos set from storage ntils:z tempPos
-
-scoreboard players operation @s ntils.z.p.x1_mod = #x1 ntils.z.int
-scoreboard players operation @s ntils.z.p.y1_mod = #y1 ntils.z.int
-scoreboard players operation @s ntils.z.p.z1_mod = #z1 ntils.z.int
-
-scoreboard players operation @s ntils.z.p.x2_mod = #x2 ntils.z.int
-scoreboard players operation @s ntils.z.p.y2_mod = #y2 ntils.z.int
-scoreboard players operation @s ntils.z.p.z2_mod = #z2 ntils.z.int
-
-scoreboard players operation @s ntils.z.p.x1_mod -= @s ntils.z.p.x3
-scoreboard players operation @s ntils.z.p.y1_mod -= @s ntils.z.p.y3
-scoreboard players operation @s ntils.z.p.z1_mod -= @s ntils.z.p.z3
-
-scoreboard players operation @s ntils.z.p.x2_mod -= @s ntils.z.p.x3
-scoreboard players operation @s ntils.z.p.y2_mod -= @s ntils.z.p.y3
-scoreboard players operation @s ntils.z.p.z2_mod -= @s ntils.z.p.z3
-
-scoreboard players set @s ntils.z.p.loop 0
-
-execute if score @s ntils.z.p.loop_sentinel matches 600.. store result score @s ntils.z.p.loop_step run scoreboard players set @s ntils.z.p.loop_sentinel 600
-
-scoreboard players operation @s ntils.z.p.loop_step /= #steps ntils.z.temp
-scoreboard players set #loop ntils.z.temp 0
+function ntils:api/math/bz/3/i/s/start
 
 $execute if score @s ntils.z.p.loop_sentinel matches 1.. at @s run function ntils:z/part/lightning/beizer/loop {command:"$(command)"}
