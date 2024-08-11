@@ -39,72 +39,72 @@
 #
 # PERFORMANCE: Great. It's a healthy amount of scoreboard operations, but it's ultimately just scores.
 
-scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.c.x ntils.API
-scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.b.x ntils.API
-scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.i.temp *= #2 ntils.z.const
+scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.temp = #math.bz.3.i.in.c.x ntils.API
+scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.temp = #math.bz.3.i.in.b.x ntils.API
+scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.temp *= #2 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.i.temp -= #math.bz.3.i.o.x ntils.z.math.bz.3.i.temp
-scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.i.temp += #math.bz.3.i.in.a.x ntils.API
-scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.i.temp *= #1000 ntils.z.const
-scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.i.temp /= #math.bz.3.i.in.iterations ntils.API
-scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.i.temp /= #math.bz.3.i.in.iterations ntils.API
+scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.temp -= #math.bz.3.i.o.x ntils.z.math.bz.3.temp
+scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.temp += #math.bz.3.i.in.a.x ntils.API
+scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.temp *= #1000 ntils.z.const
+scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.temp /= #math.bz.3.i.in.iterations ntils.API
+scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.temp /= #math.bz.3.i.in.iterations ntils.API
 
-scoreboard players operation #math.bz.3.i.2a.x ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.a.x ntils.API
-scoreboard players operation #math.bz.3.i.2a.x ntils.z.math.bz.3.i.temp *= #2 ntils.z.const
+scoreboard players operation #math.bz.3.i.2a.x ntils.z.math.bz.3.temp = #math.bz.3.i.in.a.x ntils.API
+scoreboard players operation #math.bz.3.i.2a.x ntils.z.math.bz.3.temp *= #2 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.i.temp -= #math.bz.3.i.2a.x ntils.z.math.bz.3.i.temp
-scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.i.temp *= #1000 ntils.z.const
-scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.i.temp /= #math.bz.3.i.in.iterations ntils.API
+scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.temp -= #math.bz.3.i.2a.x ntils.z.math.bz.3.temp
+scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.temp *= #1000 ntils.z.const
+scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.temp /= #math.bz.3.i.in.iterations ntils.API
 
-execute store result score #math.bz.3.i.vec_s.x ntils.z.math.bz.3.i.temp store result score #math.bz.3.i.vec.x ntils.z.math.bz.3.i.temp run scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.i.temp += #math.bz.3.i.m.x ntils.z.math.bz.3.i.temp
-execute store result score #math.bz.3.i.accel.x ntils.z.math.bz.3.i.temp run scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.i.temp *= #2 ntils.z.const
+execute store result score #math.bz.3.i.vec_s.x ntils.z.math.bz.3.temp store result score #math.bz.3.i.vec.x ntils.z.math.bz.3.temp run scoreboard players operation #math.bz.3.i.o.x ntils.z.math.bz.3.temp += #math.bz.3.i.m.x ntils.z.math.bz.3.temp
+execute store result score #math.bz.3.i.accel.x ntils.z.math.bz.3.temp run scoreboard players operation #math.bz.3.i.m.x ntils.z.math.bz.3.temp *= #2 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.vec_s.x ntils.z.math.bz.3.i.temp /= #1000 ntils.z.const
+scoreboard players operation #math.bz.3.i.vec_s.x ntils.z.math.bz.3.temp /= #1000 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.c.y ntils.API
-scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.b.y ntils.API
-scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.i.temp *= #2 ntils.z.const
+scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.temp = #math.bz.3.i.in.c.y ntils.API
+scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.temp = #math.bz.3.i.in.b.y ntils.API
+scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.temp *= #2 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.i.temp -= #math.bz.3.i.o.y ntils.z.math.bz.3.i.temp
-scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.i.temp += #math.bz.3.i.in.a.y ntils.API
-scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.i.temp *= #1000 ntils.z.const
-scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.i.temp /= #math.bz.3.i.in.iterations ntils.API
-scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.i.temp /= #math.bz.3.i.in.iterations ntils.API
+scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.temp -= #math.bz.3.i.o.y ntils.z.math.bz.3.temp
+scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.temp += #math.bz.3.i.in.a.y ntils.API
+scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.temp *= #1000 ntils.z.const
+scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.temp /= #math.bz.3.i.in.iterations ntils.API
+scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.temp /= #math.bz.3.i.in.iterations ntils.API
 
-scoreboard players operation #math.bz.3.i.2a.y ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.a.y ntils.API
-scoreboard players operation #math.bz.3.i.2a.y ntils.z.math.bz.3.i.temp *= #2 ntils.z.const
+scoreboard players operation #math.bz.3.i.2a.y ntils.z.math.bz.3.temp = #math.bz.3.i.in.a.y ntils.API
+scoreboard players operation #math.bz.3.i.2a.y ntils.z.math.bz.3.temp *= #2 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.i.temp -= #math.bz.3.i.2a.y ntils.z.math.bz.3.i.temp
-scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.i.temp *= #1000 ntils.z.const
-scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.i.temp /= #math.bz.3.i.in.iterations ntils.API
+scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.temp -= #math.bz.3.i.2a.y ntils.z.math.bz.3.temp
+scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.temp *= #1000 ntils.z.const
+scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.temp /= #math.bz.3.i.in.iterations ntils.API
 
-execute store result score #math.bz.3.i.vec_s.y ntils.z.math.bz.3.i.temp store result score #math.bz.3.i.vec.y ntils.z.math.bz.3.i.temp run scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.i.temp += #math.bz.3.i.m.y ntils.z.math.bz.3.i.temp
-execute store result score #math.bz.3.i.accel.y ntils.z.math.bz.3.i.temp run scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.i.temp *= #2 ntils.z.const
+execute store result score #math.bz.3.i.vec_s.y ntils.z.math.bz.3.temp store result score #math.bz.3.i.vec.y ntils.z.math.bz.3.temp run scoreboard players operation #math.bz.3.i.o.y ntils.z.math.bz.3.temp += #math.bz.3.i.m.y ntils.z.math.bz.3.temp
+execute store result score #math.bz.3.i.accel.y ntils.z.math.bz.3.temp run scoreboard players operation #math.bz.3.i.m.y ntils.z.math.bz.3.temp *= #2 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.vec_s.y ntils.z.math.bz.3.i.temp /= #1000 ntils.z.const
+scoreboard players operation #math.bz.3.i.vec_s.y ntils.z.math.bz.3.temp /= #1000 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.c.z ntils.API
-scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.b.z ntils.API
-scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.i.temp *= #2 ntils.z.const
+scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.temp = #math.bz.3.i.in.c.z ntils.API
+scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.temp = #math.bz.3.i.in.b.z ntils.API
+scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.temp *= #2 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.i.temp -= #math.bz.3.i.o.z ntils.z.math.bz.3.i.temp
-scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.i.temp += #math.bz.3.i.in.a.z ntils.API
-scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.i.temp *= #1000 ntils.z.const
-scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.i.temp /= #math.bz.3.i.in.iterations ntils.API
-scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.i.temp /= #math.bz.3.i.in.iterations ntils.API
+scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.temp -= #math.bz.3.i.o.z ntils.z.math.bz.3.temp
+scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.temp += #math.bz.3.i.in.a.z ntils.API
+scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.temp *= #1000 ntils.z.const
+scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.temp /= #math.bz.3.i.in.iterations ntils.API
+scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.temp /= #math.bz.3.i.in.iterations ntils.API
 
-scoreboard players operation #math.bz.3.i.2a.z ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.a.z ntils.API
-scoreboard players operation #math.bz.3.i.2a.z ntils.z.math.bz.3.i.temp *= #2 ntils.z.const
+scoreboard players operation #math.bz.3.i.2a.z ntils.z.math.bz.3.temp = #math.bz.3.i.in.a.z ntils.API
+scoreboard players operation #math.bz.3.i.2a.z ntils.z.math.bz.3.temp *= #2 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.i.temp -= #math.bz.3.i.2a.z ntils.z.math.bz.3.i.temp
-scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.i.temp *= #1000 ntils.z.const
-scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.i.temp /= #math.bz.3.i.in.iterations ntils.API
+scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.temp -= #math.bz.3.i.2a.z ntils.z.math.bz.3.temp
+scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.temp *= #1000 ntils.z.const
+scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.temp /= #math.bz.3.i.in.iterations ntils.API
 
-execute store result score #math.bz.3.i.vec_s.z ntils.z.math.bz.3.i.temp store result score #math.bz.3.i.vec.z ntils.z.math.bz.3.i.temp run scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.i.temp += #math.bz.3.i.m.z ntils.z.math.bz.3.i.temp
-execute store result score #math.bz.3.i.accel.z ntils.z.math.bz.3.i.temp run scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.i.temp *= #2 ntils.z.const
+execute store result score #math.bz.3.i.vec_s.z ntils.z.math.bz.3.temp store result score #math.bz.3.i.vec.z ntils.z.math.bz.3.temp run scoreboard players operation #math.bz.3.i.o.z ntils.z.math.bz.3.temp += #math.bz.3.i.m.z ntils.z.math.bz.3.temp
+execute store result score #math.bz.3.i.accel.z ntils.z.math.bz.3.temp run scoreboard players operation #math.bz.3.i.m.z ntils.z.math.bz.3.temp *= #2 ntils.z.const
 
-scoreboard players operation #math.bz.3.i.vec_s.z ntils.z.math.bz.3.i.temp /= #1000 ntils.z.const
+scoreboard players operation #math.bz.3.i.vec_s.z ntils.z.math.bz.3.temp /= #1000 ntils.z.const
 
-execute store result storage ntils:api math.bz.3.i.out[0] double 0.001 store result score #math.bz.3.i.out.x ntils.API run scoreboard players operation #math.bz.3.i.base.x ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.a.x ntils.API
-execute store result storage ntils:api math.bz.3.i.out[1] double 0.001 store result score #math.bz.3.i.out.y ntils.API run scoreboard players operation #math.bz.3.i.base.y ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.a.y ntils.API
-execute store result storage ntils:api math.bz.3.i.out[2] double 0.001 store result score #math.bz.3.i.out.z ntils.API run scoreboard players operation #math.bz.3.i.base.z ntils.z.math.bz.3.i.temp = #math.bz.3.i.in.a.z ntils.API
+execute store result storage ntils:api math.bz.3.i.out[0] double 0.001 store result score #math.bz.3.i.out.x ntils.API run scoreboard players operation #math.bz.3.i.base.x ntils.z.math.bz.3.temp = #math.bz.3.i.in.a.x ntils.API
+execute store result storage ntils:api math.bz.3.i.out[1] double 0.001 store result score #math.bz.3.i.out.y ntils.API run scoreboard players operation #math.bz.3.i.base.y ntils.z.math.bz.3.temp = #math.bz.3.i.in.a.y ntils.API
+execute store result storage ntils:api math.bz.3.i.out[2] double 0.001 store result score #math.bz.3.i.out.z ntils.API run scoreboard players operation #math.bz.3.i.base.z ntils.z.math.bz.3.temp = #math.bz.3.i.in.a.z ntils.API
