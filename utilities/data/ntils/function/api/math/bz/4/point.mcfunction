@@ -1,6 +1,6 @@
 # MATH/BZ/4/POINT
 #
-# Given a start point (a), an end point (d), amd two control points (b) and (c), and a t value, calculates a single point along a bezier curve.
+# Given a start point (a), an end point (d), control points (b) and (c), and a t value, calculates a single point along a bezier curve.
 #
 #   INPUT SCORES:
 #
@@ -24,12 +24,12 @@
 #   #math.bz.4.in.d.y ntils.API
 #   #math.bz.4.in.d.z ntils.API
 #
-# This is the percent along the curve you wish to have the point at. Set to a value between 0 and 1000000
+# This is the percent along the curve you wish to have the point at. Set to a value between 0 and 1000
 #   #math.bz.4.in.t ntils.API
 #
 #   OUTPUT SCORES:
 #
-# These are the scores for the XYZ output of the current position along the beizer curve.
+# These are the scores for the XYZ output of the current position along the bezier curve.
 #   #math.bz.4.out.x ntils.API
 #   #math.bz.4.out.y ntils.API
 #   #math.bz.4.out.z ntils.API

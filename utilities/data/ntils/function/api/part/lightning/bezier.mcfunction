@@ -1,13 +1,13 @@
-# PART/LIGHTING/BEIZER
+# PART/LIGHTING/BEZIER
 #
-# This is beizer lightning. Run like this: execute positioned x y z summon marker positioned x2 y2 z2 run function ntils:api/part/lightning/beizer {Steps:<>,Delay:<>,Command:<>}
+# This is bezier lightning. Run like this: execute positioned x y z summon marker positioned x2 y2 z2 run function ntils:api/part/lightning/bezier {Steps:<>,Delay:<>,Command:<>}
 #
 # The start of the lightning will be at x y z and the end will be at x2 y2 z2. Think of it like this: marker location is the start, and the final function context is the end
 #
 # MACRO INPUTS:
 #   -Steps: The amount of ticks the lightning should take. Set to 1 to make the effect instant.
 #   -Delay: Sets the lightning to skip running Command for a certain amount of steps. Set to 0 or 1 to make it not skip it at all.
-#   -Command: The command that will be run at each point of the randomized beizer curve. NOTE: This will not do any point-to-point raycasting for you!
+#   -Command: The command that will be run at each point of the randomized bezier curve. NOTE: This will not do any point-to-point raycasting for you!
 #
 # This does not handle the actual particles! To make something like a point-to-point raycast, set Command to a function that looks like this:
 # | particle end_rod
@@ -32,6 +32,6 @@
 $data modify storage ntils:z macro set value {command:"$(Command)",end_pos:[]}
 $scoreboard players set #steps ntils.z.temp $(Steps)
 $scoreboard players set #delay ntils.z.temp $(Delay)
-tag @s add ntils.z.part.lightning.beizer.delay
+tag @s add ntils.z.part.lightning.bezier.delay
 tag @s add ntils.z.marker
-$function ntils:z/part/lightning/beizer/main {command:"$(Command)"}
+$function ntils:z/part/lightning/bezier/main {command:"$(Command)"}

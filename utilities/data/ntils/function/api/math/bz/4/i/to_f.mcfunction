@@ -1,6 +1,6 @@
 # MATH/BZ/4/I/TO_F
 #
-# Copies the internal entity scores used for beizer iteration to fake players. Use this to switch between s and f iterations.
+# Copies the internal entity scores used for bezier iteration to fake players. Use this to switch between s and f iterations.
 #
 # PERFORMANCE: Excellent. It's *literally* just scoreboard operations. Still, don't overuse this, it's better to just stick to one type of iteration.
 

@@ -50,7 +50,7 @@ scoreboard objectives add ntils.z.uuid.get_int.1 dummy
 scoreboard objectives add ntils.z.uuid.get_int.2 dummy
 scoreboard objectives add ntils.z.uuid.get_int.3 dummy
 
-# 3 POINT BEIZER ITERATION SCOREBOARDS #
+# 3 POINT bezier ITERATION SCOREBOARDS #
 
 scoreboard objectives add ntils.z.math.bz.3.i.vec.x dummy
 scoreboard objectives add ntils.z.math.bz.3.i.vec.y dummy
@@ -70,7 +70,7 @@ scoreboard objectives add ntils.z.math.bz.3.i.base.z dummy
 
 scoreboard objectives add ntils.z.math.bz.3.temp dummy
 
-# 4 POINT BEIZER ITERATION SCOREBOARDS #
+# 4 POINT bezier ITERATION SCOREBOARDS #
 
 scoreboard objectives add ntils.z.math.bz.4.i.vec.x dummy
 scoreboard objectives add ntils.z.math.bz.4.i.vec.y dummy
@@ -102,10 +102,12 @@ scoreboard objectives add ntils.z.math.bz.4.temp dummy
 
 scoreboard players set #-1 ntils.z.const -1
 scoreboard players set #2 ntils.z.const 2
+scoreboard players set #2000 ntils.z.const 2000
 scoreboard players set #3 ntils.z.const 3
 scoreboard players set #333 ntils.z.const 333
 scoreboard players set #4 ntils.z.const 4
 scoreboard players set #5 ntils.z.const 5
+scoreboard players set #559 ntils.z.const 559
 scoreboard players set #6 ntils.z.const 6
 scoreboard players set #6000 ntils.z.const 6000
 scoreboard players set #8 ntils.z.const 8
@@ -125,6 +127,7 @@ scoreboard players set #1000000 ntils.z.const 1000000
 scoreboard players set #2^6 ntils.z.const 64
 scoreboard players set #2^8 ntils.z.const 256
 scoreboard players set #2^12 ntils.z.const 4096
+scoreboard players set #2^15 ntils.z.const 32768
 scoreboard players set #2^16 ntils.z.const 65536
 scoreboard players set #2^18 ntils.z.const 262144
 scoreboard players set #2^24 ntils.z.const 16777215
@@ -150,6 +153,6 @@ function ntils:z/lookups/load
 
 # POINTLESS STORAGE INIT #
 
-data modify storage ntils:api math.bz.3.i.out set value [0d,0d,0d]
-data modify storage ntils:api math.bz.4.i.out set value [0d,0d,0d]
+data modify storage ntils:api math.bz.3.out set value [0d,0d,0d]
+data modify storage ntils:api math.bz.4.out set value [0d,0d,0d]
 data modify storage ntils:z player.tick.macro set value {id:0}
