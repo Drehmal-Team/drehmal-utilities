@@ -105,6 +105,7 @@ scoreboard players set #2 ntils.z.const 2
 scoreboard players set #2000 ntils.z.const 2000
 scoreboard players set #3 ntils.z.const 3
 scoreboard players set #333 ntils.z.const 333
+scoreboard players set #333333 ntils.z.const 333333
 scoreboard players set #4 ntils.z.const 4
 scoreboard players set #5 ntils.z.const 5
 scoreboard players set #559 ntils.z.const 559
