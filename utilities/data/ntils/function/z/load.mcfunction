@@ -101,27 +101,32 @@ scoreboard objectives add ntils.z.math.bz.4.temp dummy
 # NUMERICAL CONSTANTS #
 
 scoreboard players set #-1 ntils.z.const -1
-scoreboard players set #2 ntils.z.const 2
-scoreboard players set #2000 ntils.z.const 2000
-scoreboard players set #3 ntils.z.const 3
-scoreboard players set #333 ntils.z.const 333
-scoreboard players set #333333 ntils.z.const 333333
-scoreboard players set #4 ntils.z.const 4
-scoreboard players set #5 ntils.z.const 5
-scoreboard players set #559 ntils.z.const 559
-scoreboard players set #6 ntils.z.const 6
-scoreboard players set #6000 ntils.z.const 6000
-scoreboard players set #8 ntils.z.const 8
-
+scoreboard players set #100 ntils.z.const 100
 scoreboard players set #120 ntils.z.const 120
 scoreboard players set #180 ntils.z.const 180
-scoreboard players set #360 ntils.z.const 360
-scoreboard players set #36000 ntils.z.const 36000
-
-scoreboard players set #100 ntils.z.const 100
 scoreboard players set #1000 ntils.z.const 1000
 scoreboard players set #10000 ntils.z.const 10000
 scoreboard players set #1000000 ntils.z.const 1000000
+
+scoreboard players set #2 ntils.z.const 2
+scoreboard players set #2000 ntils.z.const 2000
+
+scoreboard players set #3 ntils.z.const 3
+scoreboard players set #360 ntils.z.const 360
+scoreboard players set #333 ntils.z.const 333
+scoreboard players set #36000 ntils.z.const 36000
+scoreboard players set #333333 ntils.z.const 333333
+
+scoreboard players set #4 ntils.z.const 4
+
+scoreboard players set #5 ntils.z.const 5
+scoreboard players set #500 ntils.z.const 500
+scoreboard players set #559 ntils.z.const 559
+
+scoreboard players set #6 ntils.z.const 6
+scoreboard players set #6000 ntils.z.const 6000
+
+scoreboard players set #8 ntils.z.const 8
 
 # POWERS OF 2 #
 
