@@ -1,6 +1,6 @@
 # MATH/BZ/3/C/THROUGH
 #
-# Given a start point, an end point, a target point for the curve to pass through, and the t value of the curve at that point, calculates the control points of a 3 point bezier curve.
+# Given a start point, an end point, a target point for the curve to pass through, and the t value of the curve at that point, calculates the control point of a 3 point bezier curve.
 #
 # WARNING: This code suffers from moderate precision loss. Unlike the 4 point calculator, however, it's nowhere near as drastic.
 #
@@ -28,7 +28,7 @@
 #
 #   OUTPUT:
 #
-# Scores for the first and second control point of the curve. They are specifically saved as "in" scores, not out scores. This is intentional.
+# Scores for the control point of the curve. They are specifically saved as "in" scores, not out scores. This is intentional.
 #   #math.bz.3.in.b.x ntils.API
 #   #math.bz.3.in.b.y ntils.API
 #   #math.bz.3.in.b.z ntils.API
