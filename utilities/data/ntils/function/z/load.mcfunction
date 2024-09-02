@@ -50,7 +50,7 @@ scoreboard objectives add ntils.z.uuid.get_int.1 dummy
 scoreboard objectives add ntils.z.uuid.get_int.2 dummy
 scoreboard objectives add ntils.z.uuid.get_int.3 dummy
 
-# 3 POINT bezier ITERATION SCOREBOARDS #
+# 3 POINT BEZIER SCOREBOARDS #
 
 scoreboard objectives add ntils.z.math.bz.3.i.vec.x dummy
 scoreboard objectives add ntils.z.math.bz.3.i.vec.y dummy
@@ -70,7 +70,7 @@ scoreboard objectives add ntils.z.math.bz.3.i.base.z dummy
 
 scoreboard objectives add ntils.z.math.bz.3.temp dummy
 
-# 4 POINT bezier ITERATION SCOREBOARDS #
+# 4 POINT BEZIER SCOREBOARDS #
 
 scoreboard objectives add ntils.z.math.bz.4.i.vec.x dummy
 scoreboard objectives add ntils.z.math.bz.4.i.vec.y dummy
@@ -98,6 +98,10 @@ scoreboard objectives add ntils.z.math.bz.4.i.base.z dummy
 
 scoreboard objectives add ntils.z.math.bz.4.temp dummy
 
+# N POINT BEZIER SCOREBOARDS #
+
+scoreboard objectives add ntils.z.math.bz.n.temp dummy
+
 # NUMERICAL CONSTANTS #
 
 scoreboard players set #-1 ntils.z.const -1
@@ -109,6 +113,7 @@ scoreboard players set #10000 ntils.z.const 10000
 scoreboard players set #1000000 ntils.z.const 1000000
 
 scoreboard players set #2 ntils.z.const 2
+scoreboard players set #25 ntils.z.const 25
 scoreboard players set #2000 ntils.z.const 2000
 
 scoreboard players set #3 ntils.z.const 3
@@ -127,6 +132,8 @@ scoreboard players set #6 ntils.z.const 6
 scoreboard players set #6000 ntils.z.const 6000
 
 scoreboard players set #8 ntils.z.const 8
+
+scoreboard players set #9 ntils.z.const 9
 
 # POWERS OF 2 #
 
@@ -161,4 +168,5 @@ function ntils:z/lookups/load
 
 data modify storage ntils:api math.bz.3.out set value [0d,0d,0d]
 data modify storage ntils:api math.bz.4.out set value [0d,0d,0d]
+data modify storage ntils:api math.bz.n.out set value [0d,0d,0d]
 data modify storage ntils:z player.tick.macro set value {id:0}
