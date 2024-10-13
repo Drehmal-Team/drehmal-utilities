@@ -11,5 +11,5 @@
 
 data modify storage ntils:api players[].Open set value False
 data modify storage ntils:z pdata.open.macro set value {id:0}
-execute store result storage ntils:z pdata.open.macro.id int 1 run scoreboard players get @s ntils.z.id
+execute store result storage ntils:z pdata.open.macro.id int 1 run scoreboard players get @s ntils.z.pdata.id
 function ntils:z/pdata/open/main with storage ntils:z pdata.open.macro

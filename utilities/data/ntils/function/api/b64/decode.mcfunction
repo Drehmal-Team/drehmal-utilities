@@ -9,16 +9,16 @@
 # PERFORMANCE: Bad
 #   Very optimized for its purpose but still not great. Only use this on the portion of base64 you actually need converted.
 
-execute store result score #loop ntils.z.temp store result score #len ntils.z.temp run data get storage ntils:api b64.decode.in
+execute store result score #loop ntils.z.b64.temp store result score #len ntils.z.b64.temp run data get storage ntils:api b64.decode.in
 
-scoreboard players operation #len ntils.z.temp %= #4 ntils.z.const
+scoreboard players operation #len ntils.z.b64.temp %= #4 ntils.z.const
 
-execute unless score #len ntils.z.temp matches 0 run return fail
+execute unless score #len ntils.z.b64.temp matches 0 run return fail
 
 data modify storage ntils:api b64.decode.out set value []
 data modify storage ntils:z b64.decode.in set from storage ntils:api b64.decode.in
 
-scoreboard players operation #loop ntils.z.temp /= #4 ntils.z.const
+scoreboard players operation #loop ntils.z.b64.temp /= #4 ntils.z.const
 
 data modify storage ntils:z b64.decode.from set value {0:'',1:'',2:'',3:''}
 

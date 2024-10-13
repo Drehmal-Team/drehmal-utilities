@@ -30,18 +30,18 @@ $data modify storage ntils:z fl.region.temp set value {name:"$(Name)",id:0,dim:'
 execute store result storage ntils:z fl.region.temp.id int 1 run scoreboard players add #FORCELOAD_ID# ntils.z.global 1
 data modify storage ntils:z fl.region.temp.dim set from storage ntils:z fl.region.dim
 
-execute store result score #x1 ntils.z.temp run data get storage ntils:z fl.region.from[0] 0.0625
-execute store result score #x2 ntils.z.temp run data get storage ntils:z fl.region.to[0] 0.0625
-execute store result score #z1 ntils.z.temp run data get storage ntils:z fl.region.from[2] 0.0625
-execute store result score #z2 ntils.z.temp run data get storage ntils:z fl.region.to[2] 0.0625
+execute store result score #x1 ntils.z.fl.temp run data get storage ntils:z fl.region.from[0] 0.0625
+execute store result score #x2 ntils.z.fl.temp run data get storage ntils:z fl.region.to[0] 0.0625
+execute store result score #z1 ntils.z.fl.temp run data get storage ntils:z fl.region.from[2] 0.0625
+execute store result score #z2 ntils.z.fl.temp run data get storage ntils:z fl.region.to[2] 0.0625
 
-execute if score #x1 ntils.z.temp > #x2 ntils.z.temp run scoreboard players operation #x1 ntils.z.temp >< #x2 ntils.z.temp
-execute if score #z1 ntils.z.temp > #z2 ntils.z.temp run scoreboard players operation #z1 ntils.z.temp >< #z2 ntils.z.temp
+execute if score #x1 ntils.z.fl.temp > #x2 ntils.z.fl.temp run scoreboard players operation #x1 ntils.z.fl.temp >< #x2 ntils.z.fl.temp
+execute if score #z1 ntils.z.fl.temp > #z2 ntils.z.fl.temp run scoreboard players operation #z1 ntils.z.fl.temp >< #z2 ntils.z.fl.temp
 
-execute store result storage ntils:z fl.region.temp.x int 16 run scoreboard players get #x1 ntils.z.temp
-execute store result storage ntils:z fl.region.temp.z int 16 run scoreboard players get #z1 ntils.z.temp
+execute store result storage ntils:z fl.region.temp.x int 16 run scoreboard players get #x1 ntils.z.fl.temp
+execute store result storage ntils:z fl.region.temp.z int 16 run scoreboard players get #z1 ntils.z.fl.temp
 
-scoreboard players operation #z1 ntils.z.int = #z1 ntils.z.temp
+scoreboard players operation #z1 ntils.z.int = #z1 ntils.z.fl.temp
 
 function ntils:z/fl/region/l/x
 

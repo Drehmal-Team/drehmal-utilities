@@ -7,11 +7,12 @@ scoreboard objectives add ntils.z.bool dummy
 scoreboard objectives add ntils.API dummy
 scoreboard objectives add ntils.API.id dummy
 
-scoreboard objectives add ntils.z.id dummy
+scoreboard objectives add ntils.API.player.inv.update.ignore dummy
+scoreboard objectives add ntils.z.player.inv.update.bool dummy
+
+scoreboard objectives add ntils.z.pdata.id dummy
 
 scoreboard objectives add ntils.z.tag_scores.checked dummy
-
-scoreboard objectives add ntils.z.player.inv.update.bool dummy
 
 scoreboard objectives add ntils.z.combat.heal.subtick dummy
 
@@ -102,6 +103,22 @@ scoreboard objectives add ntils.z.math.bz.4.temp dummy
 
 scoreboard objectives add ntils.z.math.bz.n.temp dummy
 
+# SQRT SCOREBOARDS #
+
+scoreboard objectives add ntils.z.math.sqrt.temp dummy
+
+# FLOAD SCOREBOARDS #
+
+scoreboard objectives add ntils.z.fl.temp dummy
+
+# BASE64 SCOREBOARDS #
+
+scoreboard objectives add ntils.z.b64.temp dummy
+
+# TIME SCOREBOARDS #
+
+scoreboard objectives add ntils.z.time.convert.temp dummy
+
 # NUMERICAL CONSTANTS #
 
 scoreboard players set #-1 ntils.z.const -1
@@ -149,6 +166,17 @@ scoreboard players set #2^24 ntils.z.const 16777215
 
 scoreboard players set #TIME.MINUTE ntils.z.const 1200
 scoreboard players set #TIME.DAY ntils.z.const 24000
+
+scoreboard players set #SECONDS_IN_MINUTE ntils.z.const 60
+scoreboard players set #MINUTES_IN_HOUR ntils.z.const 60
+scoreboard players set #HOURS_IN_DAY ntils.z.const 24
+scoreboard players set #DAYS_IN_YEAR ntils.z.const 365
+
+scoreboard players set #UNIX.ONE_MINUTE ntils.z.const 60
+scoreboard players set #UNIX.ONE_HOUR ntils.z.const 3600
+scoreboard players set #UNIX.ONE_DAY ntils.z.const 86400
+scoreboard players set #UNIX.ONE_YEAR ntils.z.const 31536000
+scoreboard players set #UNIX.LEAP_YEAR ntils.z.const 126230400
 
 # MISC CONSTANTS #
 
