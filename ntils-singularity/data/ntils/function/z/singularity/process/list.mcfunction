@@ -4,6 +4,6 @@ execute unless data storage ntils:z singularity.outputlist[0].error run tellraw 
 execute if data storage ntils:z singularity.outputlist[0].error run tellraw @a[tag=ntils.z.dev] [{"storage": "ntils:z","nbt": "lang.singularity.process.list.module.line.module_error","interpret": true}]
 execute if data storage ntils:z singularity.outputlist[0].version run tellraw @a[tag=ntils.z.dev] [{"storage": "ntils:z","nbt": "lang.singularity.process.list.module.line.version","interpret": true}]
 
-tellraw @a ""
+tellraw @a[tag=ntils.z.dev] ""
 data remove storage ntils:z singularity.outputlist[0]
 execute if data storage ntils:z singularity.outputlist[] run function ntils:z/singularity/process/list
