@@ -1,0 +1,1 @@
+tellraw @a [{"color": "red","text": "[ERROR]"},{"color": "white","text": " Utility \""},{"color": "yellow","text": "template"},{"color": "white","text": "\" was unable to load correctly."}]

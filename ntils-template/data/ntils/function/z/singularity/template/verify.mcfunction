@@ -1,0 +1,2 @@
+execute unless data storage ntils:z {singularity:{data:[{name:"singularity"},{name:"template",version:-1}]}} run return run function ntils:z/singularity/template/error
+scoreboard players set #template ntils.z.singularity.flag 1

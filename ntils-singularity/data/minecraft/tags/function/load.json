@@ -1,0 +1,10 @@
+{
+    "values": [
+      "ntils:z/singularity/start",
+      "#ntils:z/singularity/data",
+      "#ntils:z/singularity/verify",
+      "ntils:z/singularity/singularity/init",
+      "#ntils:api/generic/load"
+    ],
+    "replace":true
+  }

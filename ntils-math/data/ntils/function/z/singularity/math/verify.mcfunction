@@ -1,0 +1,2 @@
+execute unless data storage ntils:z {singularity:{data:[{name:"singularity"},{name:"math",version:1}]}} run return run function ntils:z/singularity/math/error
+scoreboard players set #math ntils.z.singularity.flag 1

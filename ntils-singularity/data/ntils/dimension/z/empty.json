@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:overworld",
+    "generator": {
+      "type": "minecraft:flat",
+      "settings": {
+        "biome": "minecraft:the_void",
+        "layers": [
+          {
+            "block": "minecraft:air",
+            "height": 1
+          }
+        ],
+        "structure_overrides": []
+      }
+    }
+  }
+  
