@@ -1,0 +1,3 @@
+execute unless data storage ntils:z {singularity:{data:[{id:"singularity"},{id:"uuid"}]}} run return run data modify storage ntils:z singularity.data[{id:"uuid"}].error set value "Unknown"
+execute unless data storage ntils:z {singularity:{data:[{id:"lookups"},{id:"uuid",version:-1}]}} run return run data modify storage ntils:z singularity.data[{id:"uuid"}].error set value "Lookups module not installed."
+scoreboard players set #uuid ntils.z.singularity.flag 1

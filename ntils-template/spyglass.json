@@ -17,7 +17,7 @@
         {
             "if": [
                 {
-                    "category": ["score_holder", "dimension"]
+                    "category": ["score_holder", "dimension", "tag"]
                 }
             ],
             "then": {

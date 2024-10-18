@@ -1,0 +1,1 @@
+data modify storage ntils:z singularity.data append value {id:"uuid",version:-1,display:{desc:"UUID utility functions.",name:"UUID"}}
