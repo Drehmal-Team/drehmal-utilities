@@ -1,2 +1,0 @@
-execute unless data storage ntils:z {singularity:{data:[{id:"singularity"},{id:"dev"}]}} run data modify storage ntils:z singularity.data[{id:"dev"}].error set value "Unknown"
-scoreboard players set #dev ntils.z.singularity.flag 1

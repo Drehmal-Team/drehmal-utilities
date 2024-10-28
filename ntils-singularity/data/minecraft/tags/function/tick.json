@@ -1,7 +1,7 @@
 {
-    "values": [
-  "#ntils:z/singularity/tick",
-  "#ntils:api/generic/tick"
-    ],
-    "replace":true
-  }
+  "values": [
+    "#ntils:z/singularity/tick",
+    "#ntils:api/singularity/tick"
+  ],
+  "replace":true
+}

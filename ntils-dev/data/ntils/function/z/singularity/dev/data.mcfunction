@@ -1,1 +1,6 @@
-data modify storage ntils:z singularity.data append value {id:"dev",version:-1,display:{desc:"Developer module. For developers only :)",name:"Dev"}}
+data modify storage ntils:api singularity.data append value {\
+    id:"dev",\
+    version:1,\
+    display:{desc:"Dev Module.",name:"Dev"},\
+    dependency:[]\
+}

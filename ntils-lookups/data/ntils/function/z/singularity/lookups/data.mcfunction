@@ -1,1 +1,6 @@
-data modify storage ntils:z singularity.data append value {id:"lookups",version:1,display:{desc:"Lookup table module. Loads the lookup table. A dependancy for other modules.",name:"Lookups"}}
+data modify storage ntils:api singularity.data append value {\
+    id:"lookups",\
+    version:1,\
+    display:{desc:"Lookups module.",name:"Lookups"},\
+    dependency:[]\
+}

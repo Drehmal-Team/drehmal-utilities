@@ -1,12 +1,8 @@
 {
-    "values": [
-      "ntils:z/singularity/start",
-      "#ntils:z/singularity/lang",
-      "#ntils:z/singularity/data",
-      "#ntils:z/singularity/verify",
-      "ntils:z/singularity/singularity/init",
-      "#ntils:z/singularity/load",
-      "#ntils:api/generic/load"
-    ],
-    "replace":true
-  }
+  "values": [
+    "ntils:z/singularity/main",
+    "#ntils:z/singularity/load",
+    "#ntils:api/singularity/load"
+  ],
+  "replace":true
+}

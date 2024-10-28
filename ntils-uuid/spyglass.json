@@ -1,33 +1,43 @@
 {
-"env": {
-    "gameVersion": "1.21.1"
- },
- "lint": {
-    "undeclaredSymbol": [
-        {
-            "if": [
-                {
-                    "pattern": "ntils.(z.(const|global|singularity.flag)|API)"
+    "env": {
+        "gameVersion": "1.21.1"
+     },
+     "lint": {
+        "undeclaredSymbol": [
+            {
+                "if": [
+                    {
+                        "pattern": "ntils.(z.(const|global|singularity.flag)|API)"
+                    }
+                ],
+                "then": {
+                    "declare": "block"
                 }
-            ],
-            "then": {
-                "declare": "block"
-            }
-        },
-        {
-            "if": [
-                {
-                    "category": ["score_holder", "dimension", "tag"]
+            },
+            {
+                "if": [
+                    {
+                        "pattern": "ntils:api/singularity/error"
+                    }
+                ],
+                "then": {
+                    "declare": "block"
                 }
-            ],
-            "then": {
-                "declare": "block"
+            },
+            {
+                "if": [
+                    {
+                        "category": ["score_holder", "dimension", "tag"]
+                    }
+                ],
+                "then": {
+                    "declare": "block"
+                }
+            },
+    
+            {
+                "then": { "report": "warning" }
             }
-        },
-
-        {
-            "then": { "report": "warning" }
-        }
-    ]
- }
-}
+        ]
+     }
+    }

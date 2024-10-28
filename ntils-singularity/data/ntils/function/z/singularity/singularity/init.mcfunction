@@ -1,4 +1,4 @@
-function ntils:z/singularity/process/output
+scoreboard objectives add ntils.z.singularity.temp dummy
 
 scoreboard objectives add ntils.z.const dummy
 scoreboard objectives add ntils.z.global dummy

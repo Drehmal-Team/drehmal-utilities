@@ -1,1 +1,6 @@
-data modify storage ntils:z singularity.data append value {id:"math",version:1,display:{desc:"Math utilities.",name:"Math"}}
+data modify storage ntils:api singularity.data append value {\
+    id:"math",\
+    version:1,\
+    display:{desc:"Math module.",name:"Math"},\
+    dependency:[]\
+}

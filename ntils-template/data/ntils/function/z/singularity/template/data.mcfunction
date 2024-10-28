@@ -1,1 +1,0 @@
-data modify storage ntils:z singularity.data append value {id:"template",version:-1,display:{desc:"This pack does nothing. You should disable this.",name:"Template"}}
