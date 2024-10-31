@@ -1,0 +1,1 @@
+$data modify storage ntils:z worldstate.tags set value ["ntils.z.worldstate.$(version)","ntils.API.ignore","ntils.z.worldstate.marker"]

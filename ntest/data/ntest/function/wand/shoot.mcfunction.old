@@ -1,0 +1,92 @@
+#execute positioned ~ ~25 ~ run teleport @s ^ ^ ^-8
+data modify storage ntest:s vector set from entity @s Pos
+data modify storage ntest:s vector_s set from storage ntest:s vector
+execute store result score #math.bz.4.in.a.x ntils.API store result score #x1 ntest.temp store result score #2x1 ntest.temp run data get storage ntest:s vector[0] 1000
+execute store result score #math.bz.4.in.a.y ntils.API store result score #y1 ntest.temp store result score #2y1 ntest.temp run data get storage ntest:s vector[1] 1000
+execute store result score #math.bz.4.in.a.z ntils.API store result score #z1 ntest.temp store result score #2z1 ntest.temp run data get storage ntest:s vector[2] 1000
+scoreboard players set #loop ntest.temp 500
+scoreboard players set #math.bz.4.in.iterations ntils.API 8
+function ntest:wand/find_target
+#scoreboard players operation #math.bz.4.in.iterations ntils.API *= #4 ntest.const
+data modify entity @s Pos set from storage ntest:s vector_s
+
+scoreboard players operation #mod ntest.temp = #math.bz.4.in.iterations ntils.API
+execute store result score #mod/2 ntest.temp run scoreboard players operation #mod ntest.temp *= #CONTROL_POINT_SCALE_TENTACLE# ntest.const
+execute store result score #mod.75 ntest.temp run scoreboard players operation #mod/2 ntest.temp /= #2 ntest.const
+execute store result score #mod.25 ntest.temp run scoreboard players operation #mod.75 ntest.temp /= #4 ntest.const
+scoreboard players operation #mod.75 ntest.temp *= #3 ntest.const
+
+scoreboard players operation #2x1 ntest.temp *= #2 ntest.const
+scoreboard players operation #2y1 ntest.temp *= #2 ntest.const
+scoreboard players operation #2z1 ntest.temp *= #2 ntest.const
+
+scoreboard players operation #2x2 ntest.temp *= #2 ntest.const
+scoreboard players operation #2y2 ntest.temp *= #2 ntest.const
+scoreboard players operation #2z2 ntest.temp *= #2 ntest.const
+
+scoreboard players operation #2x1 ntest.temp += #x2 ntest.temp
+scoreboard players operation #2y1 ntest.temp += #y2 ntest.temp
+scoreboard players operation #2z1 ntest.temp += #z2 ntest.temp
+scoreboard players operation #2x1 ntest.temp /= #3 ntest.const
+scoreboard players operation #2y1 ntest.temp /= #3 ntest.const
+scoreboard players operation #2z1 ntest.temp /= #3 ntest.const
+
+execute store result score #r1 ntest.temp run random value 0..2147483646
+scoreboard players operation #r1 ntest.temp %= #mod.25 ntest.temp
+scoreboard players operation #r1 ntest.temp += #mod.75 ntest.temp
+execute if predicate ntils:api/math/rng/50 run scoreboard players operation #r1 ntest.temp *= #-1 ntest.const
+execute store result score #r2 ntest.temp run random value 0..2147483646
+scoreboard players operation #r2 ntest.temp %= #mod ntest.temp
+scoreboard players operation #r2 ntest.temp -= #mod/2 ntest.temp
+execute store result score #r3 ntest.temp run random value 0..2147483646
+scoreboard players operation #r3 ntest.temp %= #mod ntest.temp
+scoreboard players operation #r3 ntest.temp -= #mod/2 ntest.temp
+execute store result score #c ntest.temp run random value 0..2
+execute if score #c ntest.temp matches 1 run scoreboard players operation #r2 ntest.temp >< #r1 ntest.temp
+execute if score #c ntest.temp matches 1 run scoreboard players operation #r3 ntest.temp >< #r1 ntest.temp
+
+execute store result score #math.bz.4.in.b.x ntils.API run scoreboard players operation #2x1 ntest.temp += #r1 ntest.temp
+execute store result score #math.bz.4.in.b.y ntils.API run scoreboard players operation #2y1 ntest.temp += #r2 ntest.temp
+execute store result score #math.bz.4.in.b.z ntils.API run scoreboard players operation #2z1 ntest.temp += #r3 ntest.temp
+
+scoreboard players operation #2x2 ntest.temp += #x1 ntest.temp
+scoreboard players operation #2y2 ntest.temp += #y1 ntest.temp
+scoreboard players operation #2z2 ntest.temp += #z1 ntest.temp
+scoreboard players operation #2x2 ntest.temp /= #3 ntest.const
+scoreboard players operation #2y2 ntest.temp /= #3 ntest.const
+scoreboard players operation #2z2 ntest.temp /= #3 ntest.const
+
+execute store result score #r1 ntest.temp run random value 0..2147483646
+scoreboard players operation #r1 ntest.temp %= #mod.25 ntest.temp
+scoreboard players operation #r1 ntest.temp += #mod.75 ntest.temp
+execute if predicate ntils:api/math/rng/50 run scoreboard players operation #r1 ntest.temp *= #-1 ntest.const
+execute store result score #r2 ntest.temp run random value 0..2147483646
+scoreboard players operation #r2 ntest.temp %= #mod ntest.temp
+scoreboard players operation #r2 ntest.temp -= #mod/2 ntest.temp
+execute store result score #r3 ntest.temp run random value 0..2147483646
+scoreboard players operation #r3 ntest.temp %= #mod ntest.temp
+scoreboard players operation #r3 ntest.temp -= #mod/2 ntest.temp
+execute store result score #c ntest.temp run random value 0..2
+execute if score #c ntest.temp matches 1 run scoreboard players operation #r2 ntest.temp >< #r1 ntest.temp
+execute if score #c ntest.temp matches 1 run scoreboard players operation #r3 ntest.temp >< #r1 ntest.temp
+
+execute store result score #math.bz.4.in.c.x ntils.API run scoreboard players operation #2x2 ntest.temp += #r1 ntest.temp
+execute store result score #math.bz.4.in.c.y ntils.API run scoreboard players operation #2y2 ntest.temp += #r2 ntest.temp
+execute store result score #math.bz.4.in.c.z ntils.API run scoreboard players operation #2z2 ntest.temp += #r3 ntest.temp
+
+#scoreboard players operation #math.bz.4.in.b.x ntils.API = #2x1 ntest.temp
+#scoreboard players operation #math.bz.4.in.b.y ntils.API = #2y1 ntest.temp
+#scoreboard players operation #math.bz.4.in.b.z ntils.API = #2z1 ntest.temp
+
+#scoreboard players operation #math.bz.4.in.c.x ntils.API = #2x2 ntest.temp
+#scoreboard players operation #math.bz.4.in.c.y ntils.API = #2y2 ntest.temp
+#scoreboard players operation #math.bz.4.in.c.z ntils.API = #2z2 ntest.temp
+
+function ntils:api/math/bz/4/i/s/start
+tag @s add ntest.tentacle
+execute store result score @s ntest.id run scoreboard players add #ID ntest.global 1
+
+scoreboard players operation @s ntest.owner = #id ntest.temp
+execute at @s run playsound minecraft:block.enchantment_table.use player @a
+execute at @s run playsound minecraft:entity.evoker.cast_spell player @a ~ ~ ~ 1 0
+execute at @s run particle squid_ink ~ ~ ~ 0.2 0.2 0.2 0 16

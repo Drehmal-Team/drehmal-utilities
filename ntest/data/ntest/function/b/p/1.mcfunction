@@ -1,0 +1,7 @@
+kill @e[type=block_display,tag=ntest.b.p.p1]
+kill @e[type=text_display,tag=ntest.b.p.p1]
+summon block_display ~ ~ ~ {Glowing:1b,glow_color_override:15598596,Tags:["ntest.b.p.p1"],Passengers:[{id:"minecraft:text_display",billboard:"center",Tags:["ntest.b.p.p1"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,.8f,0f],scale:[1.5f,1.5f,1.5f]},text:'[{"color":"white","text":"Control point "},{"bold":true,"color":"yellow","text":"1"}]'}],brightness:{sky:15,block:15},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-.5f,-.5f,-.5f],scale:[1f,1f,1f]},block_state:{Name:"minecraft:red_stained_glass"}}
+function ntils:api/pos/get
+execute store result score #bz.p.b.x ntest.global store result score #math.bz.4.in.p1.x ntils.API store result score #math.bz.4.in.b.x ntils.API run data get storage ntils:api pos.get.out[0] 1000
+execute store result score #bz.p.b.y ntest.global store result score #math.bz.4.in.p1.y ntils.API store result score #math.bz.4.in.b.y ntils.API run data get storage ntils:api pos.get.out[1] 1000
+execute store result score #bz.p.b.z ntest.global store result score #math.bz.4.in.p1.z ntils.API store result score #math.bz.4.in.b.z ntils.API run data get storage ntils:api pos.get.out[2] 1000

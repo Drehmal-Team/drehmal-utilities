@@ -1,0 +1,1 @@
+execute summon arrow run function ntest:s/m

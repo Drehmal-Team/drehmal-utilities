@@ -1,0 +1,1 @@
+$data get storage ntils:z lookups.hex.char[$(x)]

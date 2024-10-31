@@ -1,0 +1,6 @@
+{
+  "description": "",
+  "range": 1.0,
+  "sound_event": "minecraft:item.goat_horn.sound.3",
+  "use_duration": 100.0
+}

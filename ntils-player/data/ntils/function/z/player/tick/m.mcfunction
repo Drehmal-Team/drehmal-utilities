@@ -1,0 +1,1 @@
+$return run data modify storage ntils:z player.tick.$(id) set from block 0 0 0 Items[0]

@@ -1,0 +1,2 @@
+data modify entity @s Tags set from storage ntils:z worldstate.tags
+execute positioned ~29999992 ~ ~29999992 positioned ~108086391056891904 ~ ~108086391056891904 positioned ~-108086391056891904 ~ ~-108086391056891904 positioned ~-30000000 -64 ~-30000000 run function #ntils:api/worldstate/update

@@ -1,6 +1,6 @@
 {
     "values": [
-        "ntils:z/player/tick/main"
+        "ntils:z/player/tick"
     ],
     "replace": false
 }

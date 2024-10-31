@@ -1,0 +1,24 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:enter_block",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "ntils.z.player.state.fire.clear.trigger": {
+                  "min": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "ntils:z/player/state/fire/clear/trigger"
+    }
+  }
+  

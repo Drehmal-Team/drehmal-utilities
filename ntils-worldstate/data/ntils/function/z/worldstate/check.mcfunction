@@ -1,0 +1,1 @@
+$execute as @e[type=marker,tag=ntils.z.worldstate.marker,tag=!ntils.z.worldstate.$(version)] at @s run function ntils:z/worldstate/update

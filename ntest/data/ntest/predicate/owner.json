@@ -1,0 +1,27 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+      "type": "minecraft:score",
+      "target": "this",
+      "score": "ntils.API.id"
+    },
+    "range": {
+      "min": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "#owner"
+        },
+        "score": "ntest.temp"
+      },
+      "max": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "#owner"
+        },
+        "score": "ntest.temp"
+      }
+    }
+  }
+  

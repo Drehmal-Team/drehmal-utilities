@@ -1,0 +1,1 @@
+execute in ntils:z/empty run setblock 0 0 0 barrel

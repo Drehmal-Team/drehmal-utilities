@@ -1,0 +1,1 @@
+execute as @a[tag=ntils.z.player.state.fire.clear] run function ntils:z/player/state/fire/clear/as

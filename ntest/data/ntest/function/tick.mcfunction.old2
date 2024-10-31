@@ -1,0 +1,3 @@
+execute as @a[scores={ntest.click=1..}] at @s anchored eyes positioned ^ ^ ^10 run function ntest:arb/click
+execute if entity @a[predicate=ntest:sneak] if score #point_num ntest.global matches 1.. summon marker run function ntest:arb/gen
+execute as @e[type=marker,tag=ntest.arb.tick] at @s run function ntest:arb/tick
