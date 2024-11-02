@@ -1,0 +1,1 @@
+execute as @a[scores={ntils.z.time.total_world_time=20..}] run function ntils:z/time/tick/singleplayer/increment

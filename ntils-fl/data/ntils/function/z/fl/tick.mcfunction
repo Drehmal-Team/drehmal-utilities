@@ -1,0 +1,2 @@
+execute as @e[type=marker,tag=ntils.z.fl.run.command] at @s run function ntils:z/fl/run/cmd with entity @s data.ntils.z.fl.run
+execute if data storage ntils:z fl.list[{name:"ntils.z.fl.run.internal"}] run schedule function ntils:z/fl/tick 1t
