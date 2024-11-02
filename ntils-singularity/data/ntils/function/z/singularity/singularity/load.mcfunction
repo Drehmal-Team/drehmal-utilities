@@ -12,6 +12,7 @@ scoreboard players set #100 ntils.z.const 100
 scoreboard players set #120 ntils.z.const 120
 scoreboard players set #180 ntils.z.const 180
 scoreboard players set #1461 ntils.z.const 1461
+scoreboard players set #1200 ntils.z.const 1200
 scoreboard players set #1000 ntils.z.const 1000
 scoreboard players set #10000 ntils.z.const 10000
 scoreboard players set #1000000 ntils.z.const 1000000

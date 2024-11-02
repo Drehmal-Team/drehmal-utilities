@@ -15,4 +15,4 @@ execute unless predicate ntils:z/player/id/correct run function ntils:z/player/i
 data modify storage ntils:api player[].Open set value False
 data modify storage ntils:z player.storage.open.m set value {id:0}
 execute store result storage ntils:z player.storage.open.m.id int 1 run scoreboard players get @s ntils.z.player.id
-function ntils:z/player/storage/open/main with storage ntils:z pdata.open.macro
+function ntils:z/player/storage/open/main with storage ntils:z player.storage.open.m

@@ -5,7 +5,7 @@
 # Performance: Good
 #   Needs two macros for the hex conversion but otherwise highly optimized. Don't overuse this if you don't need to, though.
 
-execute unless score $ntils:uuid.ENABLED ntils.z.singularity.flag matches 1 run return fail
+execute unless score $ntils:uuid.ENABLED ntils.API.singularity.flag matches 1 run return fail
 
 function ntils:api/uuid/get_int
 data modify storage ntils:api uuid.to_hex.in set from storage ntils:api uuid.get_int.out

@@ -1,0 +1,1 @@
+$schedule function ntils:z/time/force_time_sync/sch/second $(second)t

@@ -13,4 +13,5 @@ execute if score #time.FORCING_SYNC# ntils.z.global matches 1.. run return fail
 
 scoreboard players reset #CURRENT_UNIX_TIME# ntils.z.global
 
+schedule clear ntils:z/time/force_time_sync/sch/second
 function ntils:z/time/force_time_sync/start

@@ -2,9 +2,9 @@
     "condition": "minecraft:entity_scores",
     "entity": "this",
     "scores": {
-      "ntils.API.player.id": {
-        "min": 1
-      },
+        "ntils.API.player.id": {
+          "min": 1
+        },
       "ntils.z.player.id": {
         "min": {
           "type": "minecraft:score",
