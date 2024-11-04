@@ -1,1 +1,2 @@
+$execute unless data storage ntils:api player.storage[{id:$(id)}] run data modify storage ntils:api player.storage append value {id:$(id),data:{},Open:False}
 $data modify storage ntils:api player.storage[{id:$(id)}].Open set value True

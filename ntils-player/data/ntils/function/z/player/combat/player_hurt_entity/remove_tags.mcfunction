@@ -1,0 +1,1 @@
+tag @e remove ntils.z.player.combat.player_hurt_me

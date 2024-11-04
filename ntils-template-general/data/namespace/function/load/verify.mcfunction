@@ -1,1 +1,0 @@
-execute unless data storage ntils:api {singularity:{data:[{id:"singularity"},{id:"namespace"}]}} run function ntils:api/singularity/error {msg:"This datapack did not install correctly.",code:0,id:"namespace"}

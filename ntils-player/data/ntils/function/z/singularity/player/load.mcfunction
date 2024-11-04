@@ -4,8 +4,6 @@ scoreboard objectives add ntils.API.player.id dummy
 scoreboard objectives add ntils.API.player.state.inv_update.IGNORE dummy
 scoreboard objectives add ntils.API.player.state.mainhand_update.IGNORE dummy
 
-
-
 scoreboard objectives add ntils.z.player.id dummy
 scoreboard objectives add ntils.z.player.temp dummy
 

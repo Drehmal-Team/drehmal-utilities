@@ -14,7 +14,7 @@ data modify storage ntils:z lang.singularity.process.list.module.line.module_err
 
 data modify storage ntils:z lang.singularity.process.line set value '[{"text":"-","color":"dark_gray"},{"text":"===","color":"gray"},{"text":"□□□□□","color":"white"},{"text":"========","color":"gray"},{"text":"-------------------------------","color":"dark_gray"}]'
 data modify storage ntils:z lang.singularity.process.0 set value '[{"storage": "ntils:z","nbt": "lang.singularity.process.list.spacer","interpret": true},{"nbt": "lang.singularity.ntils","storage": "ntils:z","interpret": true},{"text":" Load Manager Output","color":"gray"}]'
-data modify storage ntils:z lang.singularity.process.1 set value '[{"storage": "ntils:z","nbt": "lang.singularity.process.list.spacer","interpret": true},{"color":"gray","text": "The following datapacks are being managed by "},{"nbt": "singularity.data[{id:singularity}].display.name","storage": "ntils:z","interpret": false,"color":"yellow"},{"text":".","color":"gray"}]'
+data modify storage ntils:z lang.singularity.process.1 set value '[{"storage": "ntils:z","nbt": "lang.singularity.process.list.spacer","interpret": true},{"color":"gray","text": "The following datapacks are being managed by "},{"nbt": "singularity.data[{id:\'ntils:singularity\'}].display.name","storage": "ntils:api","interpret": false,"color":"yellow"},{"text":".","color":"gray"}]'
 
 data modify storage ntils:z lang.singularity.process.nopacks set value '{"color":"red","text": "No packs loaded!"}'
 

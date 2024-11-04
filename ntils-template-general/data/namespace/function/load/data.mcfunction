@@ -1,1 +1,0 @@
-data modify storage ntils:api singularity.data append value {id:"namespace",enabled:True,version:"N/A",display:{desc:"Template pack for non-utility packs.",name:"Template - General"}}
