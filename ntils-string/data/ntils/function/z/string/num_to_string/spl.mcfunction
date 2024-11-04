@@ -1,0 +1,1 @@
+$data modify storage ntils:api string.num_to_string.out set value "-0.$(str)"
