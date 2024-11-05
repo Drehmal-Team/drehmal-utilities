@@ -9,4 +9,4 @@
 
 execute unless score $ntils:player.ENABLED ntils.API.singularity.flag matches 1 run return fail
 
-data modify storage ntils:api player.storage[].Open set value False
+execute if data storage ntils:api player.storage[] run data modify storage ntils:api player.storage[].Open set value False

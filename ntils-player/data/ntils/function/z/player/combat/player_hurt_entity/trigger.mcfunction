@@ -2,7 +2,7 @@ execute if entity @s[tag=ntils.API.combat.disable_advancement] run return run ad
 
 function ntils:z/player/combat/player_hurt_entity/get_damage
 
-execute as @e[type=!#ntils:api/player/combat/nohitbox,tag=!ntils.z.player.combat.player_hurt_me,distance=..10] at @s on attacker if entity @s[advancements={ntils:z/player/combat/player_hurt_entity=true}] as @e[distance=0,nbt={HurtTime:10s}] run function ntils:z/player/combat/player_hurt_entity/add_tags
+execute as @e[type=!#ntils:api/player/combat/nohitbox,tag=!ntils.z.player.combat.player_hurt_entity,distance=..10] at @s on attacker if entity @s[advancements={ntils:z/player/combat/player_hurt_entity=true}] as @e[distance=0,nbt={HurtTime:10s}] run function ntils:z/player/combat/player_hurt_entity/add_tags
 
 execute in ntils:z/empty run item replace block 0 0 0 container.0 from entity @s weapon.mainhand
 execute in ntils:z/empty run data modify storage ntils:z player.combat.player_hurt_entity.temp_mainhand set from block 0 0 0 Items[0]
@@ -34,7 +34,7 @@ execute if score #DAMAGE_DEALT# ntils.API >= #crit_check ntils.z.player.temp if 
 
 function #ntils:api/player/combat/player_hurt_entity
 
-tag @e remove ntils.API.player.combat.player_hurt_me.victim
+tag @e remove ntils.API.player.combat.player_hurt_entity.victim
 schedule function ntils:z/player/combat/player_hurt_entity/remove_tags 1t
 advancement revoke @s only ntils:z/player/combat/player_hurt_entity
 

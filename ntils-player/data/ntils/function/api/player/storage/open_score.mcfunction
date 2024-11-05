@@ -14,8 +14,8 @@
 #   Slightly better than the open_as function because that has to check that an ID already exists as a failsafe.
 
 execute unless score $ntils:player.ENABLED ntils.API.singularity.flag matches 1 run return fail
+function ntils:api/player/storage/close
 
-data modify storage ntils:api player[].Open set value False
 data modify storage ntils:z player.storage.open.m set value {id:0}
 execute store result storage ntils:z player.storage.open.m.id int 1 run scoreboard players get #player.storage.open.in ntils.API
 function ntils:z/player/storage/open/main with storage ntils:z pdata.open.macro

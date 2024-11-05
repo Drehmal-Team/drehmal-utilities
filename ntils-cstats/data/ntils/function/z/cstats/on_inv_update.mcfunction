@@ -22,5 +22,6 @@ data modify storage ntils:api cstats.edit_modifiers.in.list append from storage 
 data modify storage ntils:api cstats.edit_modifiers.in.source set value "inventory"
 function ntils:api/cstats/edit_modifiers
 
+function #ntils:api/cstats/stats_update
 
 function ntils:api/player/storage/close
