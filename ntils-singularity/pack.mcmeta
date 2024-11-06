@@ -1,6 +1,6 @@
 {
   "pack": {
-    "pack_format": 48,
+    "pack_format": 57,
     "description": "Utilities - §bSingularity/n§7Handles loading/unloading and global constants."
   }
 }

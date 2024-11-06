@@ -8,6 +8,7 @@ scoreboard objectives add ntils.API dummy
 # NUMERICAL CONSTANTS #
 
 scoreboard players set #-1 ntils.z.const -1
+scoreboard players set #10 ntils.z.const 10
 scoreboard players set #100 ntils.z.const 100
 scoreboard players set #120 ntils.z.const 120
 scoreboard players set #180 ntils.z.const 180

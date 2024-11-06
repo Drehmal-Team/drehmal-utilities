@@ -11,8 +11,8 @@ scoreboard players set #dam_mod ntils.z.player.temp 0
 execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={undead=true}}] store result score #dam_mod ntils.z.player.temp run data get storage ntils:z player.combat.player_hurt_entity.temp_mainhand.components."minecraft:enchantments".levels."minecraft:smite" 25
 execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={arthropod=true}}] store result score #dam_mod ntils.z.player.temp run data get storage ntils:z player.combat.player_hurt_entity.temp_mainhand.components."minecraft:enchantments".levels."minecraft:bane_of_athropods" 25
 
-execute store result score #crit_check ntils.z.player.temp run attribute @s generic.attack_damage get 15
-execute store result score #full_check ntils.z.player.temp run attribute @s generic.attack_damage get 10
+execute store result score #crit_check ntils.z.player.temp run attribute @s attack_damage get 15
+execute store result score #full_check ntils.z.player.temp run attribute @s attack_damage get 10
 scoreboard players operation #crit_check ntils.z.player.temp += #dam_mod ntils.z.player.temp
 scoreboard players operation #full_check ntils.z.player.temp += #dam_mod ntils.z.player.temp
 
