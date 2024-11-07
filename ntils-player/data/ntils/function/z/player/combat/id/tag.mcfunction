@@ -1,0 +1,1 @@
+$tag @s add ntils.z.player.combat.id.value.$(i)

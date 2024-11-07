@@ -1,0 +1,4 @@
+$tag @e[type=!#ntils:api/player/combat/nohitbox,tag=ntils.z.player.combat.id.value.$(vi),nbt=!{HurtTime:0s}] add ntils.API.player.combat.player_hurt_entity.victim_entity
+$execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={bd=true}}] at @e[type=!#ntils:api/player/combat/nohitbox,tag=ntils.API.player.combat.player_hurt_entity.victim_entity] run tag @e[type=!#ntils:api/player/combat/nohitbox,tag=ntils.z.player.combat.id.value.$(di),limit=1,sort=nearest] add ntils.API.player.combat.player_hurt_entity.direct_entity
+$data modify storage ntils:api player.combat.player_hurt_entity.victim_entity set from storage ntils:z lookups.player.entity_list[$(vt)]
+$execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={bd=true}}] run data modify storage ntils:api player.combat.player_hurt_entity.direct_entity set from storage ntils:z lookups.player.entity_list[$(dt)]

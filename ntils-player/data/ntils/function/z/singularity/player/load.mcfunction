@@ -7,4 +7,8 @@ scoreboard objectives add ntils.API.player.state.mainhand_update.IGNORE dummy
 scoreboard objectives add ntils.z.player.id dummy
 scoreboard objectives add ntils.z.player.temp dummy
 
+scoreboard objectives add ntils.z.player.state.bow.timer dummy
+scoreboard objectives add ntils.z.player.state.bow.used minecraft.used:bow
+
+
 scoreboard objectives add ntils.z.player.state.fire.clear.trigger dummy

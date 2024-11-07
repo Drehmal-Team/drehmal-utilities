@@ -4,6 +4,6 @@ data modify storage ntils:api singularity.data append value {\
     display:{desc:"Player module.",name:"Player"},\
     dependency:[\
         {id:"ntils:uuid",version:{min:1}},\
-        {id:"ntils:lookups",version:{min:1}},\
+        {id:"ntils:lookups",version:{min:3}},\
     ]\
 }

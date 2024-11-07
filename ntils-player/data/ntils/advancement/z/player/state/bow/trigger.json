@@ -1,0 +1,16 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": "minecraft:bow"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "ntils:z/player/state/bow/trigger"
+    }
+  }
+  

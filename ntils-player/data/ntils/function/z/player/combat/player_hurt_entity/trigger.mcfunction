@@ -1,42 +1,60 @@
 execute if entity @s[tag=ntils.API.combat.disable_advancement] run return run advancement revoke @s only ntils:z/player/combat/player_hurt_entity
 
-function ntils:z/player/combat/player_hurt_entity/get_damage
+# --------------------------------------------- #
 
-execute as @e[type=!#ntils:api/player/combat/nohitbox,tag=!ntils.z.player.combat.player_hurt_entity,distance=..10] at @s on attacker if entity @s[advancements={ntils:z/player/combat/player_hurt_entity=true}] as @e[distance=0,nbt={HurtTime:10s}] run function ntils:z/player/combat/player_hurt_entity/add_tags
+data modify storage ntils:api player.combat.player_hurt_entity set value {\
+    damage: {\
+        pre: 0,\
+        post: 0,\
+    },\
+    is_direct: True,\
+    victim_entity: "null",\
+    direct_entity: "player",\
+    source_entity: "player",\
+}
 
-execute in ntils:z/empty run item replace block 0 0 0 container.0 from entity @s weapon.mainhand
-execute in ntils:z/empty run data modify storage ntils:z player.combat.player_hurt_entity.temp_mainhand set from block 0 0 0 Items[0]
+# --------------------------------------------- #
 
-scoreboard players set #dam_mod ntils.z.player.temp 0
-execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={undead=true}}] store result score #dam_mod ntils.z.player.temp run data get storage ntils:z player.combat.player_hurt_entity.temp_mainhand.components."minecraft:enchantments".levels."minecraft:smite" 25
-execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={arthropod=true}}] store result score #dam_mod ntils.z.player.temp run data get storage ntils:z player.combat.player_hurt_entity.temp_mainhand.components."minecraft:enchantments".levels."minecraft:bane_of_athropods" 25
+function ntils:z/player/combat/player_hurt_entity/get_damage_before
+function ntils:z/player/combat/player_hurt_entity/get_damage_after
 
-execute store result score #crit_check ntils.z.player.temp run attribute @s attack_damage get 15
-execute store result score #full_check ntils.z.player.temp run attribute @s attack_damage get 10
-scoreboard players operation #crit_check ntils.z.player.temp += #dam_mod ntils.z.player.temp
-scoreboard players operation #full_check ntils.z.player.temp += #dam_mod ntils.z.player.temp
+scoreboard players set #vid ntils.z.player.temp 0
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={iv7=true}}] run scoreboard players add #vid ntils.z.player.temp 128
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={iv6=true}}] run scoreboard players add #vid ntils.z.player.temp 64
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={iv5=true}}] run scoreboard players add #vid ntils.z.player.temp 32
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={iv4=true}}] run scoreboard players add #vid ntils.z.player.temp 16
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={iv3=true}}] run scoreboard players add #vid ntils.z.player.temp 8
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={iv2=true}}] run scoreboard players add #vid ntils.z.player.temp 4
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={iv1=true}}] run scoreboard players add #vid ntils.z.player.temp 2
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={iv0=true}}] run scoreboard players add #vid ntils.z.player.temp 1
 
-scoreboard players set #dam_mod ntils.z.player.temp 0
-scoreboard players set #sharp_level ntils.z.player.temp 0
-execute store result score #sharp_level ntils.z.player.temp run data get storage ntils:z player.combat.player_hurt_entity.temp_mainhand.components."minecraft:enchantments".levels."minecraft:sharpness" 1
+scoreboard players set #vtype ntils.z.player.temp 0
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={v7=true}}] run scoreboard players add #vtype ntils.z.player.temp 128
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={v6=true}}] run scoreboard players add #vtype ntils.z.player.temp 64
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={v5=true}}] run scoreboard players add #vtype ntils.z.player.temp 32
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={v4=true}}] run scoreboard players add #vtype ntils.z.player.temp 16
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={v3=true}}] run scoreboard players add #vtype ntils.z.player.temp 8
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={v2=true}}] run scoreboard players add #vtype ntils.z.player.temp 4
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={v1=true}}] run scoreboard players add #vtype ntils.z.player.temp 2
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={v0=true}}] run scoreboard players add #vtype ntils.z.player.temp 1
 
-execute if score #sharp_level ntils.z.player.temp matches 1.. run scoreboard players add #dam_mod ntils.z.player.temp 10
-execute if score #sharp_level ntils.z.player.temp matches 1.. run scoreboard players remove #sharp_level ntils.z.player.temp 1
-scoreboard players operation #sharp_level ntils.z.player.temp *= #5 ntils.z.const
-scoreboard players operation #dam_mod ntils.z.player.temp += #sharp_level ntils.z.player.temp
-scoreboard players operation #crit_check ntils.z.player.temp += #dam_mod ntils.z.player.temp
-scoreboard players operation #full_check ntils.z.player.temp += #dam_mod ntils.z.player.temp
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={bd=true}}] run function ntils:z/player/combat/player_hurt_entity/get_direct_entity
 
-scoreboard players set #HIT_TYPE# ntils.API 0
+data modify storage ntils:z player.combat.player_hurt_entity.m set value {vt:0,dt:0,vi:0,di:0}
+execute store result storage ntils:z player.combat.player_hurt_entity.m.vt int 1 run scoreboard players get #vtype ntils.z.player.temp
+execute store result storage ntils:z player.combat.player_hurt_entity.m.dt int 1 run scoreboard players get #dtype ntils.z.player.temp
+execute store result storage ntils:z player.combat.player_hurt_entity.m.vi int 1 run scoreboard players get #vid ntils.z.player.temp
+execute store result storage ntils:z player.combat.player_hurt_entity.m.di int 1 run scoreboard players get #did ntils.z.player.temp
 
-execute if score #DAMAGE_DEALT# ntils.API >= #full_check ntils.z.player.temp run scoreboard players set #HIT_TYPE# ntils.API 1
-execute if score #DAMAGE_DEALT# ntils.API >= #crit_check ntils.z.player.temp if entity @s[predicate=ntils:z/player/combat/player_hurt_entity/crit_possible] run scoreboard players set #HIT_TYPE# ntils.API 2
+function ntils:z/player/combat/player_hurt_entity/get_entities with storage ntils:z player.combat.player_hurt_entity.m
+
+execute store result storage ntils:api player.combat.player_hurt_entity.damage.pre double 0.1 run scoreboard players get #player.combat.DAMAGE_BEFORE_CALC# ntils.API
+execute store result storage ntils:api player.combat.player_hurt_entity.damage.post double 0.1 run scoreboard players get #player.combat.DAMAGE_AFTER_CALC# ntils.API
+execute if entity @s[advancements={ntils:z/player/combat/player_hurt_entity={bd=false}}] run function ntils:z/player/combat/player_hurt_entity/crit_check
 
 function #ntils:api/player/combat/player_hurt_entity
 
-tag @e remove ntils.API.player.combat.player_hurt_entity.victim
-schedule function ntils:z/player/combat/player_hurt_entity/remove_tags 1t
-advancement revoke @s only ntils:z/player/combat/player_hurt_entity
-
+tag @e[type=!#ntils:api/player/combat/nohitbox] remove ntils.API.player.combat.player_hurt_entity.victim_entity
+tag @e[type=!#ntils:api/player/combat/nohitbox] remove ntils.API.player.combat.player_hurt_entity.direct_entity
 
 advancement revoke @s only ntils:z/player/combat/player_hurt_entity
