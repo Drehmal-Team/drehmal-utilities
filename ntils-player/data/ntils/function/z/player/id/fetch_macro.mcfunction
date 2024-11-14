@@ -1,4 +1,4 @@
-$execute if data storage ntils:api player.storage[{z:{uuid:"$(out)"}}] store result score @s ntils.z.player.id store result score @s ntils.API.player.id run return run data get storage ntils:z player.storage[{z:{uuid:"$(out)"}}].z.id
+$execute if data storage ntils:api player.storage[{z:{uuid:"$(out)"}}] store result score @s ntils.z.player.id store result score @s ntils.API.player.id run return run data get storage ntils:api player.storage[{z:{uuid:"$(out)"}}].z.id
 
 scoreboard players set #player.ID# ntils.z.global 0
 data modify storage ntils:z player.id.temp set value []
