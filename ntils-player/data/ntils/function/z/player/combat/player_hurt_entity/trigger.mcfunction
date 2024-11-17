@@ -1,4 +1,4 @@
-execute if entity @s[tag=ntils.API.combat.disable_advancement] run return run advancement revoke @s only ntils:z/player/combat/player_hurt_entity
+execute if entity @s[tag=ntils.API.player.combat.player_hurt_entity.disable_advancement] run return run advancement revoke @s only ntils:z/player/combat/player_hurt_entity
 
 # --------------------------------------------- #
 

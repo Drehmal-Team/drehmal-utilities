@@ -1,0 +1,3 @@
+$execute if entity @s[advancements={ntils:z/player/combat/entity_hurt_player={bd=true}}] run tag @e[type=!#ntils:api/player/combat/nohitbox,tag=ntils.z.player.combat.id.value.$(di),limit=1,sort=nearest] add ntils.API.player.combat.entity_hurt_player.direct_entity
+$data modify storage ntils:api player.combat.entity_hurt_player.source_entity set from storage ntils:z lookups.player.entity_list[$(st)]
+$execute if entity @s[advancements={ntils:z/player/combat/entity_hurt_player={bd=true}}] run data modify storage ntils:api player.combat.entity_hurt_player.direct_entity set from storage ntils:z lookups.player.entity_list[$(dt)]
