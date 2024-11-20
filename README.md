@@ -1,8 +1,8 @@
 # Utilities
 
-general purpose utilities pack for https://drehmal.net
-this is a personal thing, if you use it make sure to credit all the packs listed below where code was "borrowed"
+heavily WIP (code for: do not use) semiprivate modular datapack library by 1000hrcelebration for https://drehmal.net (not actually in use yet atm)
+no real documentation exists, everything here is subject to change, ask me on discord for any questions about this
 
 ## stolen code used: 
 
-modified version of https://github.com/XanBelOr/Minecraft-Simple-Custom-Heal/
+none currently
