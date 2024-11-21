@@ -1,0 +1,28 @@
+{
+  "values": [
+    "cramming",
+    "dragon_breath",
+    "drown",
+    "dry_out",
+    "falling_block",
+    "falling_stalactite",
+    "fireball",
+    "fireworks",
+    "hot_floor",
+    "in_fire",
+    "in_wall",
+    "indirect_magic",
+    "mob_attack",
+    "mob_attack_no_aggro",
+    "mob_projectile",
+    "on_fire",
+    "sonic_boom",
+    "spit",
+    "stalagmite",
+    "starve",
+    "trident",
+    "unattributed_fireball",
+    "wind_charge",
+    "wither"
+  ]
+}

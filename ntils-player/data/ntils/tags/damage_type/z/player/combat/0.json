@@ -1,0 +1,28 @@
+{
+  "values": [
+    "bad_respawn_point",
+    "campfire",
+    "dragon_breath",
+    "dry_out",
+    "explosion",
+    "falling_anvil",
+    "falling_stalactite",
+    "fireworks",
+    "freeze",
+    "generic_kill",
+    "in_fire",
+    "indirect_magic",
+    "lightning_bolt",
+    "magic",
+    "mob_attack_no_aggro",
+    "on_fire",
+    "outside_border",
+    "player_explosion",
+    "spit",
+    "starve",
+    "sweet_berry_bush",
+    "thrown",
+    "unattributed_fireball",
+    "wither"
+  ]
+}

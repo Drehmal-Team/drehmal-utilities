@@ -1,0 +1,28 @@
+{
+  "values": [
+    "cactus",
+    "campfire",
+    "drown",
+    "dry_out",
+    "fall",
+    "falling_anvil",
+    "fireball",
+    "fireworks",
+    "generic",
+    "generic_kill",
+    "in_wall",
+    "indirect_magic",
+    "mace_smash",
+    "magic",
+    "mob_projectile",
+    "on_fire",
+    "player_attack",
+    "player_explosion",
+    "stalagmite",
+    "starve",
+    "thorns",
+    "thrown",
+    "wind_charge",
+    "wither"
+  ]
+}

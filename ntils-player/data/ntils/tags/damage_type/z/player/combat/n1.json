@@ -1,0 +1,29 @@
+{
+  "values": [
+    "arrow",
+    "bad_respawn_point",
+    "cramming",
+    "dragon_breath",
+    "ender_pearl",
+    "explosion",
+    "falling_block",
+    "falling_stalactite",
+    "fly_into_wall",
+    "freeze",
+    "hot_floor",
+    "in_fire",
+    "lava",
+    "lightning_bolt",
+    "mob_attack",
+    "mob_attack_no_aggro",
+    "out_of_world",
+    "outside_border",
+    "sonic_boom",
+    "spit",
+    "sting",
+    "sweet_berry_bush",
+    "trident",
+    "unattributed_fireball",
+    "wither_skull"
+  ]
+}

@@ -10,5 +10,6 @@ scoreboard objectives add ntils.z.player.temp dummy
 scoreboard objectives add ntils.z.player.state.bow.timer dummy
 scoreboard objectives add ntils.z.player.state.bow.used minecraft.used:bow
 
-
 scoreboard objectives add ntils.z.player.state.fire.clear.trigger dummy
+
+scoreboard players set #player.state.EXP_BAR_SIZE# ntils.z.global 182

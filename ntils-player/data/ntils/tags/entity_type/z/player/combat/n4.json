@@ -16,7 +16,6 @@
     "birch_chest_boat",
     "blaze",
     "block_display",
-    "dark_oak_boat",
     "dark_oak_chest_boat",
     "dolphin",
     "donkey",
@@ -32,7 +31,7 @@
     "evoker",
     "evoker_fangs",
     "experience_bottle",
-    "hopper_minecart",
+    "experience_orb",
     "horse",
     "husk",
     "illusioner",
@@ -48,7 +47,7 @@
     "llama",
     "llama_spit",
     "magma_cube",
-    "pig",
+    "mangrove_boat",
     "piglin",
     "piglin_brute",
     "pillager",
@@ -64,7 +63,7 @@
     "shulker_bullet",
     "silverfish",
     "skeleton",
-    "tnt",
+    "skeleton_horse",
     "tnt_minecart",
     "trader_llama",
     "trident",
@@ -79,6 +78,7 @@
     "witch",
     "wither",
     "wither_skeleton",
-    "wither_skull"
+    "wither_skull",
+    "wolf"
   ]
 }

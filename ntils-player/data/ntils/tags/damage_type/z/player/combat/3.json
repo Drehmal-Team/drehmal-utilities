@@ -1,0 +1,28 @@
+{
+  "values": [
+    "ender_pearl",
+    "explosion",
+    "fall",
+    "falling_anvil",
+    "falling_block",
+    "falling_stalactite",
+    "fireball",
+    "fireworks",
+    "lava",
+    "lightning_bolt",
+    "mace_smash",
+    "magic",
+    "mob_attack",
+    "mob_attack_no_aggro",
+    "mob_projectile",
+    "on_fire",
+    "sting",
+    "sweet_berry_bush",
+    "thorns",
+    "thrown",
+    "trident",
+    "unattributed_fireball",
+    "wind_charge",
+    "wither"
+  ]
+}

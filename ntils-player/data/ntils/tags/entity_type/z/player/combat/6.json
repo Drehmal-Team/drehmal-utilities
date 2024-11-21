@@ -1,6 +1,5 @@
 {
   "values": [
-    "hopper_minecart",
     "horse",
     "husk",
     "illusioner",
@@ -63,6 +62,7 @@
     "stray",
     "strider",
     "tadpole",
-    "text_display"
+    "text_display",
+    "tnt"
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "values": [
+    "arrow",
+    "bad_respawn_point",
+    "cactus",
+    "campfire",
+    "cramming",
+    "dragon_breath",
+    "drown",
+    "dry_out",
+    "fly_into_wall",
+    "freeze",
+    "generic",
+    "generic_kill",
+    "hot_floor",
+    "in_fire",
+    "in_wall",
+    "indirect_magic",
+    "out_of_world",
+    "outside_border",
+    "player_attack",
+    "player_explosion",
+    "sonic_boom",
+    "spit",
+    "stalagmite",
+    "starve",
+    "wither_skull"
+  ]
+}

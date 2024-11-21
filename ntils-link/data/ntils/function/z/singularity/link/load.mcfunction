@@ -1,0 +1,3 @@
+execute unless score $ntils:link.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+
+# ...

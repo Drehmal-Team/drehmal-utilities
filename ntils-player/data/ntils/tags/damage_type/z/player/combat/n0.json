@@ -1,0 +1,29 @@
+{
+  "values": [
+    "arrow",
+    "cactus",
+    "cramming",
+    "drown",
+    "ender_pearl",
+    "fall",
+    "falling_block",
+    "fireball",
+    "fly_into_wall",
+    "generic",
+    "hot_floor",
+    "in_wall",
+    "lava",
+    "mace_smash",
+    "mob_attack",
+    "mob_projectile",
+    "out_of_world",
+    "player_attack",
+    "sonic_boom",
+    "stalagmite",
+    "sting",
+    "thorns",
+    "trident",
+    "wind_charge",
+    "wither_skull"
+  ]
+}

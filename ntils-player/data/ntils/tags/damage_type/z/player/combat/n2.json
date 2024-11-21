@@ -1,0 +1,29 @@
+{
+  "values": [
+    "arrow",
+    "bad_respawn_point",
+    "cactus",
+    "campfire",
+    "ender_pearl",
+    "explosion",
+    "fall",
+    "falling_anvil",
+    "fly_into_wall",
+    "freeze",
+    "generic",
+    "generic_kill",
+    "lava",
+    "lightning_bolt",
+    "mace_smash",
+    "magic",
+    "out_of_world",
+    "outside_border",
+    "player_attack",
+    "player_explosion",
+    "sting",
+    "sweet_berry_bush",
+    "thorns",
+    "thrown",
+    "wither_skull"
+  ]
+}

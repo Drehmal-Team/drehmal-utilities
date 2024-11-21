@@ -1,0 +1,2 @@
+execute if entity @s[type=!player,distance=..0.0000001] run return run data modify storage ntils:api context.pos.get.out set from entity @s Pos
+execute summon marker run function ntils:z/context/pos/get/as

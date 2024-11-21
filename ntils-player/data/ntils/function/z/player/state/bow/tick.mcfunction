@@ -1,6 +1,6 @@
 execute unless score @s ntils.z.player.state.bow.used matches 1.. if entity @s[tag=ntils.z.player.state.bow.pulling] run return run tag @s remove ntils.z.player.state.bow.pulling
 
-execute if score @s ntils.z.player.state.bow.used matches 1 run function #ntils:api/player/state/bow/shoot
+execute if score @s ntils.z.player.state.bow.used matches 1 at @s run function #ntils:api/player/state/bow/shoot
 
 tag @s remove ntils.z.player.state.bow.pulling
 scoreboard players reset @s ntils.z.player.state.bow.timer
