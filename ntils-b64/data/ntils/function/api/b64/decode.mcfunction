@@ -1,10 +1,14 @@
 # B64/DECODE
 #
-# Takes a base 64 encoded input string at "ntils:api b64.decode.in" and outputs the decoded output at "ntils:api b64.decode.out"
+#    Given a Base64 encoded string (as seen in player head items), decodes it into ASCII. Outputs the decoded result as a string list.
 #
-# IN: string
+# INPUT:
+#   > Storage:
+#       | ntils:api b64.decode.in, string
 #
-# OUT: char array
+# OUTPUT:
+#   > Storage:
+#       | ntils:api b64.decode.out, string list
 #
 # PERFORMANCE: Bad
 #   Very optimized for its purpose but still not great. Only use this on the portion of base64 you actually need converted.

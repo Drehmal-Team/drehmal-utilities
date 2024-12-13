@@ -1,9 +1,16 @@
 # MATH/DISTANCE
 #
-# Given a vector specified with X, Y, and Z, calculates the distance with floating-point precision using stolen display transformation wizardy.
-#   Input: {X:float,Y:float,Z:float} at ntils:api math.distance.in
+#   Given a vector specified with X, Y, and Z, calculates the length of that vector with floating-point precision.
 #
-# PERFORMANCE: Meh
+# INPUT:
+#   > Storage:
+#       | ntils:api math.distance.in, object. Format: {X:float,Y:float,Z:float}
+#
+# OUTPUT:
+#   > Storage:
+#       | ntils:api math.distance.out, float.
+#
+# PERFORMANCE: Good
 #   Use this if you need floating-point precision on your distance calculation. Otherwise, just use the scoreboard method.
 
 data modify storage ntils:z math.distance.transform set value [0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1f]

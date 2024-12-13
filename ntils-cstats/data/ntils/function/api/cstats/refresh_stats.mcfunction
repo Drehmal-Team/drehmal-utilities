@@ -1,10 +1,20 @@
 # CSTATS/EDIT_MODIFIERS
 #
-# Given a player, refreshes that players stats.
-# Notably, by "a player," this interacts with an open player storage using the ntils:player module.
-# If no open player storage exists, then this function will fail.
+#   Given a player, refreshes that players stats.
+#   Notably, by "a player," this interacts with an open player storage using the ntils:player module.
+#   If no open player storage exists, then this function will fail.
 #
-# OUTPUT: This function does not have proper output. Instead, the stat modifications are applied directly to the players storage.
+# INPUT: 
+#   > Misc:
+#       | An open storage with the ntils:player player storage system.
+#
+# OUTPUT:
+#   > Storage:
+#       | ntils:api player.storage[{Open:True}].data.ntils.api.cstats.stats, object. A standard NBT object in the format {stat:value}, containing the calculated values of all stats affecting the player.
+#
+# PERFORMANCE: Bad
+#   Has to perform a macro function call for each unique stat name on the player as well as a normal function call for each modifier.
+#   Not as bad as it sounds, because all told this is still better than anything that uses player NBT directly.
 
 execute unless score $ntils:cstats.ENABLED ntils.API.singularity.flag matches 1.. run return fail
 execute unless data storage ntils:api player.storage[{Open:True}] run return fail

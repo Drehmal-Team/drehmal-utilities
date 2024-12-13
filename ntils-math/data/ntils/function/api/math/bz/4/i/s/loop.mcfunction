@@ -14,7 +14,7 @@
 #
 # At ntils:api math.bz.4.out, a [double,double,double] array with the position data from above will be created, so that you can easily just set an entities position data to it.
 #
-# PERFORMANCE: Excellent. Could have been less commands if fixed point wasnt a fuck
+# PERFORMANCE: Excellent
 
 execute store result storage ntils:api math.bz.4.out[0] double 0.001 store result score #math.bz.4.out.x ntils.API run scoreboard players operation @s ntils.z.math.bz.4.i.base.x += @s ntils.z.math.bz.4.i.vec_s.x
 execute store result score @s ntils.z.math.bz.4.i.vec_s.x run scoreboard players operation @s ntils.z.math.bz.4.i.vec.x += @s ntils.z.math.bz.4.i.accel_s.x

@@ -1,0 +1,1 @@
+$execute as $(rig) run function animated_java:$(nm)/animations/$(n)/resume

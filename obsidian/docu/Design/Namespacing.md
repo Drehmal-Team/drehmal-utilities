@@ -1,0 +1,1 @@
+Proper namespacing is crucial to keeping Ntils running smoothly and cleanly.

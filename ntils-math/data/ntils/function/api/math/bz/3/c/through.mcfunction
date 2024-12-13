@@ -33,7 +33,8 @@
 #   #math.bz.3.in.b.y ntils.API
 #   #math.bz.3.in.b.z ntils.API
 #
-# PERFORMANCE: Great. Far superior to the 4 point version, and magnitudes more accurate.
+# PERFORMANCE: Good
+#   Far superior to the 4 point version, and magnitudes more accurate. 32 vs 99 commands.
 
 scoreboard players operation #de ntils.z.math.bz.3.temp = #math.bz.3.in.t ntils.API
 scoreboard players operation #de ntils.z.math.bz.3.temp *= #math.bz.3.in.t ntils.API

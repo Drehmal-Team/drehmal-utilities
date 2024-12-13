@@ -1,6 +1,6 @@
 {
     "values": [
-        "ntils:z/singularity/template/load"
+        "ntils:z/singularity/ajsm/load"
     ],
     "replace": false
 }

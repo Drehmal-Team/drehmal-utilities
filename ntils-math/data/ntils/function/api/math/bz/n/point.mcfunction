@@ -24,7 +24,8 @@
 #
 # At ntils:api math.bz.n.out, a [double,double,double] array with the position data from above will be created, so that you can easily just set an entities position data to it.
 #
-# PERFORMANCE: Bad. Do not use this! I will keep this in for posterity, but using this is highly inadvisable. I made this for fun.
+# PERFORMANCE: Okay
+#   Do not use this! I will keep this in for posterity, but using this is highly inadvisable. I made this for fun.
 
 execute store result score #math.choose.in.x ntils.API if data storage ntils:api math.bz.n.in[]
 execute store result score #k ntils.z.math.bz.n.temp run scoreboard players remove #math.choose.in.x ntils.API 1

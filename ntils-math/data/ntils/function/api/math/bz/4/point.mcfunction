@@ -38,7 +38,8 @@
 #
 # At ntils:api math.bz.4.out, a [double,double,double] array with the position data from above will be created, so that you can easily just set an entities position data to it.
 #
-# PERFORMANCE: Good. However, don't run this if you can get away with using the iterator instead.
+# PERFORMANCE: Okay
+#   68 commands in total. Don't run this if you can get away with using the iterator instead.
 
 scoreboard players operation #math.bz.4.3t ntils.z.math.bz.4.temp = #math.bz.4.in.t ntils.API
 scoreboard players operation #math.bz.4.3t ntils.z.math.bz.4.temp *= #3 ntils.z.const

@@ -43,7 +43,8 @@
 #   #math.bz.4.in.c.y ntils.API
 #   #math.bz.4.in.c.z ntils.API
 #
-# PERFORMANCE: Good. It's just 99 scoreboard commands. Don't run this *too* much.
+# PERFORMANCE: Okay
+#   It's just 99 scoreboard commands. Don't run this *too* much.
 
 scoreboard players operation #t1^2 ntils.z.math.bz.4.temp = #math.bz.4.in.t1 ntils.API
 execute store result score #t1^3 ntils.z.math.bz.4.temp store result score #t1^2.div ntils.z.math.bz.4.temp run scoreboard players operation #t1^2 ntils.z.math.bz.4.temp *= #math.bz.4.in.t1 ntils.API
