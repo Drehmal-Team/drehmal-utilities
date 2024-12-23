@@ -1,10 +1,15 @@
 # MATH/DISTANCE
 #
-#   Given a vector specified with X, Y, and Z, calculates the length of that vector with floating-point precision.
+#   Calculates the length of a 1, 2, or 3 component vector with floating-point precision.
 #
 # INPUT:
 #   > Storage:
-#       | ntils:api math.distance.in, object. Format: {X:float,Y:float,Z:float}
+#       | ntils:api math.distance.in, object. Not all of X, Y, and Z need to be specified for this to work, but at least one needs to be.
+#       |   {
+#       |       X, float
+#       |       Y, float
+#       |       Z, float
+#       |   }
 #
 # OUTPUT:
 #   > Storage:
