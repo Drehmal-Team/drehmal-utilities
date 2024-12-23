@@ -5,9 +5,7 @@
 #
 # OUTPUT:
 #   > Scoreboard:
-#       | #math.bz.4.in.d.x ntils.API
-#       | #math.bz.4.in.d.y ntils.API
-#       | #math.bz.4.in.d.z ntils.API
+#       | #math.bz.4.in.d.[x,y,z] ntils.API (3)
 #
 # PERFORMANCE: Good
 #   Not necessarily ideal, but good enough that it can be used in any situation where performance isnt a total priority.

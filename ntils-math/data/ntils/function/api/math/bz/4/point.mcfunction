@@ -1,45 +1,23 @@
 # MATH/BZ/4/POINT
 #
-# Given a start point (a), an end point (d), control points (b) and (c), and a t value, calculates a single point along a bezier curve.
+#   Given a start point (a), an end point (c), two control points (b) and (c), and a t value, calculates a single point along a bezier curve.
 #
-#   INPUT SCORES:
+# INPUT:
+#   > Scoreboard:
+#       | #math.bz.4.in.a.[x,y,z] ntils.API (3)     <- Inputs for the starting point.
+#       | #math.bz.4.in.b.[x,y,z] ntils.API (3)     <- Inputs for the first control point.
+#       | #math.bz.4.in.c.[x,y,z] ntils.API (3)     <- Inputs for the second control point.
+#       | #math.bz.4.in.d.[x,y,z] ntils.API (3)     <- Inputs for the end point.
+#       | #math.bz.4.in.t ntils.API                 <- Value of the parameter t used to calculate the point. 0..1000 range.
 #
-# These are the inputs for the start point. Scale them by 1000
-#   #math.bz.4.in.a.x ntils.API
-#   #math.bz.4.in.a.y ntils.API
-#   #math.bz.4.in.a.z ntils.API
-#
-# These are the inputs for the first control point. Scale them by 1000
-#   #math.bz.4.in.b.x ntils.API
-#   #math.bz.4.in.b.y ntils.API
-#   #math.bz.4.in.b.z ntils.API
-#
-# These are the inputs for the second control point. Scale them by 1000
-#   #math.bz.4.in.c.x ntils.API
-#   #math.bz.4.in.c.y ntils.API
-#   #math.bz.4.in.c.z ntils.API
-#
-# These are the inputs for the end point. Scale them by 1000
-#   #math.bz.4.in.d.x ntils.API
-#   #math.bz.4.in.d.y ntils.API
-#   #math.bz.4.in.d.z ntils.API
-#
-# This is the percent along the curve you wish to have the point at. Set to a value between 0 and 1000
-#   #math.bz.4.in.t ntils.API
-#
-#   OUTPUT SCORES:
-#
-# These are the scores for the XYZ output of the current position along the bezier curve.
-#   #math.bz.4.out.x ntils.API
-#   #math.bz.4.out.y ntils.API
-#   #math.bz.4.out.z ntils.API
-#
-#   ADDITIONAL OUTPUT:
-#
-# At ntils:api math.bz.4.out, a [double,double,double] array with the position data from above will be created, so that you can easily just set an entities position data to it.
+# OUTPUT:
+#   > Scoreboard:
+#       | #math.bz.4.out.[x,y,z] ntils.API (3)
+#   > Storage:
+#       | ntils:api math.bz.4.out, double list (3)
 #
 # PERFORMANCE: Okay
-#   68 commands in total. Don't run this if you can get away with using the iterator instead.
+#   Don't run this if you can get away with using the iterator instead.
 
 scoreboard players operation #math.bz.4.3t ntils.z.math.bz.4.temp = #math.bz.4.in.t ntils.API
 scoreboard players operation #math.bz.4.3t ntils.z.math.bz.4.temp *= #3 ntils.z.const

@@ -1,31 +1,28 @@
 # MATH/BZ/N/POINT
 #
-# Given an arbitrarily long list of points and a t value, calculates a point along a bezier curve of arbitrary order.
+#   Given an arbitrarily long list of points and a t value, calculates a point along a bezier curve of arbitrary order.
+#   NOTE: This suffers from HUGE precision issues for curves with more than 3 control points (5 points total). To be honest, this thing doesn't serve much of a purpose, but it sure is fun!
 #
-# NOTE: This suffers from HUGE precision issues for curves with more than 3 control points (5 points total). To be honest, this thing doesn't serve much of a purpose, but it sure is fun!
-#
-#   INPUT: ntils:api math.bz.n.in
-#       |  This will be a list of lists. Each list must contain numbers, and they will be treated as coordinates, and will have their values scaled as such.
-#       |  Copying entity Pos data directly to the list will create the desired effect.
-#       |
-#       |  The [0] entry of the list will be treated as the start, and the [-1] entry will be treated as the end.
-#       |  All other points will be treated as controls.
-#
-#  SCOREBOARD INPUT: #math.bz.n.in.t ntils.API
-#       | This is the t value for the point along the curve you want to access.
+# INPUT: 
+#   > Scoreboard:
+#       | #math.bz.n.in.t ntils.API  <- This is the t value for the point along the curve you want to access.
+#   > Storage:
+#       | ntils:api math.bz.n.in, double list (3) list (n). This will be a list of lists. Each list must contain numbers, 
+#       |                                                   and they will be treated as coordinates, and will have their 
+#       |                                                   values scaled as such. Copying entity Pos data directly to the 
+#       |                                                   list will create the desired effect.
+#       |                                                   The [0] entry of the list will be treated as the start, and 
+#       |                                                   the [-1] entry will be treated as the end.
+#       |                                                   All other points will be treated as controls.
 # 
-#
-# These are the scores for the XYZ output of the current position along the bezier curve.
-#   #math.bz.n.out.x ntils.API
-#   #math.bz.n.out.y ntils.API
-#   #math.bz.n.out.z ntils.API
-#
-#   ADDITIONAL OUTPUT:
-#
-# At ntils:api math.bz.n.out, a [double,double,double] array with the position data from above will be created, so that you can easily just set an entities position data to it.
+# OUTPUT:
+#   > Scoreboard:
+#       | #math.bz.n.out.[x,y,z] ntils.API (3)
+#   > Storage:
+#       | ntils:api math.bz.n.out, double list (3). The scoreboard output in list form, for direct Pos modification.
 #
 # PERFORMANCE: Okay
-#   Do not use this! I will keep this in for posterity, but using this is highly inadvisable. I made this for fun.
+#   Very little use cases here, and performance cost scales quadratically with input size. If you know your curve will only ever be 3 or 4 points, just use the dedicated functions.
 
 execute store result score #math.choose.in.x ntils.API if data storage ntils:api math.bz.n.in[]
 execute store result score #k ntils.z.math.bz.n.temp run scoreboard players remove #math.choose.in.x ntils.API 1

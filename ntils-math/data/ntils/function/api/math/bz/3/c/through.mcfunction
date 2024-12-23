@@ -17,7 +17,7 @@
 #       |                                              it should be noted that very small or very large t values will cause precision loss.
 #
 # OUTPUT:
-#    > Scoreboard:
+#   > Scoreboard:
 #       | #math.bz.3.in.b.[x,y,z] ntils.API (3)     <- Usable input for any of the other bezier functions in the pack.
 #
 # PERFORMANCE: Good

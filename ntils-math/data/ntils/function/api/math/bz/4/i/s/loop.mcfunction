@@ -1,20 +1,21 @@
-# MATH/BZ/4/I/S/LOOP
+# MATH/BZ/3/I/S/LOOP
 #
-# Iterates a single step along the bezier curve initialized by the math/bz/4/i/s/loop function and sets the output scores/data.
-# This iterates using the scores on the current @s entity.
+#   Iterates a single step along the bezier curve initialized by the math/bz/4/i/s/start function.
+#   Outputs the current position on the curve as scores and as nbt that can be applied directly as Pos data.
 #
-#   OUTPUT SCORES:
+# INPUT:
+#   > Misc:
+#       | For this function to work correctly, an iteration process must have already been started on the @s entity.
+#       | To start one, call math/bz/4/i/s/start.
 #
-# These are the scores for the XYZ output of the current position along the bezier curve.
-#   #math.bz.4.out.x ntils.API
-#   #math.bz.4.out.y ntils.API
-#   #math.bz.4.out.z ntils.API
-#
-#   ADDITIONAL OUTPUT:
-#
-# At ntils:api math.bz.4.out, a [double,double,double] array with the position data from above will be created, so that you can easily just set an entities position data to it.
+# OUTPUT:
+#   > Scoreboard:
+#       | #math.bz.4.out.[x,y,z] ntils.API (3)
+#   > Storage:
+#       | ntils:api math.bz.4.out, double list (3)
 #
 # PERFORMANCE: Excellent
+#   Starting an iteration is slow, but performing an iteration step is very fast, which is basically the whole reason for this stuff.
 
 execute store result storage ntils:api math.bz.4.out[0] double 0.001 store result score #math.bz.4.out.x ntils.API run scoreboard players operation @s ntils.z.math.bz.4.i.base.x += @s ntils.z.math.bz.4.i.vec_s.x
 execute store result score @s ntils.z.math.bz.4.i.vec_s.x run scoreboard players operation @s ntils.z.math.bz.4.i.vec.x += @s ntils.z.math.bz.4.i.accel_s.x

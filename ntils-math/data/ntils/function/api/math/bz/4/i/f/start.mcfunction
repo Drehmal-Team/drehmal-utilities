@@ -1,49 +1,30 @@
 # MATH/BZ/4/I/S/START
 #
-# Given a start point (a), an end point (d), and two control points (b) and (c), and an amount of iteration steps, begin a bezier iteration.
-# Once an iteration has been started, calling math/bz/4/i/s/loop will perform one iteration along the bezier curve. Once the amount of iterations becomes equal to
-# the starting iteration count value, the entire curve will have been traversed.
+#   Given a start point (a), an end point (d), and two control points (b) and (c), and an amount of iteration steps, begin a bezier iteration.
+#   Once an iteration has been started, calling math/bz/4/i/s/loop will perform one iteration along the bezier curve. Once the amount of iterations becomes equal to
+#   the starting iteration count value, the entire curve will have been traversed.
 #
-# WARNING: This iteration method has to contend with scoreboard precision! As such, it has two fail cases: An iteration count that is too low (causes scoreboard overflows and makes a curve that veers wildly), or an iteration count that is too high (makes for compounding precision loss. as an example, a curve with 100 given iterations will end up closer to its target than one with 1000). A good rule of thumb is that the iteration count should be no lower than 2/3rds of the distance between the A and D points in blocks. So, for 30 blocks of distance, iteration count >20.
-# Given this, don't use this for any situation which would produce either eventuality.
+#   NOTE: This iteration method has to contend with scoreboard precision! As such, it has two fail cases: An iteration count that is too low (causes scoreboard overflows and makes a curve that veers wildly), or an iteration count that is too high (makes for compounding precision loss. as an example, a curve with 100 given iterations will end up closer to its target than one with 1000). A good rule of thumb is that the iteration count should be no lower than 2/3rds of the distance between the A and D points in blocks. So, for 30 blocks of distance, iteration count >20.
+#   Given this, don't use this for any situation which would produce either eventuality.
 #
-# This uses entity scores on @s. Starting another iteration on this same entity will overwrite this one.
+#   This uses entity scores on @s. Starting another iteration on this same entity will overwrite this one.
 #
-#   INPUT SCORES:
+# INPUT:
+#   > Scoreboard:
+#       | #math.bz.4.in.a.[x,y,z] ntils.API
+#       | #math.bz.4.in.b.[x,y,z] ntils.API
+#       | #math.bz.4.in.c.[x,y,z] ntils.API
+#       | #math.bz.4.in.d.[x,y,z] ntils.API
+#       | #math.bz.4.in.iterations ntils.API
 #
-# These are the inputs for the start point. Scale them by 1000
-#   #math.bz.4.in.a.x ntils.API
-#   #math.bz.4.in.a.y ntils.API
-#   #math.bz.4.in.a.z ntils.API
-#
-# These are the inputs for the first control point. Scale them by 1000
-#   #math.bz.4.in.b.x ntils.API
-#   #math.bz.4.in.b.y ntils.API
-#   #math.bz.4.in.b.z ntils.API
-#
-# These are the inputs for the second control point. Scale them by 1000
-#   #math.bz.4.in.c.x ntils.API
-#   #math.bz.4.in.c.y ntils.API
-#   #math.bz.4.in.c.z ntils.API
-#
-# These are the inputs for the end point. Scale them by 1000
-#   #math.bz.4.in.d.x ntils.API
-#   #math.bz.4.in.d.y ntils.API
-#   #math.bz.4.in.d.z ntils.API
-#
-# This is the amount of iterations you want to perform, or in other terms, the amount of times the loop function will need to be called to complete the curve.
-#   #math.bz.4.in.iterations ntils.API
-#
-#   OUTPUT SCORES:
-#
-# These are the scores for the XYZ output of the current position along the bezier curve.
-#   #math.bz.4.out.x ntils.API
-#   #math.bz.4.out.y ntils.API
-#   #math.bz.4.out.z ntils.API
-#
-#   ADDITIONAL OUTPUT:
-#
-# At ntils:api math.bz.4.out, a [double,double,double] array with the position data from above will be created, so that you can easily just set an entities position data to it.
+# OUTPUT:
+#   > Scoreboard:
+#       | #math.bz.4.out.[x,y,z] ntils.API (3)      <- The starting point of the iteration (point a).
+#   > Storage:
+#       | ntils:api math.bz.4.out, double list (3)  <- Point a as usable nbt.
+#   > Misc:
+#       | This function begins an iteration and stores the scores to perform that iteration globally.
+#       | Calling ntils:api/math/bz/4/i/f/loop will perform one step of the iteration and create usable output.
 #
 # PERFORMANCE: Okay
 #   Significantly more expensive than the 3 point version.

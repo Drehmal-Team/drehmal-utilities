@@ -1,50 +1,24 @@
 # MATH/BZ/4/C/THROUGH
 #
-# Given a start point, an end point, two target points for the curve to pass through, and the t values of the curve at those points, calculates the control points of a 4 point bezier curve.
+#   Given a start point, an end point, two target points for the curve to pass through, and the t values of the curve at those points, calculates the control points of a 4 point bezier curve.
+#   This code suffers from MASSIVE precision loss. The calculated locations of the control points can be entire blocks off from where they should be. Do not rely on this for *anything* that would be screwed over by that.
+#   NOTE: THIS MODIFIES INPUT SCORES. The output of this function is meant to be used *directly* in other functions, and as such the output is in the form of input scores.
 #
-# WARNING: This code suffers from MASSIVE precision loss. The calculated locations of the control points can be entire blocks off from where they should be. Do not rely on this for *anything* that would be screwed over by that.
+# INPUT:
+#   > Scoreboard:
+#       | #math.bz.4.in.a.[x,y,z] ntils.API (3)     <- The coordinates of the starting point.
+#       | #math.bz.4.in.p1.[x,y,z] ntils.API (3)    <- The coordinates of the first target point.
+#       | #math.bz.4.in.p2.[x,y,z] ntils.API (3)    <- The coordinates of the second target point.
+#       | #math.bz.4.in.d.[x,y,z] ntils.API (3)     <- The coordinates of the end point.
+#       | #math.bz.4.in.[t1,t2] ntils.API (2)       <- The desired t values for the target points, such that f(t1) = p1 and f(t2) = p2.
 #
-# NOTE: THIS MODIFIES INPUT SCORES. The output of this function is meant to be used *directly* in other functions, and as such the output is in the form of input scores.
-#
-#   INPUT SCORES:
-#
-# These are the inputs for the start point. Scale them by 1000
-#   #math.bz.4.in.a.x ntils.API
-#   #math.bz.4.in.a.y ntils.API
-#   #math.bz.4.in.a.z ntils.API
-#
-# These are the inputs for the first target point. Scale them by 1000
-#   #math.bz.4.in.p1.x ntils.API
-#   #math.bz.4.in.p1.y ntils.API
-#   #math.bz.4.in.p1.z ntils.API
-#
-# These are the inputs for the second target point. Scale them by 1000
-#   #math.bz.4.in.p2.x ntils.API
-#   #math.bz.4.in.p2.y ntils.API
-#   #math.bz.4.in.p2.z ntils.API
-#
-# These are the inputs for the end point. Scale them by 1000
-#   #math.bz.4.in.d.x ntils.API
-#   #math.bz.4.in.d.y ntils.API
-#   #math.bz.4.in.d.z ntils.API
-#
-# These are the t values of the curve at p1 and p2. t1 corresponds to p1, t2 to p2. Ranges from 0 to 1000 (though, super small numbers will make fucky things happen)
-#   #math.bz.4.in.t1 ntils.API
-#   #math.bz.4.in.t2 ntils.API
-#
-#   OUTPUT:
-#
-# Scores for the first and second control point of the curve. They are specifically saved as "in" scores, not out scores. This is intentional.
-#   #math.bz.4.in.b.x ntils.API
-#   #math.bz.4.in.b.y ntils.API
-#   #math.bz.4.in.b.z ntils.API
-#
-#   #math.bz.4.in.c.x ntils.API
-#   #math.bz.4.in.c.y ntils.API
-#   #math.bz.4.in.c.z ntils.API
+# OUTPUT:
+#   > Scoreboard:
+#       | #math.bz.4.in.b.[x,y,z] ntils.API (3)
+#       | #math.bz.4.in.c.[x,y,z] ntils.API (3)
 #
 # PERFORMANCE: Okay
-#   It's just 99 scoreboard commands. Don't run this *too* much.
+#   It's just 99 scoreboard commands.
 
 scoreboard players operation #t1^2 ntils.z.math.bz.4.temp = #math.bz.4.in.t1 ntils.API
 execute store result score #t1^3 ntils.z.math.bz.4.temp store result score #t1^2.div ntils.z.math.bz.4.temp run scoreboard players operation #t1^2 ntils.z.math.bz.4.temp *= #math.bz.4.in.t1 ntils.API

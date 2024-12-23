@@ -1,46 +1,31 @@
 # MATH/BZ/3/I/S/START
 #
-# Given a start point (a), an end point (c), a single control point (b), and an amount of iteration steps, begin a bezier iteration.
-# Once an iteration has been started, calling math/bz/3/i/s/loop will perform one iteration along the bezier curve. Once the amount of iterations becomes equal to
-# the starting iteration count value, the entire curve will have been traversed.
+#   Given a start point (a), an end point (c), a single control point (b), and an amount of iteration steps, begin a bezier iteration.
+#   Once an iteration has been started, calling math/bz/3/i/s/loop will perform one iteration along the bezier curve. Once the amount of iterations becomes equal to
+#   the starting iteration count value, the entire curve will have been traversed.
 #
-# WARNING: This iteration method has to contend with scoreboard precision! As such, it has two fail cases: An iteration count that is too low (causes scoreboard overflows and makes a curve that veers wildly), or an iteration count that is too high (makes for compounding precision loss. as an example, a curve with 100 given iterations will end up closer to its target than one with 1000). A good rule of thumb is that the iteration count should be no lower than 2/3rds of the distance between the A and C points in blocks. So, for 30 blocks of distance, iteration count >20.
-# Given this, don't use this for any situation which would produce either eventuality.
+#   NOTE: This iteration method has to contend with scoreboard precision! As such, it has two fail cases: An iteration count that is too low (causes scoreboard overflows and makes a curve that veers wildly), or an iteration count that is too high (makes for compounding precision loss. as an example, a curve with 100 given iterations will end up closer to its target than one with 1000). A good rule of thumb is that the iteration count should be no lower than 2/3rds of the distance between the A and C points in blocks. So, for 30 blocks of distance, iteration count >20.
+#   Given this, don't use this for any situation which would produce either eventuality.
 #
-# This uses entity scores on @s. Starting another iteration on this same entity will overwrite this one.
+#   This uses entity scores on @s. Starting another iteration on this same entity will overwrite this one.
 #
-#   INPUT SCORES:
+# INPUT:
+#   > Scoreboard:
+#       | #math.bz.3.in.a.[x,y,z] ntils.API (3)
+#       | #math.bz.3.in.b.[x,y,z] ntils.API (3)
+#       | #math.bz.3.in.c.[x,y,z] ntils.API (3)
+#       | #math.bz.3.in.iterations ntils.API
 #
-# These are the inputs for the start point. Scale them by 1000
-#   #math.bz.3.in.a.x ntils.API
-#   #math.bz.3.in.a.y ntils.API
-#   #math.bz.3.in.a.z ntils.API
+# OUTPUT:
+#   > Scoreboard:
+#       | #math.bz.3.out.[x,y,z] ntils.API (3)      <- The starting point of the iteration (point a).
+#   > Storage:
+#       | ntils:api math.bz.3.out, double list (3)  <- Point a as usable nbt.
+#   > Misc:
+#       | This function begins an iteration and stores the scores to perform that iteration on the @s entity.
+#       | Calling ntils:api/math/bz/3/i/s/loop will perform one step of the iteration and create usable output.
 #
-# These are the inputs for the control point. Scale them by 1000
-#   #math.bz.3.in.b.x ntils.API
-#   #math.bz.3.in.b.y ntils.API
-#   #math.bz.3.in.b.z ntils.API
-#
-# These are the inputs for the end point. Scale them by 1000
-#   #math.bz.3.in.c.x ntils.API
-#   #math.bz.3.in.c.y ntils.API
-#   #math.bz.3.in.c.z ntils.API
-#
-# This is the amount of iterations you want to perform, or in other terms, the amount of times the loop function will need to be called to complete the curve.
-#   #math.bz.3.in.iterations ntils.API
-#
-#   OUTPUT SCORES:
-#
-# These are the scores for the XYZ output of the current position along the bezier curve.
-#   #math.bz.3.out.x ntils.API
-#   #math.bz.3.out.y ntils.API
-#   #math.bz.3.out.z ntils.API
-#
-#   ADDITIONAL OUTPUT:
-#
-# At ntils:api math.bz.3.out, a [double,double,double] array with the position data from above will be created, so that you can easily just set an entities position data to it.
-#
-# PERFORMANCE: Great. It's a healthy amount of scoreboard operations, but it's ultimately just scores.
+# PERFORMANCE: Okay
 
 scoreboard players operation #m.x ntils.z.math.bz.3.temp = #math.bz.3.in.c.x ntils.API
 scoreboard players operation #o.x ntils.z.math.bz.3.temp = #math.bz.3.in.b.x ntils.API
