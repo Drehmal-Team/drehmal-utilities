@@ -1,1 +1,1 @@
-Proper namespacing is crucial to keeping Ntils running smoothly and cleanly.
+Proper namespacing is crucial to keeping Ntils running smoothly and cleanly. Write more here later bleh.
