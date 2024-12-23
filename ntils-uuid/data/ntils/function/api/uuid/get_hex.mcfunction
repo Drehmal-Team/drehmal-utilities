@@ -1,9 +1,12 @@
 # UUID/GET_HEX
 #
-# Gets the hexadecimal representation of this entities UUID. Stores it at ntils:api uuid.to_hex.out
+#   Gets the string representation of the UUID of the @s entity.
 #
-# Performance: Good
-#   Needs two macros for the hex conversion but otherwise highly optimized. Don't overuse this if you don't need to, though.
+# OUTPUT:
+#   > Storage:
+#       | ntils:api uuid.get_hex.out, string
+#
+# Performance: Okay
 
 execute unless score $ntils:uuid.ENABLED ntils.API.singularity.flag matches 1 run return fail
 

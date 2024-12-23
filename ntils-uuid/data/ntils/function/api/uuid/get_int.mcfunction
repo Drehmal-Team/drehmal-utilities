@@ -1,10 +1,14 @@
 # UUID/GET_INT
 #
-# Gets the integer array representation of this entities UUID. Stores it at ntils:api uuid.to_int.out
+#   Gets the integer array representation of the UUID of the @s entity. Stores it at ntils:api uuid.to_int.out
 #
-# Performance: Excellent
+# OUTPUT:
+#   > Storage:
+#       | ntils:api uuid.get_int.out, int list (4)
+#
+# Performance: Good
 #   Caches the entities UUID in scores, meaning that running this multiple times on the same entity results in far better performance than getting its UUID.
-#   Always use this instead of getting UUID data.
+#   Always use this instead of getting UUID data directly.
 
 execute unless score $ntils:uuid.ENABLED ntils.API.singularity.flag matches 1 run return fail
 
