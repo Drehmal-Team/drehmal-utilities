@@ -1,0 +1,1 @@
+execute if score #inc.PROFILING# ntils.API matches 0.. run function ntils:z/inc/dev/tick

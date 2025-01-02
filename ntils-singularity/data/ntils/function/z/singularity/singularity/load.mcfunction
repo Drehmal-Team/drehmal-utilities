@@ -61,8 +61,12 @@ scoreboard players set #2^16 ntils.z.const 65536
 scoreboard players set #2^18 ntils.z.const 262144
 scoreboard players set #2^24 ntils.z.const 16777215
 
-# FORCELOADS #
+# DIMENSION-SPECIFIC FORCELOADS #
 
 execute in ntils:z/empty run forceload add 0 0
 execute in ntils:z/empty unless loaded 0 0 0 run schedule function ntils:z/singularity/singularity/void/schedule 1t
 execute in ntils:z/empty positioned 0 0 0 if loaded ~ ~ ~ run function #ntils:z/singularity/place_in_void
+
+# NON-DIMENSION-SPECIFIC FORCELOADS #
+
+function ntils:z/singularity/singularity/all/schedule

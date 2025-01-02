@@ -1,0 +1,1 @@
+setblock ~ 120 ~ repeating_command_block{auto:True,Command:"execute if score #inc.PROFILING# ntils.API matches 1 run function ntils:z/inc/dev/timestamp {text:'dim_specific command_block',color:'dark_aqua'}"}

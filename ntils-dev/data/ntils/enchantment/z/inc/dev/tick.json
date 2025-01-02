@@ -1,0 +1,40 @@
+{
+    "description": "",
+    "supported_items": [],
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+      "base": 0,
+      "per_level_above_first": 0
+    },
+    "max_cost": {
+      "base": 0,
+      "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": [
+      "any"
+    ],
+    "effects": {
+      "minecraft:tick": [
+        {
+          "requirements": {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "#inc.PROFILING#"
+              },
+              "score": "ntils.API"
+            },
+            "range": 1
+          },
+          "effect": {
+            "type": "minecraft:run_function",
+            "function": "ntils:z/inc/dev/ench"
+          }
+        }
+      ]
+    }
+  }

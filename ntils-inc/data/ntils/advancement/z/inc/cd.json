@@ -1,0 +1,14 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:changed_dimension",
+        "conditions": {
+          "from": "ntils:z/empty",
+          "to": "ntils:z/empty"
+        }
+      }
+    },
+    "rewards": {
+      "function": "ntils:z/inc/cd/trigger"
+    }
+  }

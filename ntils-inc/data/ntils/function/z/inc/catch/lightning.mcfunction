@@ -1,0 +1,2 @@
+execute as @e[type=lightning_bolt,tag=ntils.API.inc.NODAMAGE,tag=!ntils.z.inc.lightning,x=0] at @s run teleport @s ~ ~100000 ~
+tag @e[type=lightning_bolt,tag=ntils.API.inc.NODAMAGE,tag=!ntils.z.inc.lightning,x=0] add ntils.z.inc.lightning

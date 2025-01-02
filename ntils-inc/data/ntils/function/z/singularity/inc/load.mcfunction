@@ -1,0 +1,1 @@
+execute unless score $ntils:inc.ENABLED ntils.API.singularity.flag matches 1.. run return fail

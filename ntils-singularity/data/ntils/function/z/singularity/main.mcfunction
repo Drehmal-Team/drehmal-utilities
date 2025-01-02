@@ -8,8 +8,10 @@ scoreboard players reset * ntils.API.singularity.flag
 data remove storage ntils:z lang
 function #ntils:api/singularity/lang
 
+data modify storage ntils:api singularity.dimensions set value []
 data modify storage ntils:api singularity.data set value []
 function #ntils:api/singularity/data
+data modify storage ntils:z singularity.dimensions set from storage ntils:api singularity.dimensions
 
 data modify storage ntils:api singularity.data[].enabled set value True
 function ntils:z/singularity/verify

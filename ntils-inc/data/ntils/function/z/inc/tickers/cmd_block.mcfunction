@@ -1,0 +1,1 @@
+execute if entity @e[type=lightning_bolt,tag=ntils.API.inc.NODAMAGE,tag=!ntils.z.inc.lightning,x=0] run function ntils:z/inc/throw/lightning

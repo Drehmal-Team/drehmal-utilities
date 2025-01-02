@@ -1,0 +1,26 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:tick",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "#inc.TICK_ADVANCEMENT#"
+                },
+                "score": "ntils.z.global"
+              },
+              "range": 1
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "ntils:z/inc/tickers/tick_advancement/trigger"
+    }
+  }
