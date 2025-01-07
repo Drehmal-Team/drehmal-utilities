@@ -11,7 +11,7 @@ execute if score #svz ntils.z.ray.temp matches 1 store result score #cz ntils.z.
 #return run function ntils:z/ray/test/with/block
 execute if block ~ ~ ~ #ntils:api/ray/hitbox/cube run return run function ntils:z/ray/test/with/block
 
-#data modify storage ntils:z ray.box set value [[4b,0b,4b,12b,16b,12b]]
-data modify storage ntils:z ray.box set value [[0b,0b,0b,16b,8b,16b],[0b,8b,0b,8b,16b,16b]]
+loot replace entity 00000000-0000-0000-0000-000002160ec0 container.0 loot ntils:api/ray/hitbox/collision
+data modify storage ntils:z ray.box set from entity 00000000-0000-0000-0000-000002160ec0 item.components."minecraft:custom_data".ntils.api.ray.hitbox.collision
 
 execute if data storage ntils:z ray.box[] run return run function ntils:z/ray/test/box with storage ntils:z ray.m
