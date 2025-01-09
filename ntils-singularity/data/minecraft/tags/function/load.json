@@ -4,5 +4,5 @@
     "#ntils:z/singularity/load",
     "#ntils:api/singularity/load"
   ],
-  "replace":true
+  "replace":false
 }
