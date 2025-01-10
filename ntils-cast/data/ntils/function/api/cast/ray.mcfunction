@@ -27,8 +27,8 @@ execute if data storage ntils:z cast.ray.d.Distance store result score #d ntils.
 data modify storage ntils:api cast.ray.out set value {}
 
 execute summon marker run function ntils:z/cast/ray/main
-execute if score #distfinal ntils.z.cast.temp > #d ntils.z.cast.temp run return fail
+execute if score #df ntils.z.cast.temp > #d ntils.z.cast.temp run return fail
 
-execute store result storage ntils:z cast.ray.m.d double 0.0000215791631601 run scoreboard players get #distfinal ntils.z.cast.temp
+execute store result storage ntils:z cast.ray.m.d double 0.0000215791631601 run scoreboard players get #df ntils.z.cast.temp
 function ntils:z/cast/ray/at_point with storage ntils:z cast.ray.m
 return 1

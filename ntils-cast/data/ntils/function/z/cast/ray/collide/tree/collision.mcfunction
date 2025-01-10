@@ -10,4 +10,4 @@ execute if data storage ntils:z cast.ray.boxes[] run function ntils:z/cast/ray/c
 execute if score #vx ntils.z.cast.temp matches 0.. run scoreboard players operation #cx ntils.z.cast.temp += #sx ntils.z.cast.temp
 execute if score #vy ntils.z.cast.temp matches 0.. run scoreboard players operation #cy ntils.z.cast.temp += #sy ntils.z.cast.temp
 execute if score #vz ntils.z.cast.temp matches 0.. run scoreboard players operation #cz ntils.z.cast.temp += #sz ntils.z.cast.temp
-return run execute if score #distfinal ntils.z.cast.temp < #d ntils.z.cast.temp
+return run execute if score #df ntils.z.cast.temp < #d ntils.z.cast.temp

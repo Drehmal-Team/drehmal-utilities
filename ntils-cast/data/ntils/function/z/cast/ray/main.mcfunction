@@ -12,7 +12,7 @@ data modify storage ntils:z cast.ray.vector set from entity @s Pos
 data modify storage ntils:z cast.ray.m merge value {x:1,y:1,z:1}
 
 # bookshelf is so fucking cool --------------------------------------------------------------------------------
-execute store result score #distfinal ntils.z.cast.temp store result score #sy ntils.z.cast.temp store result score #sz ntils.z.cast.temp run scoreboard players set #sx ntils.z.cast.temp 2147483647
+execute store result score #df ntils.z.cast.temp store result score #sy ntils.z.cast.temp store result score #sz ntils.z.cast.temp run scoreboard players set #sx ntils.z.cast.temp 2147483647
 
 # X -----------------------------------------------------------------------------------------------------------
 execute store result score #vx ntils.z.cast.temp run data get storage ntils:z cast.ray.vector[0] 46341

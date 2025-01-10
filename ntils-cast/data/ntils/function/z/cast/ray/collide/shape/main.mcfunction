@@ -30,11 +30,10 @@ scoreboard players operation #bz2 ntils.z.cast.temp += #cz ntils.z.cast.temp
 scoreboard players operation #tmi ntils.z.cast.temp > #by1 ntils.z.cast.temp
 scoreboard players operation #tmi ntils.z.cast.temp > #bz1 ntils.z.cast.temp
 
-
 scoreboard players operation #tma ntils.z.cast.temp < #by2 ntils.z.cast.temp
 scoreboard players operation #tma ntils.z.cast.temp < #bz2 ntils.z.cast.temp
 
-execute unless score #tma ntils.z.cast.temp matches ..0 unless score #tmi ntils.z.cast.temp > #tma ntils.z.cast.temp unless score #tmi ntils.z.cast.temp > #d ntils.z.cast.temp unless score #tmi ntils.z.cast.temp > #distfinal ntils.z.cast.temp run function ntils:z/cast/ray/collide/shape/find
+execute unless score #tma ntils.z.cast.temp matches ..0 unless score #tmi ntils.z.cast.temp > #tma ntils.z.cast.temp unless score #tmi ntils.z.cast.temp > #d ntils.z.cast.temp unless score #tmi ntils.z.cast.temp > #df ntils.z.cast.temp run function ntils:z/cast/ray/collide/shape/find
 
 data remove storage ntils:z cast.ray.boxes[-1]
-execute if data storage ntils:z cast.ray.boxes[] run return run function ntils:z/cast/ray/collide/shape/main
+execute if data storage ntils:z cast.ray.boxes[] run function ntils:z/cast/ray/collide/shape/main
