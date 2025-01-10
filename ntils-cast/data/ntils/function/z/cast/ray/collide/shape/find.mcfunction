@@ -1,0 +1,1 @@
+scoreboard players operation #distfinal ntils.z.cast.temp = #tmi ntils.z.cast.temp

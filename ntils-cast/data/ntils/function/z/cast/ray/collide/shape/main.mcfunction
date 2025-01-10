@@ -1,0 +1,40 @@
+# X ------------------------------------------------------------------------------------------------
+execute store result score #tmi ntils.z.cast.temp run data get storage ntils:z cast.ray.boxes[-1][0] 134217727
+execute store result score #tma ntils.z.cast.temp run data get storage ntils:z cast.ray.boxes[-1][3] 134217727
+scoreboard players operation #tmi ntils.z.cast.temp /= #vx ntils.z.cast.temp
+scoreboard players operation #tma ntils.z.cast.temp /= #vx ntils.z.cast.temp
+execute if score #vx ntils.z.cast.temp matches ..0 run scoreboard players operation #tmi ntils.z.cast.temp >< #tma ntils.z.cast.temp
+scoreboard players operation #tmi ntils.z.cast.temp += #cx ntils.z.cast.temp
+scoreboard players operation #tma ntils.z.cast.temp += #cx ntils.z.cast.temp
+
+# Y ------------------------------------------------------------------------------------------------
+execute store result score #by1 ntils.z.cast.temp run data get storage ntils:z cast.ray.boxes[-1][1] 134217727
+execute store result score #by2 ntils.z.cast.temp run data get storage ntils:z cast.ray.boxes[-1][4] 134217727
+scoreboard players operation #by1 ntils.z.cast.temp /= #vy ntils.z.cast.temp
+scoreboard players operation #by2 ntils.z.cast.temp /= #vy ntils.z.cast.temp
+execute if score #vy ntils.z.cast.temp matches ..0 run scoreboard players operation #by1 ntils.z.cast.temp >< #by2 ntils.z.cast.temp
+scoreboard players operation #by1 ntils.z.cast.temp += #cy ntils.z.cast.temp
+scoreboard players operation #by2 ntils.z.cast.temp += #cy ntils.z.cast.temp
+
+# Z ------------------------------------------------------------------------------------------------
+execute store result score #bz1 ntils.z.cast.temp run data get storage ntils:z cast.ray.boxes[-1][2] 134217727
+execute store result score #bz2 ntils.z.cast.temp run data get storage ntils:z cast.ray.boxes[-1][5] 134217727
+scoreboard players operation #bz1 ntils.z.cast.temp /= #vz ntils.z.cast.temp
+scoreboard players operation #bz2 ntils.z.cast.temp /= #vz ntils.z.cast.temp
+execute if score #vz ntils.z.cast.temp matches ..0 run scoreboard players operation #bz1 ntils.z.cast.temp >< #bz2 ntils.z.cast.temp
+scoreboard players operation #bz1 ntils.z.cast.temp += #cz ntils.z.cast.temp
+scoreboard players operation #bz2 ntils.z.cast.temp += #cz ntils.z.cast.temp
+
+
+# find tmin and tmax -------------------------------------------------------------------------------
+scoreboard players operation #tmi ntils.z.cast.temp > #by1 ntils.z.cast.temp
+scoreboard players operation #tmi ntils.z.cast.temp > #bz1 ntils.z.cast.temp
+
+
+scoreboard players operation #tma ntils.z.cast.temp < #by2 ntils.z.cast.temp
+scoreboard players operation #tma ntils.z.cast.temp < #bz2 ntils.z.cast.temp
+
+execute unless score #tma ntils.z.cast.temp matches ..0 unless score #tmi ntils.z.cast.temp > #tma ntils.z.cast.temp unless score #tmi ntils.z.cast.temp > #d ntils.z.cast.temp unless score #tmi ntils.z.cast.temp > #distfinal ntils.z.cast.temp run function ntils:z/cast/ray/collide/shape/find
+
+data remove storage ntils:z cast.ray.boxes[-1]
+execute if data storage ntils:z cast.ray.boxes[] run return run function ntils:z/cast/ray/collide/shape/main

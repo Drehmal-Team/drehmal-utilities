@@ -26,6 +26,9 @@ scoreboard players set #d ntils.z.cast.temp 2145585985
 execute if data storage ntils:z cast.ray.d.Distance store result score #d ntils.z.cast.temp run data get storage ntils:z cast.ray.d.Distance 46341
 data modify storage ntils:api cast.ray.out set value {}
 
-scoreboard players set #rtr ntils.z.cast.temp -1
 execute summon marker run function ntils:z/cast/ray/main
-return run execute if score #rtr ntils.z.cast.temp matches 1
+execute if score #distfinal ntils.z.cast.temp > #d ntils.z.cast.temp run return fail
+
+execute store result storage ntils:z cast.ray.m.d double 0.0000215791631601 run scoreboard players get #distfinal ntils.z.cast.temp
+function ntils:z/cast/ray/at_point with storage ntils:z cast.ray.m
+return 1

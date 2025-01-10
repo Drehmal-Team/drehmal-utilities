@@ -1,9 +1,6 @@
-execute align xyz run particle flame ~ ~ ~ 0.07 0.07 0.07 0 10 force
-execute align xyz run particle flame ~1 ~ ~ 0.07 0.07 0.07 0 10 force
-execute align xyz run particle flame ~ ~1 ~ 0.07 0.07 0.07 0 10 force
-execute align xyz run particle flame ~ ~ ~1 0.07 0.07 0.07 0 10 force
-execute align xyz run particle flame ~1 ~1 ~ 0.07 0.07 0.07 0 10 force
-execute align xyz run particle flame ~ ~1 ~1 0.07 0.07 0.07 0 10 force
-execute align xyz run particle flame ~1 ~ ~1 0.07 0.07 0.07 0 10 force
-execute align xyz run particle flame ~1 ~1 ~1 0.07 0.07 0.07 0 10 force
+scoreboard players operation #cx ntils.z.cast.temp -= #sx ntils.z.cast.temp
+scoreboard players operation #cy ntils.z.cast.temp -= #sy ntils.z.cast.temp
+execute store result score #distfinal ntils.z.cast.temp run scoreboard players operation #cz ntils.z.cast.temp -= #sz ntils.z.cast.temp
+scoreboard players operation #distfinal ntils.z.cast.temp > #cx ntils.z.cast.temp
+scoreboard players operation #distfinal ntils.z.cast.temp > #cy ntils.z.cast.temp
 return 1
