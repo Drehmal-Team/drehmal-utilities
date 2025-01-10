@@ -1,2 +1,2 @@
 scoreboard players remove #dloop ntils.z.dev.temp 1
-execute if score #dloop ntils.z.dev.temp matches 1.. positioned ^ ^ ^0.25 run function ntils:z/cast/dev/recurse
+execute if score #dloop ntils.z.dev.temp matches 1.. positioned ^ ^ ^0.00000025 unless block ~ ~ ~ #ntils:api/cast/hitbox/collision/full run function ntils:z/cast/dev/recurse
