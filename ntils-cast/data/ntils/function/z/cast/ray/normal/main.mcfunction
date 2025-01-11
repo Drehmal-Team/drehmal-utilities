@@ -1,13 +1,4 @@
-data modify storage ntils:z cast.ray.origin set from entity @s Pos
-
-execute store result storage ntils:z cast.ray.m.x int -1 run data get storage ntils:z cast.ray.origin[0]
-execute store result storage ntils:z cast.ray.m.y int -1 run data get storage ntils:z cast.ray.origin[1]
-execute store result storage ntils:z cast.ray.m.z int -1 run data get storage ntils:z cast.ray.origin[2]
-
-function ntils:z/cast/ray/get_within with storage ntils:z cast.ray.m
-data modify storage ntils:z cast.ray.origin set from entity @s Pos
-execute positioned .0 0 .0 run teleport @s ^ ^ ^1
-data modify storage ntils:z cast.ray.vector set from entity @s Pos
+function ntils:z/cast/ray/get_ov
 
 data modify storage ntils:z cast.ray.m merge value {x:1,y:1,z:1}
 
@@ -38,7 +29,7 @@ scoreboard players operation #sz ntils.z.cast.temp /= #vz ntils.z.cast.temp
 scoreboard players operation #cz ntils.z.cast.temp /= #vz ntils.z.cast.temp
 execute if score #vz ntils.z.cast.temp matches 0.. run scoreboard players operation #cz ntils.z.cast.temp += #sz ntils.z.cast.temp
 
-execute align xyz positioned ~.5 ~.5 ~.5 run function ntils:z/cast/ray/traverse/loop with storage ntils:z cast.ray.m
+execute align xyz positioned ~.5 ~.5 ~.5 run function ntils:z/cast/ray/normal/traverse/loop with storage ntils:z cast.ray.m
 
 teleport @s ~ -10000 ~
 kill @s

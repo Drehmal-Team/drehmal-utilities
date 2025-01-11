@@ -1,0 +1,1 @@
+scoreboard players operation @s ntils.z.cast.ray.slow.df = #tmi ntils.z.cast.temp

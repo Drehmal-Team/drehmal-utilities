@@ -1,0 +1,5 @@
+$execute unless block ~ ~ ~ #ntils:api/cast/hitbox/$(t)/empty if function ntils:z/cast/ray/slow/collide/tree/$(t) run return 1
+$execute if score @s ntils.z.cast.ray.slow.cx <= @s ntils.z.cast.ray.slow.cy if score @s ntils.z.cast.ray.slow.cx <= @s ntils.z.cast.ray.slow.cz if score @s ntils.z.cast.ray.slow.cx <= @s ntils.z.cast.ray.slow.ds unless function ntils:z/cast/ray/slow/traverse/x positioned ~$(x) ~ ~ run return run function ntils:z/cast/ray/slow/traverse/loop {x:$(x),y:$(y),z:$(z),t:$(t)}
+$execute if score @s ntils.z.cast.ray.slow.cy <= @s ntils.z.cast.ray.slow.cz if score @s ntils.z.cast.ray.slow.cy <= @s ntils.z.cast.ray.slow.ds unless function ntils:z/cast/ray/slow/traverse/y positioned ~ ~$(y) ~ run return run function ntils:z/cast/ray/slow/traverse/loop {x:$(x),y:$(y),z:$(z),t:$(t)}
+$execute if score @s ntils.z.cast.ray.slow.cz <= @s ntils.z.cast.ray.slow.ds unless function ntils:z/cast/ray/slow/traverse/z positioned ~ ~ ~$(z) run return run function ntils:z/cast/ray/slow/traverse/loop {x:$(x),y:$(y),z:$(z),t:$(t)}
+return fail

@@ -42,7 +42,7 @@ scoreboard players operation #tma ntils.z.cast.temp < #bz2 ntils.z.cast.temp
 # the distance requirement we set at the start
 #
 # full credit to bookshelf for this, i would have never come up with this on my own
-execute unless score #tma ntils.z.cast.temp matches ..0 unless score #tmi ntils.z.cast.temp > #tma ntils.z.cast.temp unless score #tmi ntils.z.cast.temp > #d ntils.z.cast.temp unless score #tmi ntils.z.cast.temp > #df ntils.z.cast.temp run function ntils:z/cast/ray/collide/shape/find
+execute unless score #tma ntils.z.cast.temp matches ..0 unless score #tmi ntils.z.cast.temp > #tma ntils.z.cast.temp unless score #tmi ntils.z.cast.temp > #d ntils.z.cast.temp unless score #tmi ntils.z.cast.temp > #df ntils.z.cast.temp run function ntils:z/cast/ray/normal/collide/shape/find
 
 data remove storage ntils:z cast.ray.boxes[-1]
-execute if data storage ntils:z cast.ray.boxes[] run function ntils:z/cast/ray/collide/shape/main
+execute if data storage ntils:z cast.ray.boxes[] run function ntils:z/cast/ray/normal/collide/shape/main

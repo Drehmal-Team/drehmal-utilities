@@ -1,0 +1,1 @@
+scoreboard players operation @s ntils.z.cast.ray.slow.cx += @s ntils.z.cast.ray.slow.sx

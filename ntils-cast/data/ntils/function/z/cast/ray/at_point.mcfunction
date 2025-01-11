@@ -1,1 +1,1 @@
-$execute positioned ^ ^ ^$(d) run particle happy_villager ~ ~ ~ 0 0 0 0 1 force
+$execute positioned ^ ^ ^$(d) run $(p)
