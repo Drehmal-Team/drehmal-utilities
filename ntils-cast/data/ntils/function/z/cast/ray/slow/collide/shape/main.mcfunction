@@ -4,8 +4,8 @@ execute store result score #tma ntils.z.cast.temp run data get storage ntils:z c
 scoreboard players operation #tmi ntils.z.cast.temp /= @s ntils.z.cast.ray.slow.vx
 scoreboard players operation #tma ntils.z.cast.temp /= @s ntils.z.cast.ray.slow.vx
 execute if score @s ntils.z.cast.ray.slow.vx matches ..-1 run scoreboard players operation #tmi ntils.z.cast.temp >< #tma ntils.z.cast.temp
-scoreboard players operation #tmi ntils.z.cast.temp += @s ntils.z.cast.ray.slow.cx
-scoreboard players operation #tma ntils.z.cast.temp += @s ntils.z.cast.ray.slow.cx
+scoreboard players operation #tmi ntils.z.cast.temp += #tx ntils.z.cast.temp
+scoreboard players operation #tma ntils.z.cast.temp += #tx ntils.z.cast.temp
 
 # Y ------------------------------------------------------------------------------------------------
 execute store result score #by1 ntils.z.cast.temp run data get storage ntils:z cast.ray.boxes[-1][1] 134217727
@@ -13,8 +13,8 @@ execute store result score #by2 ntils.z.cast.temp run data get storage ntils:z c
 scoreboard players operation #by1 ntils.z.cast.temp /= @s ntils.z.cast.ray.slow.vy
 scoreboard players operation #by2 ntils.z.cast.temp /= @s ntils.z.cast.ray.slow.vy
 execute if score @s ntils.z.cast.ray.slow.vy matches ..-1 run scoreboard players operation #by1 ntils.z.cast.temp >< #by2 ntils.z.cast.temp
-scoreboard players operation #by1 ntils.z.cast.temp += @s ntils.z.cast.ray.slow.cy
-scoreboard players operation #by2 ntils.z.cast.temp += @s ntils.z.cast.ray.slow.cy
+scoreboard players operation #by1 ntils.z.cast.temp += #ty ntils.z.cast.temp
+scoreboard players operation #by2 ntils.z.cast.temp += #ty ntils.z.cast.temp
 
 # Z ------------------------------------------------------------------------------------------------
 execute store result score #bz1 ntils.z.cast.temp run data get storage ntils:z cast.ray.boxes[-1][2] 134217727
@@ -22,8 +22,8 @@ execute store result score #bz2 ntils.z.cast.temp run data get storage ntils:z c
 scoreboard players operation #bz1 ntils.z.cast.temp /= @s ntils.z.cast.ray.slow.vz
 scoreboard players operation #bz2 ntils.z.cast.temp /= @s ntils.z.cast.ray.slow.vz
 execute if score @s ntils.z.cast.ray.slow.vz matches ..-1 run scoreboard players operation #bz1 ntils.z.cast.temp >< #bz2 ntils.z.cast.temp
-scoreboard players operation #bz1 ntils.z.cast.temp += @s ntils.z.cast.ray.slow.cz
-scoreboard players operation #bz2 ntils.z.cast.temp += @s ntils.z.cast.ray.slow.cz
+scoreboard players operation #bz1 ntils.z.cast.temp += #tz ntils.z.cast.temp
+scoreboard players operation #bz2 ntils.z.cast.temp += #tz ntils.z.cast.temp
 
 
 # find tmin and tmax -------------------------------------------------------------------------------

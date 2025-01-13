@@ -26,9 +26,11 @@
 
 execute unless score $ntils:cast.ENABLED ntils.API.singularity.flag matches 1.. run return fail
 
+# process inputs (need to clean this up)
 data modify storage ntils:z cast.ray.m set value {t:"regular",f:"teleport @s ~ ~ ~",p:"teleport @s ~ ~ ~"}
 execute if data storage ntils:api cast.ray.slow.in.type run data modify storage ntils:z cast.ray.m.t set from storage ntils:api cast.ray.slow.in.type
 execute if data storage ntils:api cast.ray.slow.in.at_point run data modify storage ntils:z cast.ray.m.p set from storage ntils:api cast.ray.slow.in.at_point
+execute if data storage ntils:api cast.ray.slow.in.at_failure run data modify storage ntils:z cast.ray.m.f set from storage ntils:api cast.ray.slow.in.at_failure
 execute store result storage ntils:z cast.ray.m.x int 1 run scoreboard players get @s ntils.z.cast.ray.slow.mx
 execute store result storage ntils:z cast.ray.m.y int 1 run scoreboard players get @s ntils.z.cast.ray.slow.my
 execute store result storage ntils:z cast.ray.m.z int 1 run scoreboard players get @s ntils.z.cast.ray.slow.mz

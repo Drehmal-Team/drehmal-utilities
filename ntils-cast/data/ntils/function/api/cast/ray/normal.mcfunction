@@ -20,9 +20,8 @@
 #
 # OUTPUT:
 #   > Storage:
-#       | ntils:api cast.ray.out.distance, double. The distance, in blocks, from the ~ ~ ~ context to the ray intersection.
-#       |
-#       | ntils:api cast.ray.out.normal, int list (3). The normal of the surface intersected by the ray.
+#       | ntils:api cast.ray.normal.out.distance, double. The distance, in blocks, from the ~ ~ ~ context to the ray intersection.
+#       | ntils:api cast.ray.normal.out.normal, int list (3). The surface normal of the surface that the ray hit.
 #   > Return:
 #       | Success if the ray intersects a block, Failure otherwise.
 #
@@ -41,12 +40,12 @@ execute if data storage ntils:api cast.ray.normal.in.type run data modify storag
 execute if data storage ntils:api cast.ray.normal.in.distance store result score #d ntils.z.cast.temp run data get storage ntils:api cast.ray.normal.in.distance 46341
 execute if data storage ntils:api cast.ray.normal.in.at_block run data modify storage ntils:z cast.ray.m.b set from storage ntils:api cast.ray.normal.in.at_block
 execute if data storage ntils:api cast.ray.normal.in.at_point run data modify storage ntils:z cast.ray.m.p set from storage ntils:api cast.ray.normal.in.at_point
-data modify storage ntils:api cast.ray.out set value {}
+data modify storage ntils:api cast.ray.normal.out set value {}
 
 execute summon marker run function ntils:z/cast/ray/normal/main
 execute if score #df ntils.z.cast.temp > #d ntils.z.cast.temp run return fail
 
 execute store result storage ntils:z cast.ray.m.d double 0.0000215791631601 run scoreboard players get #df ntils.z.cast.temp
-data modify storage ntils:api cast.ray.out.distance set from storage ntils:z cast.ray.m.d
+data modify storage ntils:api cast.ray.normal.out.distance set from storage ntils:z cast.ray.m.d
 execute if data storage ntils:api cast.ray.normal.in.at_point run function ntils:z/cast/ray/at_point with storage ntils:z cast.ray.m
 return 1
