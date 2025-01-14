@@ -1,4 +1,4 @@
-data modify storage ntils:z cast.ray.boxes set from entity 00000000-0000-0000-0000-000002160ec0 item.components."minecraft:custom_data".ntils.api.cast.hitbox.get
+data modify storage ntils:z cast.ray.boxes set from entity 00000000-0000-0000-0000-000002160ec0 item.components."minecraft:custom_data".ntils.z.cast.hitbox
 
 scoreboard players operation #tx ntils.z.cast.temp = #cx ntils.z.cast.temp
 scoreboard players operation #ty ntils.z.cast.temp = #cy ntils.z.cast.temp
