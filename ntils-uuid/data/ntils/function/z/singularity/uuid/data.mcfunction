@@ -3,6 +3,6 @@ data modify storage ntils:api singularity.data append value {\
     version:1,\
     display:{desc:"UUID module.",name:"UUID"},\
     dependency:[\
-        {id:"ntils:lookups",version:{min:1}},\
+        {id:"ntils:lookups",version:{min:5}},\
     ]\
 }
