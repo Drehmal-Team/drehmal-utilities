@@ -1,3 +1,6 @@
+scoreboard players set #2^15.5 ntils.z.const 46340
+scoreboard players set #-2^15.5 ntils.z.const -46340
+
 # 3 POINT BEZIER SCOREBOARDS #
 
 scoreboard objectives add ntils.z.math.bz.3.i.vec.x dummy
@@ -54,8 +57,14 @@ scoreboard objectives add ntils.z.math.bz.n.temp dummy
 
 scoreboard objectives add ntils.z.math.sqrt.temp dummy
 
+# QUATERNION SCOREBOARDS #
+
+scoreboard objectives add ntils.z.math.quaternion.temp dummy
+
 # POINTLESS STORAGE INIT #
 
 data modify storage ntils:api math.bz.3.out set value [0d,0d,0d]
 data modify storage ntils:api math.bz.4.out set value [0d,0d,0d]
 data modify storage ntils:api math.bz.n.out set value [0d,0d,0d]
+data modify storage ntils:api math.quaternion.in set value [0f,0f,0f,0f]
+data modify storage ntils:api math.quaternion.out set value [0f,0f,0f,0f]

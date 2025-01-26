@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "type": "directory",
+      "source": "z",
+      "prefix": "z/"
+    },
+    {
+      "type": "directory",
+      "source": "api",
+      "prefix": "api/"
+    }
+  ]
+}
