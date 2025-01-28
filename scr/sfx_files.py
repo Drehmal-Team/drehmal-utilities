@@ -16,16 +16,6 @@ SELECTS = {
 }
 
 
-def gen_multi(c, s, d):
-    if d <= 0:
-        return c
-    else:
-        r = []
-        i = 0
-        while i < s:
-            r.append(gen_multi(c, s, d - 1))
-        return r
-
 def make_models(n):
     r = []
     for i in range(256):

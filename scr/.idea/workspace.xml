@@ -5,56 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42dd5794-bc89-4d80-a7f3-75803c261a2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sfx_files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-b64/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-b64/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-b64/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-b64/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-cast/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-cast/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-context/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-context/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-context/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-context/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-cstats/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-cstats/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-cstats/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-cstats/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-dev/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-dev/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-dev/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-dev/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-fl/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-fl/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-fl/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-fl/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-inc/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-inc/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-inc/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-inc/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-item/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-item/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-item/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-item/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-link/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-link/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-link/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-link/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-list/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-list/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-list/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-list/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-lookups/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-lookups/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-lookups/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-lookups/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-math/data/ntils/function/api/math/distance.mcfunction" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-math/data/ntils/function/api/math/distance.mcfunction" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-math/data/ntils/function/z/math/distance/main.mcfunction" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-math/data/ntils/function/z/singularity/math/load.mcfunction" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-math/data/ntils/function/z/singularity/math/load.mcfunction" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-math/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-math/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-math/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-math/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-part/data/ntils/function/api/part/ring/360.mcfunction" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-part/data/ntils/function/api/part/ring/45.mcfunction" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-part/data/ntils/function/api/part/ring/90.mcfunction" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-part/data/ntils/function/api/part/slash.mcfunction" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-part/data/ntils/function/z/singularity/part/data.mcfunction" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-part/data/ntils/function/z/singularity/part/load.mcfunction" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-part/data/ntils/tags/function/api/singularity/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-part/data/ntils/tags/function/z/singularity/load.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-part/pack.mcmeta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-part/spyglass.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-player/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-player/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-player/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-player/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-singularity/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-singularity/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-singularity/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-singularity/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-string/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-string/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-string/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-string/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-time/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-time/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-time/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-time/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-uuid/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-uuid/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-uuid/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-uuid/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-worldstate/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-worldstate/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ntils-worldstate/spyglass.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-worldstate/spyglass.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ntils-color/data/ntils/function/api/color/rgb/int.mcfunction" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ntils-color/data/ntils/function/z/singularity/color/load.mcfunction" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-color/data/ntils/function/z/singularity/color/load.mcfunction" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sfx_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/sfx_files.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,17 +32,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.download_mc_jar.executor": "Debug",
-    "Python.ducttape.executor": "Run",
-    "Python.gen_hitboxes.executor": "Run",
-    "Python.sfx_files.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.download_mc_jar.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.ducttape.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gen_hitboxes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sfx_files.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
