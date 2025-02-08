@@ -7,6 +7,7 @@
     <list default="true" id="42dd5794-bc89-4d80-a7f3-75803c261a2f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../ntils-color/data/ntils/function/api/color/rgb/int.mcfunction" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntils-color/data/ntils/function/z/singularity/color/load.mcfunction" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-color/data/ntils/function/z/singularity/color/load.mcfunction" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sfx_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/sfx_files.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -1,6 +1,8 @@
 execute unless score $ntils:color.ENABLED ntils.API.singularity.flag matches 1.. run return fail
 
 scoreboard players set #1000000 ntils.z.const 1000000
+scoreboard players set #2000000 ntils.z.const 2000000
+scoreboard players set #-2000000 ntils.z.const -2000000
 scoreboard players set #2^10*12 ntils.z.const 12288
 scoreboard players set #2^10 ntils.z.const 1024
 scoreboard players set #-2^10 ntils.z.const -1024
