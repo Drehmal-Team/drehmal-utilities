@@ -14,8 +14,8 @@
 #       | ntils:api math.quaternion.out, float list (4). The quaternion in float list form for directly setting display transformations.
 #
 # PERFORMANCE: Good
-#   Slightly better than from_context, but the difference is tiny. If you aren't working with a rotation directly, just use from_context, it'll be
-#   faster than the entity stuff you would have to do to call this.
+#   Better than from_context if you already have a rotation to work with. However, if you don't have the data
+#   to use directly, it's faster to call from_context instead of getting said data and calling this.
 
 
 data modify storage ntils:z math.quaternion.rot set from storage ntils:api math.quaternion.from_yaw_pitch.in

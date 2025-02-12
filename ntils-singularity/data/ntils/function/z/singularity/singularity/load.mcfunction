@@ -59,7 +59,7 @@ scoreboard players set #2^12 ntils.z.const 4096
 scoreboard players set #2^15 ntils.z.const 32768
 scoreboard players set #2^16 ntils.z.const 65536
 scoreboard players set #2^18 ntils.z.const 262144
-scoreboard players set #2^24 ntils.z.const 16777215
+scoreboard players set #2^24 ntils.z.const 16777216
 
 # DIMENSION-SPECIFIC FORCELOADS #
 

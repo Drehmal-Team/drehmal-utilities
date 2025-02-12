@@ -1,8 +1,19 @@
 scoreboard players set #2^15.5 ntils.z.const 46340
 scoreboard players set #-2^15.5 ntils.z.const -46340
+scoreboard players set #-3 ntils.z.const -3
+scoreboard players set #-2000 ntils.z.const -2000
+scoreboard players set #-2 ntils.z.const -2
+scoreboard players set #3 ntils.z.const 3
+scoreboard players set #-250 ntils.z.const -250
+scoreboard players set #-40 ntils.z.const -40
+scoreboard players set #-400 ntils.z.const -400
+scoreboard players set #-4000 ntils.z.const -4000
 
 # 3 POINT BEZIER SCOREBOARDS #
 
+scoreboard objectives add ntils.z.math.bz.3.temp dummy
+
+# Iteration scores
 scoreboard objectives add ntils.z.math.bz.3.i.vec.x dummy
 scoreboard objectives add ntils.z.math.bz.3.i.vec.y dummy
 scoreboard objectives add ntils.z.math.bz.3.i.vec.z dummy
@@ -19,10 +30,24 @@ scoreboard objectives add ntils.z.math.bz.3.i.base.x dummy
 scoreboard objectives add ntils.z.math.bz.3.i.base.y dummy
 scoreboard objectives add ntils.z.math.bz.3.i.base.z dummy
 
-scoreboard objectives add ntils.z.math.bz.3.temp dummy
+# Entity polynomial scores
+scoreboard objectives add ntils.z.math.bz.3.poly.0.x dummy
+scoreboard objectives add ntils.z.math.bz.3.poly.0.y dummy
+scoreboard objectives add ntils.z.math.bz.3.poly.0.z dummy
+
+scoreboard objectives add ntils.z.math.bz.3.poly.1.x dummy
+scoreboard objectives add ntils.z.math.bz.3.poly.1.y dummy
+scoreboard objectives add ntils.z.math.bz.3.poly.1.z dummy
+
+scoreboard objectives add ntils.z.math.bz.3.poly.2.x dummy
+scoreboard objectives add ntils.z.math.bz.3.poly.2.y dummy
+scoreboard objectives add ntils.z.math.bz.3.poly.2.z dummy
 
 # 4 POINT BEZIER SCOREBOARDS #
 
+scoreboard objectives add ntils.z.math.bz.4.temp dummy
+
+# Iteration scores
 scoreboard objectives add ntils.z.math.bz.4.i.vec.x dummy
 scoreboard objectives add ntils.z.math.bz.4.i.vec.y dummy
 scoreboard objectives add ntils.z.math.bz.4.i.vec.z dummy
@@ -47,7 +72,22 @@ scoreboard objectives add ntils.z.math.bz.4.i.base.x dummy
 scoreboard objectives add ntils.z.math.bz.4.i.base.y dummy
 scoreboard objectives add ntils.z.math.bz.4.i.base.z dummy
 
-scoreboard objectives add ntils.z.math.bz.4.temp dummy
+# Entity polynomial scores
+scoreboard objectives add ntils.z.math.bz.4.poly.0.x dummy
+scoreboard objectives add ntils.z.math.bz.4.poly.0.y dummy
+scoreboard objectives add ntils.z.math.bz.4.poly.0.z dummy
+
+scoreboard objectives add ntils.z.math.bz.4.poly.1.x dummy
+scoreboard objectives add ntils.z.math.bz.4.poly.1.y dummy
+scoreboard objectives add ntils.z.math.bz.4.poly.1.z dummy
+
+scoreboard objectives add ntils.z.math.bz.4.poly.2.x dummy
+scoreboard objectives add ntils.z.math.bz.4.poly.2.y dummy
+scoreboard objectives add ntils.z.math.bz.4.poly.2.z dummy
+
+scoreboard objectives add ntils.z.math.bz.4.poly.3.x dummy
+scoreboard objectives add ntils.z.math.bz.4.poly.3.y dummy
+scoreboard objectives add ntils.z.math.bz.4.poly.3.z dummy
 
 # N POINT BEZIER SCOREBOARDS #
 
@@ -60,6 +100,10 @@ scoreboard objectives add ntils.z.math.sqrt.temp dummy
 # QUATERNION SCOREBOARDS #
 
 scoreboard objectives add ntils.z.math.quaternion.temp dummy
+
+# TRIG SCOREBOARDS #
+
+scoreboard objectives add ntils.z.math.trig.temp dummy
 
 # POINTLESS STORAGE INIT #
 

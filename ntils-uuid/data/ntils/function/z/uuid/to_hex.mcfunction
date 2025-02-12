@@ -1,4 +1,3 @@
-data modify storage ntils:z uuid.to_hex.macro set value {0:0,1:0,2:0,3:0,4:0,5:0,6:0,7:0}
 execute store result score #h7 ntils.z.uuid.temp store result score #h6 ntils.z.uuid.temp run data get storage ntils:z uuid.to_hex.in[0]
 execute store result score #h5 ntils.z.uuid.temp store result score #h4 ntils.z.uuid.temp run data get storage ntils:z uuid.to_hex.in[1]
 execute store result score #h3 ntils.z.uuid.temp store result score #h2 ntils.z.uuid.temp run data get storage ntils:z uuid.to_hex.in[2]
