@@ -1,91 +1,54 @@
 {
   "main": {
-    "id": "ec10ecda3d66c471",
+    "id": "29dbb0a37f311fc8",
     "type": "split",
     "children": [
       {
-        "id": "0d83da8bb5f5b83d",
+        "id": "4293cf3f9bf75b08",
         "type": "tabs",
         "children": [
           {
-            "id": "8b937aa838f0b15a",
-            "type": "leaf",
-            "state": {
-              "type": "localgraph",
-              "state": {
-                "file": "Design/Header Comments.md",
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": false,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 1,
-                  "close": true
-                }
-              },
-              "icon": "lucide-git-fork",
-              "title": "Graph of Header Comments"
-            }
-          },
-          {
-            "id": "803fafeff63e1d6f",
+            "id": "27df67db89f1a61e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design/Header Comments.md",
+                "file": "ntils-math/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Header Comments"
+              "title": "README"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "5fe6b67f1196189a",
+    "id": "209124cd071cab99",
     "type": "split",
     "children": [
       {
-        "id": "94e03e8f2835182e",
+        "id": "17a6256ad7c84fc1",
         "type": "tabs",
         "children": [
           {
-            "id": "88de36c3c40b7b7f",
+            "id": "0616b1f28d8bdab9",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
             }
           },
           {
-            "id": "a2ed2b0a2866c52b",
+            "id": "17cb5b3b47250c64",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -102,7 +65,7 @@
             }
           },
           {
-            "id": "cead96d065adeb73",
+            "id": "400c0920e94911a5",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -118,20 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "83bd9eb2a3a3bd85",
+    "id": "d3361391afcbbea6",
     "type": "split",
     "children": [
       {
-        "id": "79920ba5b7167265",
+        "id": "546f1c670118a4b8",
         "type": "tabs",
         "children": [
           {
-            "id": "61ba4437524d34e7",
+            "id": "c13d7f7fc3e65d16",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/Namespacing.md",
+                "file": "ntils-math/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,46 +104,51 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Namespacing"
+              "title": "Backlinks for README"
             }
           },
           {
-            "id": "fdfebdf907b89380",
+            "id": "70f0cb7ad2dc8a15",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Design/Namespacing.md",
+                "file": "ntils-math/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Namespacing"
+              "title": "Outgoing links from README"
             }
           },
           {
-            "id": "d9b61bdafd8ac2b2",
+            "id": "fa11172a9ff30e0a",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
             }
           },
           {
-            "id": "fe0657ac84adbedf",
+            "id": "f171d258335a32a1",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/Namespacing.md"
+                "file": "ntils-math/README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Namespacing"
+              "title": "Outline of README"
             }
           }
         ]
@@ -200,16 +168,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "803fafeff63e1d6f",
+  "active": "27df67db89f1a61e",
   "lastOpenFiles": [
-    "Home.md",
-    "Design/Development.md",
-    "Design/Namespacing.md",
-    "Modules/Context.md",
-    "Design/Header Comments.md",
-    "Design",
-    "create a link.md",
-    "Welcome.md",
-    "Modules"
+    "Documentation/Namespacing.md",
+    "Documentation/Header Comments.md",
+    "ntils-lookups/README.md",
+    "ntils-math/README.md",
+    "README.md",
+    "Documentation/Development.md"
   ]
 }

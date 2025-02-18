@@ -1,0 +1,7 @@
+# NTILS:MATH
+Contains various math functions for Bezier curves, quaternions, matrixes, vectors, and several other miscellaneous things.
+## Flags
+
+| Name                     | Effect                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `#DO_SCOREBOARD_OUTPUT#` | Whether the function will perform the "scale" step of its scoreboard operations. Mainly relevant to the vector/matrix/quaternion functions, which produce properly scaled storage output by default. If unset, the output will not be scaled for readibility, and will instead use the internal scale factor.<br><br>Useful for if you want to perform scoreboard math on the output. Leave unchecked otherwise for a slight performance gain. |

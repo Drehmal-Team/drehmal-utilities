@@ -6,10 +6,14 @@
 # INPUT:
 #   > Storage:
 #       | ntils:api math.quaternion.from_yaw_pitch.in, float list (2)
+#   > Flags:
+#       | #DO_SCOREBOARD_OUTPUT#
 #
 # OUTPUT:
 #   > Scoreboard:
-#       | #math.quaternion.out.[x,y,z,w] ntils.API (4)  -> Scores representing the vector and scalar quantities of the quaternion, scaled by 46340.
+#       | #math.quaternion.out.[x,y,z,w] ntils.API (4)  -> Scores representing the vector and scalar quantities of the quaternion, scaled by 1000.
+#       |                                                  NOTE: The storage output is generated at higher precision than the scoreboard output.
+#       |                                                        This is done to keep scoreboard output consistent across all quaternion/vector/matrix functions.
 #   > Storage:
 #       | ntils:api math.quaternion.out, float list (4). The quaternion in float list form for directly setting display transformations.
 #

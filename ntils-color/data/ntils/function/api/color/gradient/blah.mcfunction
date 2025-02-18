@@ -1,5 +1,3 @@
-# this is garbage
-return fail
 scoreboard players set #math.trig.sin.out ntils.API 1800
 scoreboard players operation #math.trig.sin.out ntils.API -= #math.trig.sin.in ntils.API
 execute store result score #180-x ntils.z.math.trig.temp run scoreboard players operation #math.trig.sin.out ntils.API *= #math.trig.sin.in ntils.API
