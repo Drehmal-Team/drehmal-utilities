@@ -6,7 +6,7 @@ PATHS = {
     "ROOT": "C:/Users/torma/Documents/GitHub/drehmal-utilities/ntils-sfx/ntils-sfx-resources/assets/ntils",
     "TEXTURES": "textures/z/sfx",
     "ITEMS": "items/api/sfx",
-    "MODELS": "models/item/z/sfx/"
+    "MODELS": "models/item/z/sfx"
 }
 
 SELECTS = {
@@ -16,22 +16,22 @@ SELECTS = {
 }
 
 
-def make_models(n):
+def make_models(n,t):
     r = []
     for i in range(256):
         r.append({
         "threshold": i / 256.0 if i != 0 else 0.0001,
         "model": {
           "type": "minecraft:model",
-          "model": f"ntils:item/z/sfx/cube/{n}/{i}",
+          "model": f"ntils:item/z/sfx/{t}/{n}/{i}",
           "tints": [
             {
               "type": "minecraft:custom_model_data",
               "default": 16777215
             }
           ]}})
-        open("/".join([PATHS["ROOT"], PATHS["MODELS"], 'cube', n, str(i) + ".json"]), 'w').write(json.dumps({
-  	"parent": f"ntils:item/z/sfx/cube/parent/{n}",
+        open("/".join([PATHS["ROOT"], PATHS["MODELS"], t, n, str(i) + ".json"]), 'w').write(json.dumps({
+  	"parent": f"ntils:item/z/sfx/{t}/parent/{n}",
 	"textures": {
 		"0": f"ntils:z/sfx/alpha/{i}"
 	}
@@ -49,10 +49,29 @@ if __name__ == "__main__":
   "model": {
     "type": "minecraft:range_dispatch",
     "property": "minecraft:custom_model_data",
-    "entries": make_models(i),
+    "entries": make_models(i, "cube"),
     "fallback": {
       "type": "minecraft:model",
       "model": f"ntils:item/z/sfx/cube/{i}/255",
+          "tints": [
+            {
+              "type": "minecraft:custom_model_data",
+              "default": 16777215
+            }
+          ]
+    }
+  }
+}))
+
+        for i in ["center"]:
+            open("/".join([PATHS["ROOT"], PATHS["ITEMS"], 'sphere', i + ".json"]), 'w').write(json.dumps({
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "entries": make_models(i, "sphere"),
+    "fallback": {
+      "type": "minecraft:model",
+      "model": f"ntils:item/z/sfx/sphere/{i}/255",
           "tints": [
             {
               "type": "minecraft:custom_model_data",

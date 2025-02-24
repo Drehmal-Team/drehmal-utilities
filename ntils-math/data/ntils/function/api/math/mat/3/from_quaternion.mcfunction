@@ -1,6 +1,8 @@
 # MATH/MAT/3/FROM_QUATERNION
 #
-#   Converts a quaternion into a 3x3 rotation matrix.
+#   Converts a UNIT quaternion into a 3x3 rotation matrix.
+#   NOTE: This ONLY works on unit quaternions (quaternions with a length of 1). Anything else WILL
+#         cause this entire function to melt into a puddle. You have been warned!
 #
 # INPUT:
 #   > Storage:

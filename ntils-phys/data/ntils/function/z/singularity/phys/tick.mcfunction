@@ -1,0 +1,1 @@
+execute as @e[tag=ntils.API.phys.body] at @s run function ntils:z/phys/test/tick
