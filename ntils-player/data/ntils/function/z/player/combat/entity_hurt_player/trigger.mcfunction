@@ -2,13 +2,14 @@ execute if entity @s[tag=ntils.API.player.combat.entity_hurt_player.disable_adva
 
 # --------------------------------------------- #
 
-data modify storage ntils:api player.combat.entity_hurt_player set value {\
-    damage: {\
-        pre: 0,\
-        post: 0,\
-    },\
-    is_direct: True,\
-    damage_type: "null",\
+data modify storage ntils:api player.combat.entity_hurt_player set value {              \
+    damage: {                                                                           \
+        pre: 0,                                                                         \
+        post: 0,                                                                        \
+    },                                                                                  \
+    is_direct: True,                                                                    \
+    damage_type: "null",                                                                \
+    lethal: False                                                                       \
 }
 
 # --------------------------------------------- #
@@ -38,6 +39,8 @@ execute if entity @s[advancements={ntils:z/player/combat/entity_hurt_player={se=
 
 execute store result storage ntils:api player.combat.entity_hurt_player.damage.pre double 0.1 run scoreboard players get #player.combat.DAMAGE_BEFORE_CALC# ntils.API
 execute store result storage ntils:api player.combat.entity_hurt_player.damage.post double 0.1 run scoreboard players get #player.combat.DAMAGE_AFTER_CALC# ntils.API
+
+execute if score @s ntils.z.player.state.dead matches 1.. run function ntils:z/player/combat/entity_hurt_player/player_death
 
 function #ntils:api/player/combat/entity_hurt_player
 
