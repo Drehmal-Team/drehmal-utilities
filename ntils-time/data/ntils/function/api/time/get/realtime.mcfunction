@@ -44,7 +44,7 @@
 # PERFORMACE: Great
 # Runs about 40-50 commands generally. Nonrecursive and does not use macros, making this remarkably great for performance.
 
-execute unless score $ntils:time.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:time.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 execute unless score #CURRENT_UNIX_TIME# ntils.z.global matches 1.. run return fail
 execute if score #time.FORCING_SYNC# ntils.z.global matches 0.. run return fail
 

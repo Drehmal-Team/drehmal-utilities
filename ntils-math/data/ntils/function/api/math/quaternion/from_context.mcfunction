@@ -4,7 +4,7 @@
 #
 # INPUT:
 #   > Flags:
-#       | #DO_SCOREBOARD_OUTPUT#
+#       | $ntils:math.DO_SCOREBOARD_OUTPUT
 #
 # OUTPUT:
 #   > Scoreboard:

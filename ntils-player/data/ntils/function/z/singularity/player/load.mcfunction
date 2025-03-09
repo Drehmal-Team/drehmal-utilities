@@ -1,4 +1,4 @@
-execute unless score $ntils:player.ENABLED ntils.API.singularity.flag matches 1 run return fail
+execute unless score $ntils:player.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 scoreboard objectives add ntils.API.player.id dummy
 scoreboard objectives add ntils.API.player.state.inv_update.IGNORE dummy

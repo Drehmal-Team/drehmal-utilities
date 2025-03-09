@@ -1,6 +1,6 @@
 return fail
 
-execute unless score $ntils:player.ENABLED ntils.API.singularity.flag matches 1 run return fail
+execute unless score $ntils:player.ENABLED ntils.API.flag matches 1 run return fail
 
 tag @s add ntils.z.player.state.fire.clear
 tag @s remove ntils.z.player.state.fire.ignite

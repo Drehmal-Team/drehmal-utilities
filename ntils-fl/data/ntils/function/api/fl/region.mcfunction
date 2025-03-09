@@ -19,7 +19,7 @@
 # Performance: Good
 #   If you need to mass load chunks, always use this.
 
-execute unless score $ntils:fl.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:fl.ENABLED ntils.API.flag matches 1.. run return fail
 
 $data modify storage ntils:z fl.region.args set value $(Args)
 

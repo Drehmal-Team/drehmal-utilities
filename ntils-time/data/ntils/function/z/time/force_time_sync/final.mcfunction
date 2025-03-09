@@ -7,7 +7,7 @@ scoreboard players set #tick_offset ntils.z.time.temp 100
 scoreboard players operation #tick_offset ntils.z.time.temp -= #time.RUNNING_TIMER# ntils.z.global
 execute store result storage ntils:z time.force_time_sync.m.second int 1 run scoreboard players operation #tick_offset ntils.z.time.temp /= #5 ntils.z.const
 
-execute unless score $ntils:wborder.ENABLED ntils.API.singularity.flag matches 1.. run function ntils:z/time/force_time_sync/sch/start with storage ntils:z time.force_time_sync.m
+execute unless score $ntils:wborder.ENABLED ntils.API.flag matches 1.. run function ntils:z/time/force_time_sync/sch/start with storage ntils:z time.force_time_sync.m
 
 scoreboard players operation #time.RUNNING_TIMER# ntils.z.global = #tick_offset ntils.z.time.temp
 

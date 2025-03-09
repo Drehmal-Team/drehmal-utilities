@@ -15,7 +15,7 @@
 #   If both Pos and Dimension are given as arguments, the function is Great. However, each requires some
 #   entity nbt stuff. Though, the dimension is the only one to actually care about, if I'm being honest.
 
-execute unless score $ntils:fl.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:fl.ENABLED ntils.API.flag matches 1.. run return fail
 
 forceload add ~ ~
 $data modify storage ntils:z fl.new.temp set value {name:"$(Name)",id:0,x:0,z:0,dim:""}

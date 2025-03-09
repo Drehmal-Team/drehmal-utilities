@@ -1,4 +1,4 @@
-execute unless score $ntils:fl.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:fl.ENABLED ntils.API.flag matches 1.. run return fail
 
 scoreboard objectives add ntils.z.fl.temp dummy
 scoreboard objectives add ntils.z.fl.int dummy

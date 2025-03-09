@@ -1,9 +1,9 @@
-# ntils.API.singularity.flag is used as a load status tracker for 
+# ntils.API.flag is used as a load status tracker for 
 # each pack that passes load data to singularity, a fake player
-# score in the format '$<id>.ENABLED ntils.API.singularity.flag` is
+# score in the format '$<id>.ENABLED ntils.API.flag` is
 # created and set to 0 or 1, depending on the load status of the pack
-scoreboard objectives add ntils.API.singularity.flag dummy
-scoreboard players reset * ntils.API.singularity.flag
+scoreboard objectives add ntils.API.flag dummy
+scoreboard players reset * ntils.API.flag
 
 data remove storage ntils:z lang
 function #ntils:api/singularity/lang

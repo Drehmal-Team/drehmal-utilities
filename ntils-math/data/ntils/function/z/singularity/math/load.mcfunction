@@ -13,8 +13,6 @@ scoreboard players set #46340^2/1000 ntils.z.const 2147395
 scoreboard players set #23170^2/2000 ntils.z.const 268424
 scoreboard players set #(((2^31)-1)/4)/1000 ntils.z.const 536871
 
-scoreboard objectives add ntils.API.flag.math dummy
-
 # 3 POINT BEZIER SCOREBOARDS #
 
 scoreboard objectives add ntils.z.math.bz.3.temp dummy
@@ -111,11 +109,15 @@ scoreboard objectives add ntils.z.math.quaternion.temp dummy
 
 scoreboard objectives add ntils.z.math.mat.temp dummy
 
+# VECTOR SCOREBOARDS #
+
+scoreboard objectives add ntils.z.math.vec.temp dummy
+
 # TRIG SCOREBOARDS #
 
 scoreboard objectives add ntils.z.math.trig.temp dummy
 
-# STORAGE INIT #
+# --------------------------- STORAGE OUTPUT INIT #
 
 # Bezier output initialization
 data modify storage ntils:api math.bz.3.out set value [0d,0d,0d]
@@ -142,3 +144,8 @@ data modify storage ntils:api math.mat.3.out set value [\
 
 
 data modify storage ntils:z math.distance.transform set value [0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1f]
+
+# --------------------------- STORAGE INPUT INIT #
+
+execute unless data storage ntils:api math.quaternion.in run data modify storage ntils:api math.quaternion.in set value [1f,0f,0f,0f]
+execute unless data storage ntils:api math.quaternion.multiply.in run data modify storage ntils:api math.quaternion.multiply.in set value {left:[1f,0f,0f,0f],right:[1f,0f,0f,0f]}

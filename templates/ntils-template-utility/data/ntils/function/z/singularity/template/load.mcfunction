@@ -1,3 +1,3 @@
-execute unless score $ntils:template-utility.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:template-utility.ENABLED ntils.API.flag matches 1.. run return fail
 
 # ...

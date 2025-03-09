@@ -8,7 +8,7 @@ execute store result storage ntils:api math.quaternion.out[2] float -0.000000000
 execute store result storage ntils:api math.quaternion.out[1] float 0.00000000046566128752 run scoreboard players operation #math.quaternion.out.y ntils.API *= #sy ntils.z.math.quaternion.temp
 execute store result storage ntils:api math.quaternion.out[0] float 0.00000000046566128752 run scoreboard players operation #math.quaternion.out.x ntils.API *= #cy ntils.z.math.quaternion.temp
 
-execute unless score #DO_SCOREBOARD_OUTPUT# ntils.API.flag.math matches -2147483648..2147483647 run return 0
+execute unless score $ntils:math.DO_SCOREBOARD_OUTPUT ntils.API.math.flag matches -2147483648..2147483647 run return 0
 
 scoreboard players operation #math.quaternion.out.x ntils.API /= #46340^2/1000 ntils.z.const
 scoreboard players operation #math.quaternion.out.y ntils.API /= #46340^2/1000 ntils.z.const

@@ -13,7 +13,7 @@
 # Performance: Bad
 #   Has to perform a macro function call for each element in the list, meaning it grows in lag pretty quickly.
 
-execute unless score $ntils:list.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:list.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 execute store result score #loop ntils.z.list.temp if data storage ntils:api list.shuffle.in[]
 execute if score #loop ntils.z.list.temp matches ..1 run return run data modify storage ntils:api list.shuffle.out set from storage ntils:api list.shuffle.in

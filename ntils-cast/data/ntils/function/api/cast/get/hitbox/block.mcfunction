@@ -15,7 +15,7 @@
 # PERFORMANCE: Good
 #   Performs a minimal amount of actual operations. Since only two macro inputs are ever used, the result can be safely cached.
 
-execute unless score $ntils:cast.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:cast.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 data remove storage ntils:api cast.get.hitbox.block.out
 $execute if block ~ ~ ~ #ntils:api/cast/hitbox/$(Type)/full run return run data modify storage ntils:api cast.get.hitbox.block.out set value [[I;0,0,0,16,16,16]]

@@ -7,7 +7,7 @@
 #     > example:
 #   function ntils:api/ajsm/play {Anim:"walk_normal",Len:-1,Channel:0,Persist:True,Loop:True}
 
-execute unless score $ntils:ajsm.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:ajsm.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 $data modify storage ntils:z ajsm.play.temp set value {d:{p:$(Persist),c:$(Clear),o:"$(Anim)",t0:0,t1:$(Len)}}
 

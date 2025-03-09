@@ -13,7 +13,7 @@
 # PERFORMANCE: Bad
 #   Very optimized for its purpose but still not great. Only use this on the portion of base64 you actually need converted.
 
-execute unless score $ntils:b64.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:b64.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 execute store result score #loop ntils.z.b64.temp store result score #len ntils.z.b64.temp run data get storage ntils:api b64.decode.in
 

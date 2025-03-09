@@ -11,7 +11,7 @@
 # Performance: Good
 #   Just macro calls and some simple list filtering here.
 
-execute unless score $ntils:fl.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:fl.ENABLED ntils.API.flag matches 1.. run return fail
 
 $data modify storage ntils:z fl.clear.args set value $(Args)
 data modify storage ntils:z fl.clear.macro set value {find:{}}

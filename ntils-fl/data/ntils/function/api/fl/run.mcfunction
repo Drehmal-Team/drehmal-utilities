@@ -14,7 +14,7 @@
 #   Since the load created still needs dimension and positional context, its like a laggier version
 #   of fl/new. However, it's not bad enough to be an actual worry. Please, use this, cut down on datapack bloat.
 
-execute unless score $ntils:fl.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:fl.ENABLED ntils.API.flag matches 1.. run return fail
 
 $data modify storage ntils:z fl.run.args set value $(Args)
 $data modify storage ntils:z fl.run.data set value {cmd:"$(Command)",space:'',macro:''}

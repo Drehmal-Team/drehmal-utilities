@@ -16,7 +16,7 @@
 # PERFORMANCE: Meh
 #   Pretty much just a macro call +extras. Nothing extravagant.
 
-execute unless score $ntils:cstats.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:cstats.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 execute unless data storage ntils:api player.storage[{Open:True}] run return fail
 
 $data remove storage ntils:api player.storage[{Open:True}].data.ntils.z.cstats.modifiers[{name:"$(Name)"}].add_value[{uuid:"$(UUID)"}]

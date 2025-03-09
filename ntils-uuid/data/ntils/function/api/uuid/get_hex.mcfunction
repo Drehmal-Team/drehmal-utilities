@@ -8,7 +8,7 @@
 #
 # Performance: Okay
 
-execute unless score $ntils:uuid.ENABLED ntils.API.singularity.flag matches 1 run return fail
+execute unless score $ntils:uuid.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 function ntils:z/uuid/get_int
 data modify storage ntils:z uuid.to_hex.in set from storage ntils:z uuid.get_int.out

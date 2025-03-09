@@ -14,7 +14,7 @@
 #
 # PERFORMANCE:
 
-execute unless score $ntils:cast.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:cast.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 teleport @s ~ ~ ~ ~ ~
 
 execute store result score @s ntils.z.cast.ray.slow.ds run data get storage ntils:api cast.ray.slow.in.step 46340

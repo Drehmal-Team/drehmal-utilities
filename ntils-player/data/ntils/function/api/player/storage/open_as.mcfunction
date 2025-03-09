@@ -9,7 +9,7 @@
 # PERFORMANCE: Great
 #   Better than our 1.17 options. Still, avoid running this needlessly. Try and only do it at the start of any function that modifies a storage.
 
-execute unless score $ntils:player.ENABLED ntils.API.singularity.flag matches 1 run return fail
+execute unless score $ntils:player.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 function ntils:api/player/storage/close
 
 execute unless predicate ntils:z/player/id/correct run function ntils:z/player/id/check

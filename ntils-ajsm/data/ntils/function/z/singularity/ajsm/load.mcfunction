@@ -1,4 +1,4 @@
-execute unless score $ntils:ajsm.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:ajsm.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 scoreboard objectives add ntils.API.ajsm.time_in_current_state dummy
 scoreboard objectives add ntils.API.ajsm.state dummy

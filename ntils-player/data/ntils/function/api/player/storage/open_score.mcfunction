@@ -13,7 +13,8 @@
 #   Better than our 1.17 options. Still, avoid running this needlessly. Try and only do it at the start of any function that modifies a storage.
 #   Slightly better than the open_as function because that has to check that an ID already exists as a failsafe.
 
-execute unless score $ntils:player.ENABLED ntils.API.singularity.flag matches 1 run return fail
+return fail
+execute unless score $ntils:player.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 function ntils:api/player/storage/close
 
 data modify storage ntils:z player.storage.open.m set value {id:0}

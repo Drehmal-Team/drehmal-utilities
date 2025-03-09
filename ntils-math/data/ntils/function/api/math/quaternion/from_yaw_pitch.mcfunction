@@ -7,7 +7,7 @@
 #   > Storage:
 #       | ntils:api math.quaternion.from_yaw_pitch.in, float list (2)
 #   > Flags:
-#       | #DO_SCOREBOARD_OUTPUT#
+#       | $ntils:math.DO_SCOREBOARD_OUTPUT
 #
 # OUTPUT:
 #   > Scoreboard:

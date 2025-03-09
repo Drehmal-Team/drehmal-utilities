@@ -10,7 +10,7 @@
 # Performance: Bad
 #   No optional arguments for performance here. Avoid using this unless you absolutely need to.
 
-execute unless score $ntils:fl.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:fl.ENABLED ntils.API.flag matches 1.. run return fail
 
 function ntils:api/pos/get
 function ntils:api/pos/get_dim

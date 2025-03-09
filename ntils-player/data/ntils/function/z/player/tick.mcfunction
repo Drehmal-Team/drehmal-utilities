@@ -1,4 +1,4 @@
-execute unless score $ntils:player.ENABLED ntils.API.singularity.flag matches 1 run return fail
+execute unless score $ntils:player.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 execute store result score #c ntils.z.player.temp if entity @a
 execute unless score #c ntils.z.player.temp = #player.PREVIOUS_COUNT# ntils.z.global run function ntils:z/player/state/log/update

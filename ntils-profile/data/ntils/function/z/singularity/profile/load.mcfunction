@@ -1,4 +1,4 @@
-execute unless score $ntils:profile.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:profile.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 
 scoreboard players set #1 ntils.z.const 1

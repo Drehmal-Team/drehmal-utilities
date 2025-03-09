@@ -25,7 +25,7 @@
 #   Lots of overhead here. Partially reconstructs the list of stat-modifying effects on the player based on the provided list, which is quite laggy.
 #   However, its not as bad as it could be. It calls a seperate macro function for each providied stat, but it doesn't call anything for any existing stats.
 
-execute unless score $ntils:cstats.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:cstats.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 execute unless data storage ntils:api player.storage[{Open:True}] run return fail
 
 data modify storage ntils:z cstats.edit_modifiers.out set value []

@@ -30,7 +30,7 @@
 #   to evaulate. In a best-case scenario, the performance impact is negligable, but forcing the ray to
 #   travel through dozens of complex blocks (cauldrons, anvils, etc) will cause a measurable impact.
 
-execute unless score $ntils:cast.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:cast.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 data modify storage ntils:z cast.ray.m set value {t:"regular"}
 scoreboard players set #d ntils.z.cast.temp 2145585985

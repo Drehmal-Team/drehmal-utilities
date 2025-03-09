@@ -16,7 +16,7 @@
 #   Has to perform a macro function call for each unique stat name on the player as well as a normal function call for each modifier.
 #   Not as bad as it sounds, because all told this is still better than anything that uses player NBT directly.
 
-execute unless score $ntils:cstats.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:cstats.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 execute unless data storage ntils:api player.storage[{Open:True}] run return fail
 
 execute if data storage ntils:api player.storage[{Open:True}].data.ntils.z.cstats.modifiers[{add_value:[],add_multiplied_base:[],add_multiplied_total:[]}] run data remove storage ntils:api player.storage[{Open:True}].data.ntils.z.cstats.modifiers[{add_value:[],add_multiplied_base:[],add_multiplied_total:[]}]

@@ -24,7 +24,7 @@
 #
 # PERFORMANCE:
 
-execute unless score $ntils:cast.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:cast.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 
 # process inputs (need to clean this up)
 data modify storage ntils:z cast.ray.m set value {t:"regular",f:"teleport @s ~ ~ ~",p:"teleport @s ~ ~ ~"}

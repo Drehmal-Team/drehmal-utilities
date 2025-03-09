@@ -1,4 +1,4 @@
-execute unless score $ntils:clock.ENABLED ntils.API.singularity.flag matches 1.. run return fail
+execute unless score $ntils:clock.ENABLED ntils.API.flag matches -2147483648..2147483647 run return fail
 execute unless score #clock.TIME_SINCE_LAST_TICK ntils.API matches -2147483648..2147483647 run return fail
 
 $data remove storage ntils:z clock.registry."$(Id)"
