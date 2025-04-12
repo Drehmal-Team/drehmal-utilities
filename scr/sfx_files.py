@@ -18,7 +18,7 @@ SELECTS = {
 
 def make_models(n,t):
     r = []
-    for i in range(256):
+    for i in range(int(256.*0.1),256):
         r.append({
         "threshold": i / 256.0 if i != 0 else 0.0001,
         "model": {
@@ -41,7 +41,7 @@ def make_models(n,t):
 
 if __name__ == "__main__":
     # Produce alpha textures.
-    for i in range(256):
+    for i in range(int(256.*0.1),256):
         Image.new('RGBA', (16, 16), (255,255,255,i)).save("/".join([PATHS["ROOT"], PATHS["TEXTURES"], "alpha", str(i) + ".png"]))
 
     for i in ["back","edge","corner","center"]:

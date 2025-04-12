@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Header Comments"
             }
+          },
+          {
+            "id": "76dcd6c8da11760c",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -168,7 +181,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "27df67db89f1a61e",
+  "active": "76dcd6c8da11760c",
   "lastOpenFiles": [
     "ntils-math/README.md",
     "Documentation/Namespacing.md",

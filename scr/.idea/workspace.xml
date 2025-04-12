@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42dd5794-bc89-4d80-a7f3-75803c261a2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sphere.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ntils-sfx/ntils-sfx-resources/assets/ntils/shaders/post/shader.fsh" beforeDir="false" afterPath="$PROJECT_DIR$/../ntils-sfx/ntils-sfx-resources/assets/ntils/shaders/post/shader.fsh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sfx_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/sfx_files.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,18 +31,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.download_mc_jar.executor": "Debug",
-    "Python.ducttape.executor": "Run",
-    "Python.gen_hitboxes.executor": "Run",
-    "Python.sfx_files.executor": "Run",
-    "Python.sphere.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.download_mc_jar.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.ducttape.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gen_hitboxes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sfx_files.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sphere.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

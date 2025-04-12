@@ -24,7 +24,7 @@ void main() {
     
     fragColor = vec4(mix(
                 fragColor.xyz,
-                max(texture(PrevSampler, texCoord).xyz * 0.99, fragColor.xyz), 
+                min(texture(PrevSampler, texCoord).xyz * 1.01, fragColor.xyz), 
                 phosphorStrength
             ),fragColor.w);
     
